@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        #header {
+            width: 1000px;
+            background-color: pink;
+            margin: auto;
+            height: 200px
+        }
+        /* float 은 모든 내용물을 다 포함할 수 있는 너비가 되어야 
+        반응형 디자인이 된다. */
+        
+        .clearFix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        /*  이 코드를 만들어 두고 필요할 때마다 사용하면 된다.*/
+        
+        #header::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        /* 배경색은 float에 의해서 사라졌다. 
+        높이를 주면 해결된다*/
+        
+        .tabButton li {
+            float: left;
+        }
+        
+        .tabButton li:nth-child(1) {
+            float: left;
+            width: 400px;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+        
+        .tabButton li:nth-child(2) {
+            background-color: green;
+            float: left;
+            width: 400px;
+        }
+        
+        .gnb {
+            clear: both;
+            /*위 코드는 클리어 픽스(clearFix) 이다.
+            형제레벨에 문제가 생겼을 때 사용한다.
+            
+            1. clear:left | right | both
+            형들에게 float이 레이아웃이 적용되면 동생에게 발생하는 문제
+            형이 float:left; 되면 나도 형 옆에 붙는 문제
+            나의 원래 위치에 배치할 때 필요한 코드이다.
+
+
+            2.자식들이 float 되면 부모에게 발생하는 문제
+             배경색이 없어지거나, 테두리가 이상,
+             margin, padding 이 적용되지 않음!
+
+             원인 : 자식이 float 되면 붕떠서 부모의 높이가 없어지므로 발생
+            2-1 : 높이를 준다. height:200px 좋은 방법은 아닌다.
+            디바이스에 따라서 높이가 달라지기 때문이다.
+            
+            2-2 : 태그::after{content:''; display: block; clear:both;}
+             웬만하면 이 방법으로 해결한다.
+            2-3 : float된 자식이 있는 부모나 형제를 다시 float 시키면 문제 해결
+            2-4 : overflow로 해결
+            
+            */
+            float: right;
+        }
+        
+        .gnb li {
+            float: left;
+            padding: 1em;
+            font-size: 12px;
+        }
+        
+        h1 {
+            float: left;
+            clear: both;
+            width: 800;
+        }
+        
+        .lnb {
+            float: right;
+        }
+        
+        .lnb li {
+            float: left;
+            padding: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header" class="clearFix">
+        <ul class="tabButton">
+            <li><a href="#">맛난치킨</a></li>
+            <li><a href="">치킨 F&amp;B</a></li>
+        </ul>
+        <ul class="gnb">
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">사이트 맵</a></li>
+            <li><a href="#">가맹점 개설안내</a></li>
+        </ul>
+
+        <h1>맛난치킨</h1>
+        <ul class="lnb">
+            <li><a href="#">메뉴</a></li>
+            <li><a href="#">매장안내</a></li>
+            <li><a href="#">이벤트</a></li>
+            <li><a href="#">메뉴</a></li>
+            <li><a href="#">메뉴</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

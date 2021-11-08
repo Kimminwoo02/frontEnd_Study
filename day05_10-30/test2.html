@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            font-weight: bold;
+            width: 120px;
+            height: 40px;
+            display: inline-block;
+            border: 1px solid black;
+            line-height: 40px;
+            /*세로 가운데 정렬*/
+            border-bottom: none;
+            text-align: center;
+        }
+        
+        div:last-child span {
+            border-bottom: 1px solid black
+        }
+        /* 인라인속성의 태그: 너비와 높이를 지정할 수 없다.
+           display 속성 block, inline, inline-block, flex
+           inline-block  줄은 안바뀌지만 블록형 속성을 가지고 있어 너비와 높이가 있다.
+
+        */
+        
+        .listClass {
+            list-style-type: none;
+            /* type은 있어도 그만 없어도 그만이다. */
+            /* 크로스 브라우징? */
+        }
+        
+        .listStyle1 li {
+            list-style: none;
+        }
+        
+        .listStyle2 {
+            list-style: square;
+        }
+        
+        li {}
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>text1</li>
+        <li>text2</li>
+        <li>text3</li>
+        <li>text4</li>
+        <li>text5</li>
+    </ol>
+    <ol start="6">
+        <li>text1</li>
+        <li>text2</li>
+        <li>text3</li>
+        <li>text4</li>
+        <li>text5</li>
+    </ol>
+
+    <ol start="6" type="A">
+        <li>text1</li>
+        <li>text2</li>
+        <li>text3</li>
+        <li>text4</li>
+        <li>text5</li>
+    </ol>
+
+    <ul start="6" class="listClass">
+        <li>text1</li>
+        <li>text2</li>
+        <li>text3</li>
+        <li>text4</li>
+        <li>text5</li>
+    </ul>
+    <ul class="listStyle1">
+        <li>text1</li>
+        <li>text2</li>
+        <li>text3</li>
+        <li>text4</li>
+        <li>text5</li>
+    </ul>
+    <ul class="listStyle2">
+        <li>text1</li>
+        <li>text2</li>
+        <li>text3</li>
+        <li>text4</li>
+        <li>text5</li>
+    </ul>
+    <ul class="listStyle3">
+        <li>text1</li>
+        <li>text2</li>
+        <li>text3</li>
+        <li>text4</li>
+        <li>text5</li>
+    </ul>
+</body>
+
+</html>

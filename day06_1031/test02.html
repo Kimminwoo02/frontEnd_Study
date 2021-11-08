@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ㅇㅇ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .clearFix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        .container {
+            width: 1000px;
+            margin: auto;
+            background-color: red;
+            border: 10px solid blue;
+        }
+        
+        .container>div {
+            width: 100px;
+            height: 100px;
+            border: 13px solid black;
+            box-sizing: border-box;
+            /* 100+13+13 = 126
+            box-sizing: border-box;
+            94(13+13)=100px
+            밑으로 조금 빠저나가는 문제를 해결!
+             */
+        }
+        
+        div.box1 {
+            background-color: orange;
+        }
+        
+        div.box2 {
+            background-color: gray;
+        }
+        
+        div.box3 {
+            background-color: green;
+        }
+        
+        .box1 {
+            float: right;
+        }
+        
+        .box2 {
+            float: right;
+        }
+        
+        .box3 {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container clearFix">
+        <!-- container 의 높이를 지정하는 것보다 
+            자식의 높이만큼 자동으로 container 높이를 지정하는 코드
+         -->
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+    </div>
+</body>
+
+</html>

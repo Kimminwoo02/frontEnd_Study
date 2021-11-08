@@ -1,0 +1,127 @@
+/* 왼쪽 사이드 143x45  */
+
+.container>div {
+    float: left;
+}
+
+.information {
+    width: 170px;
+    padding: 60px 15px 15px;
+}
+
+.information li {
+    list-style-type: disc;
+    margin-left: 20px;
+    line-height: 25px;
+}
+
+.information img {
+    margin-bottom: 5px;
+}
+
+.information ul {
+    margin-bottom: 15px;
+}
+
+h2 span {
+    display: block;
+    font-weight: normal;
+}
+
+.box {
+    width: 340px;
+    background-color: #395C00;
+}
+
+.box>div {
+    width: 50%;
+    height: 180px;
+    float: left;
+}
+
+.box>div:nth-child(2) {
+    background-image: url(./images/images2/images/source001.jpg);
+}
+
+.box>div:nth-child(3) {
+    background-color: #adf736;
+}
+
+.box>div:nth-child(4) {
+    background-color: #adadad;
+}
+
+.product {
+    width: calc(1000px - 340px - 170px);
+    height: 300px;
+    background-color: pink;
+    padding: 60px 15px 15px;
+}
+
+.notice {
+    width: calc(1000px - 340px - 170px);
+    height: 300px;
+    background-color: skyblue;
+}
+
+
+/* 가운데 340x */
+
+body {
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 12pt;
+}
+
+.wrapper {
+    width: 1000px;
+    margin: auto;
+}
+
+.header {
+    margin-bottom: 1em;
+}
+
+.gnb {
+    float: right;
+    padding: 1em 0;
+}
+
+.gnb li {
+    float: left;
+}
+
+.gnb a {
+    display: block;
+    padding: 1em;
+    font-size: 12px;
+}
+
+h1 {
+    float: left;
+    clear: both;
+    font-weight: 400;
+}
+
+h1>span {
+    font-weight: 900;
+    display: inline-block;
+    margin-right: 0.5em;
+}
+
+.search {
+    float: right;
+}
+
+.search button {
+    font-size: 12px;
+    padding: 0.5em;
+    background-color: darkcyan;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.search input[type="text"] {
+    padding: 0.3em;
+    margin-right: 0.5em;
+}

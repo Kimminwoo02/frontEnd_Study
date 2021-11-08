@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .clearFix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        .container {
+            width: 1000px;
+            margin: auto;
+        }
+        
+        .container>div {
+            width: 246px;
+            height: 246px;
+            box-sizing: border-box;
+            float: left;
+            border: 1px solid blue;
+            margin: 2px;
+            /* 상하 좌우 여백을 주어서 박스의 너비 조정이 필요. */
+        }
+        
+        div .box1 {
+            background-color: black;
+            height: 496px;
+            width: 496px;
+        }
+        
+        div.box2 {
+            background-color: red;
+            height: 246px;
+            width: 246px;
+        }
+        
+        .box3 {
+            background-color: orange;
+        }
+        
+        .box4 {
+            background-color: wheat;
+        }
+        
+        .box5 {
+            background-color: firebrick;
+        }
+        
+        div .box6 {
+            background-color: green;
+            height: 496px;
+        }
+        
+        div .box7 {
+            background-color: hotpink;
+            width: 496px;
+        }
+        
+        .box8 {
+            background-color: aqua
+        }
+        
+        .box9 {
+            background-color: violet;
+        }
+        
+        div.box10 {
+            background-color: tomato;
+            width: 496px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box2">box3</div>
+        <div class="box2">box4</div>
+        <div class="box2">box5</div>
+        <div class="box6">box6</div>
+        <div class="box7">box7</div>
+        <div class="box2">box8</div>
+        <div class="box2">box9</div>
+        <div class="box7">box10</div>
+    </div>
+</body>
+
+</html>

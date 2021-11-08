@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+            border-right: none;
+            border-left: none;
+            width: 1200px;
+            height: 300px;
+        }
+        
+        td,
+        th {
+            border: 1px solid skyblue;
+        }
+        
+        thead th {
+            height: 40px;
+        }
+        
+        tfoot th,
+        tfoot td {
+            height: 40px;
+        }
+        
+        thead th {
+            background-color: blue;
+        }
+        
+        th[scope="row"] {
+            /**/
+            width: 300px;
+            text-align: left;
+        }
+        
+        th:first-child {
+            border-left: none;
+        }
+        
+        th:last-child {
+            border-right: none;
+        }
+        
+        th:last-child {
+            border-right: none;
+        }
+        
+        td:last-child {
+            border-right: none;
+        }
+        
+        thead th {
+            /* border-top: 3px solid rgb(60, 101, 236); */
+        }
+        
+        th[scope="col"] {
+            border-top: 3px solid rgb(60, 101, 236);
+        }
+        /* 같은 코드이다. */
+        
+        table {
+            border-top: 3px solid rgb(60, 101, 236);
+        }
+        /* caption은 기본적으로 텍스트가 가운데 정렬 */
+        
+        table caption {
+            text-align: left;
+        }
+        
+        td {
+            text-align: center;
+        }
+        
+        t:nth-child(2) {
+            text-decoration: line-through;
+        }
+        
+        td:nth-of-type(1) {
+            text-decoration: line-through;
+        }
+        
+        td:first-of-type {
+            text-decoration: line-through;
+        }
+        /* 위 세 개는 같은 기능을 한다. */
+    </style>
+</head>
+
+<body>
+    <h1>소형차량 대여요금</h1>
+    <hr>
+    <table>
+        <caption>소형차랑 대여요금</caption>
+        <thead>
+            <tr>
+                <th scope="col" rowspan="2">차종</th>
+                <th scope="col" rowspan="2"></th>
+                <th scope="col" colspan="4"></th>
+                <!-- <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th> -->
+            </tr>
+            <tr>
+                <!-- <th scope="col"></th>
+                <th scope="col"></th> -->
+                <th scope="col">ㄷㅓ뉴</th>
+                <th scope="col">케티</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">스파크</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <th scope="row">레이</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">더뉴k3</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">올뉴k3</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>

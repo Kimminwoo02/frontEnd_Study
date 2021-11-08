@@ -1,0 +1,197 @@
+@charset 'utf-8';
+.header {
+    background: linear-gradient(gray, white);
+    border: 1px solid gray;
+    /* background-image: url(./images/images02/); */
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+.headerContent {
+    width: 1400px;
+    margin: auto;
+}
+
+.headerContent a {
+    display: block;
+    padding: 1em;
+}
+
+h1 {
+    width: 140px;
+    height: 71px;
+    background-image: url(./images/images01/logo.png);
+    background-position: 0 -4px;
+    color: transparent;
+    float: left;
+}
+
+.lng {
+    float: left;
+    padding-top: 20px;
+    padding-left: 400px;
+}
+
+.gnb {
+    float: right;
+}
+
+.headerContent li {
+    float: left;
+}
+
+.gnb {
+    padding-top: 20px;
+}
+
+.search {
+    width: 20px;
+    height: 20px;
+    background-image: url(./images/images01/ico_search.gif);
+    background-position: 2px 10px;
+    background-repeat: no-repeat;
+    /* padding 에도 배경이미지가 삽입되므로 위치 조절이 필요 */
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+.container>div {
+    width: calc((1200px - 700px) / 2 - 15px);
+    height: 218px;
+    /* 1번 박스의 높이는 446 이나
+    box 2번 이후는 중간 마진이 필요하다.
+    (446px-10px) / 2 의 계산이 필요하다.
+     */
+    background-color: pink;
+    float: left;
+    margin: 5px;
+}
+
+div .box1 {
+    background-image: url(./images/images01/img_banner1_1.jpg);
+    width: 700px;
+    height: 446px;
+    background-size: 100%
+}
+
+div .box2 {
+    background-image: url(./images/images01/img_product_view_500x50022.png);
+}
+
+div .box3 {
+    background-image: url(./images/images01/img_product_view_500x500_27.png);
+}
+
+div .box4 {
+    background-image: url(./images/images01/img_product_view_500x50022.png);
+    background-size: 100%;
+}
+
+div .box5 {
+    background-image: url(./images/images01/img_csr3.jpg);
+    background-size: 100%;
+}
+
+div .box5 img {
+    width: 100%;
+}
+
+div .box6 {
+    height: 446px;
+    background-image: url(./images/images01/bg_apple.jpg);
+    background-repeat: no-repeat;
+    clear: left;
+    background-size: 100%;
+    background-position: right bottom;
+    color: white;
+    background-color: rgb(189, 135, 185);
+    padding: 28px;
+}
+
+.box6>p:nth-of-type(1),
+.box10>p:nth-of-type(1) {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.box6>p:nth-of-type(2),
+.box10>p:nth-of-type(2) {
+    font-size: 16px;
+}
+
+div.box7 {
+    width: 700px;
+    padding: 28px;
+}
+
+div .box10 {
+    background-color: #BE657E;
+    width: 700px;
+    padding: 28px;
+    background-image: url(./images/images01/bg_coffee.jpg);
+    background-repeat: no-repeat;
+    background-position: right 40px;
+    background-size: 40%;
+    color: white;
+}
+
+.middleContainer {
+    width: 1440px;
+    height: 330px;
+    margin: auto;
+    background-image: url(./images/images01/bg_prd_maxim.jpg);
+    margin-bottom: 200px;
+}
+
+.productLnb a {
+    color: white;
+    display: block;
+    padding: 1em;
+}
+
+.productLnb li {
+    float: left;
+}
+
+.productLnb {
+    width: calc(1440px / 2 - 100px);
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.middleLogo {
+    clear: both;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+}
+
+.productList {
+    width: 80%;
+    margin: auto;
+}
+
+.productList li {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+.productList img {
+    width: 80%;
+}
+
+.productList span {
+    display: block;
+}
+
+.footer {
+    width: 1440px;
+    height: 200px;
+    background-color: orange;
+    margin: auto;
+}

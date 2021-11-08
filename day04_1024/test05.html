@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 700px;
+            height: 250px;
+            border: 1px solid grey;
+            border-collapse: collapse;
+            /*테이블 태그에서만 지정 가능한 속성*/
+        }
+        
+        td {
+            border: 1px solid red;
+            text-align: center;
+        }
+        
+        tr:nth-child(2) td:last-child {
+            color: transparent
+        }
+        
+        tr:nth-child(3) td:last-child {
+            color: transparent
+        }
+        
+        tr:nth-child(4) td:last-child {
+            color: transparent
+        }
+        
+        tr:first-child {
+            background-color: lightgreen;
+        }
+        
+        tr:first-child td {
+            background-color: lightgreen;
+        }
+        
+        tr:nth-child(2) td:first-child {
+            color: transparent;
+            border-bottom: none;
+        }
+        
+        tr:nth-child(3) td:first-child {
+            border: none;
+        }
+        
+        tr:nth-child(4) td:first-child {
+            border-top: none;
+            color: transparent;
+        }
+        
+        .borderNone {
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>용품 테이블</h1>
+    <hr>
+    <table>
+        <tr>
+            <td>구분</td>
+            <td>주문제작</td>
+            <td>주문제작</td>
+        </tr>
+        <tr>
+            <td>주문제작</td>
+            <td>주문제작</td>
+            <td>주문제작</td>
+        </tr>
+        <tr>
+            <td>주문제작</td>
+            <td>주문제작</td>
+            <td>주문제작</td>
+        </tr>
+        <tr>
+            <td>주문제작</td>
+            <td>주문제작</td>
+            <td>주문제작</td>
+        </tr>
+        <tr>
+            <td class="borderNone">주문제작</td>
+            <td>주문제작</td>
+            <td>주문제작</td>
+        </tr>
+        <tr>
+            <td class="borderNone">주문제작</td>
+            <td>주문제작</td>
+            <td>주문제작</td>
+        </tr>
+        <tr>
+            <td class="borderNone">주문제작</td>
+            <td>주문제작</td>
+            <td>주문제작</td>
+        </tr>
+        <tr>
+            <td class="borderNone">주문제작</td>
+            <td>주문제작</td>
+            <td>주문제작</td>
+        </tr>
+        <tr>
+            <td class="broderNone">주문제작</td>
+            <td>주문제작</td>
+            <td>주문제작</td>
+        </tr>
+        <tr>
+            <td>주문제작</td>
+            <td>주문제작</td>
+            <td>주문제작</td>
+        </tr>
+    </table>
+</body>
+
+</html>

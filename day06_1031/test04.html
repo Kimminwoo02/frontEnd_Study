@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ㅇㅇ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .clearFix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        .container {
+            width: 1000px;
+            margin: auto;
+            background-color: red;
+            border: 10px solid blue;
+        }
+        
+        .container>div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            /* margin은 배경색이 표시 안된다. */
+        }
+        
+        div.box1 {
+            background-color: orange;
+            margin-bottom: 100px;
+        }
+        
+        div.box2 {
+            background-color: gray;
+            margin-top: 200px;
+            /* margin은 상하여백의 겹침 현상 발생
+               상하여백중 큰값으로 겹침
+               margin-top은 사용하지 말자!
+            */
+        }
+        
+        div.box3 {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container ">
+
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+    </div>
+</body>
+
+</html>

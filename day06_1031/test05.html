@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ㅇㅇ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .clearFix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        .header {
+            background-color: orange;
+            width: 1000px;
+        }
+        
+        h1 {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin-top: 100px;
+            /* 자식의 margin-top은 부모의 margin-top과 겹침현상 발생.
+            margin-bottom 만 사용하면 겹침 현상이 발생하지 않고
+            오류 발생시 에러를 빨리 찾을 수 있다. */
+        }
+    </style>
+</head>
+
+<body>
+    <div class='header'>
+        <h1>로고</h1>
+
+    </div>
+</body>
+
+</html>

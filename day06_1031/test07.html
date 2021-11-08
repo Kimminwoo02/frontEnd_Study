@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .clearFix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        .container {
+            width: 1000px;
+            margin: auto;
+        }
+        
+        .container>div {
+            width: 250px;
+            float: left;
+        }
+        
+        .container>div>div {
+            height: 250px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        
+        .box1 {
+            background-color: red;
+        }
+        
+        .box2 {
+            background-color: orange;
+            height: 500px;
+        }
+        
+        div.box3 {
+            width: 500px;
+            background-color: palegreen;
+        }
+        
+        .box3>div {
+            width: 250px;
+            float: left;
+        }
+        
+        .box3>.box3_3 {
+            width: 500px;
+            border: 5px solid blue;
+        }
+        
+        .box4 {
+            background-color: purple;
+            height: 250px;
+        }
+        
+        div .box5 {
+            width: 500px;
+            background-color: peru;
+            height: 250px;
+        }
+        
+        .box6 {
+            background-color: cornsilk;
+            height: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">
+            <div class="box1_1">box1_1</div>
+            <div class="box1_2">box1_2</div>
+        </div>
+        <div class="box2">box2</div>
+        <div class="box3">
+            <div class="box3_1">box3_1</div>
+            <div class="box3_2">box3_2</div>
+            <div class="box3_3">box3_3</div>
+        </div>
+        <div class="box4">box4</div>
+        <div class="box5">box5</div>
+        <div class="box6">box6</div>
+    </div>
+</body>
+
+</html>

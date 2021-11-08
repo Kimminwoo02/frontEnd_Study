@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            font-weight: bold;
+            width: 120px;
+            height: 40px;
+            display: inline-block;
+            border: 1px solid black;
+            line-height: 40px;
+            /*세로 가운데 정렬*/
+            border-bottom: none;
+            text-align: center;
+        }
+        
+        div:last-child span {
+            border-bottom: 1px solid black
+        }
+        /* 인라인속성의 태그: 너비와 높이를 지정할 수 없다.
+           display 속성 block, inline, inline-block, flex
+           inline-block  줄은 안바뀌지만 블록형 속성을 가지고 있어 너비와 높이가 있다.
+
+        */
+    </style>
+</head>
+
+<body>
+    <div><span>공모주제</span> 따뜻하거나 기발하거나! 감동적인 자원봉사</div>
+    <div><span>공모주제</span> 따뜻하거나 기발하거나! 감동적인 자원봉사</div>
+    <div><span>공모주제</span> 따뜻하거나 기발하거나! 감동적인 자원봉사</div>
+    <div><span>공모주제</span> 따뜻하거나 기발하거나! 감동적인 자원봉사</div>
+
+
+
+</body>
+
+</html>

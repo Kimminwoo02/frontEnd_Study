@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #333;
+            /* 이것도 리셋! */
+        }
+        
+        a:hover {
+            text-decoration: underline overline line-through;
+            /* overline 은 윗줄로 표시된다. 별로 안쓴다. 
+            line-through 은 취소선이다. 선택된 메뉴 표현에 많이 사용*/
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        div {
+            height: 300px;
+            background-color: orange;
+        }
+        /* 
+        div : width + border + padding + margin 알수 없으므로 
+        기본적으로 디자인 시작하기 전에 *{margin0 padding 0 } 으로 시작 
+         이걸 reset.css 라고 한다.*/
+    </style>
+</head>
+
+<body>
+    <div> </div>
+    <button> button </button>
+    <input type="text">
+    <ul>
+        <li>한글</li>
+    </ul>
+    <dl>
+        <dt>
+            한글날
+        </dt>
+        <dd>10월 9일</dd>
+    </dl>
+    <a href="#">네이버로 가기</a>
+</body>
+
+</html>

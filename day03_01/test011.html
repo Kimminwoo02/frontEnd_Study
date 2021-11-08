@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계절에 마시기 좋은 차</title>
+    <style>
+        #container {
+            width: 800px;
+            margin: auto;
+            /*
+                id: 보통 레이아웃 제작시 사, 중복해서 사용할 수 없다.
+                중복 사용해도 오류가 나지는 않는다.
+                중복 사용시 자동 클래스로 전환된다. 100
+                최우선순위로 실행되어야 되는 건 아이디를 사용할 수있다.
+
+            
+            */
+            text-align: center;
+        }
+        /*아이디 우선순위:100 */
+        
+        .container {
+            color: #333333;
+        }
+        /* 클래스 우선순위:10 */
+        
+        h1 rt {
+            color: blue
+        }
+        /* 태그 우선순위:1*/
+        /*h1 rt == h1>ruby>rt{}*/
+        
+        div li {
+            color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" class="container">
+        <h1><ruby>제철에 생산되는 재료로 최고의 맛을 우린다.<rt>[차의향기]</rt></ruby></h1>
+        <h2> 계절별 마시기 좋은 한국의 차(차차(茶))</h2>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id a quis corrupti consectetur ad voluptatem explicabo. Maxime enim doloribus consequuntur veniam dolorum molestiae cumque cupiditate aliquid soluta! Laborum, error itaque.
+
+        </div>
+        <hr>
+        <dl>
+            <dt>아메리카노</dt>
+            <dd>
+                카페 아메리카노(이탈리아어: Caffè Americano, 스페인어: Café Americano) 또는 단순히 아메리카노(Americano)는 에스프레소를 뜨거운 물로 희석하여 마시는 커피 음료의 한 종류이다. <br> 그 농도는 일반적인 드립 커피와 비슷하지만 풍미(風味)는 다르다. 아메리카노의 농도는 에스프레소의 '샷' 수와, 더해지는 물의 양에 따라 달라진다. <br> 이탈리아어인 'Caffè Americano'를
+                영역(英譯)하면 'American coffee'이지만, 영미권에서도 이탈리어 표현 그대로 쓴다. 또한, 'Americano'에서의 'America'는 미국을 뜻하며, 'no' 부분은 이탈리아어로서 '~처럼'이라는 뜻이 있다
+            </dd>
+            <dt>아메리카노</dt>
+            <dd>
+                <ul>
+                    <li>아이스 아메리카노(iced americano)는 뜨거운 물 대신 차가운 물을 에스프레소에 더해 만든다. 추가로 얼음을 넣기도 한다.</li>
+                    <li>레드 아이(red eye)는 뜨거운 물 대신에 드립 커피를 넣는다. 캐나다에서는 "Canadiano(캐나디아노)"로 불리기도 하며, 때때로 아메리카노와 같은 뜻으로 쓰이기도 한다.</li>
+                    <li>롱 블랙(long black)은 아메리카노와 비슷한 종류로, 오스트레일리아와 뉴질랜드에서 유명하다. 뜨거운 물에 에스프레소 샷 둘을 더해 크레마가 유지된다.</li>
+                </ul>
+
+
+            </dd>
+        </dl>
+    </div>
+</body>
+
+</html>

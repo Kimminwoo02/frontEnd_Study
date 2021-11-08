@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ㅇㅇ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .clearFix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        .container {
+            width: 1200px;
+            margin: auto;
+        }
+        
+        .container>div {
+            float: left;
+        }
+        
+        .box1 {
+            width: 800px;
+            height: 400px;
+            background-color: orange;
+        }
+        
+        .box2 {
+            width: 400px;
+            height: 400px;
+            background-color: rgb(146, 40, 84);
+        }
+        
+        .box3 {
+            width: 400px;
+            height: 350px;
+            background-color: red;
+        }
+        
+        .box3_1 {
+            height: 200px;
+            border: 1px solid black;
+        }
+        
+        .box3_2 {
+            height: 150px;
+            border: 1px solid black;
+        }
+        
+        .box3>div {
+            box-sizing: border-box;
+        }
+        /* width를 지정하지 않으면 부모너비 안에서 움직임.
+            100%=400px (2px :테두리 좌우가 포함되어 지정됨)
+        */
+        
+        .box4 {
+            width: 400px;
+            height: 350px;
+            background-color: blue;
+        }
+        
+        .box5 {
+            width: 400px;
+            height: 350px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>로고</h1>
+
+    <div class="container">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">
+            <div class="box3_1">box3_1</div>
+            <div class="box3_2">box3_2</div>
+        </div>
+        <div class="box4">box4</div>
+        <div class="box5">box5</div>
+    </div>
+
+</body>
+
+</html>

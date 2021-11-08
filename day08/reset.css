@@ -1,0 +1,31 @@
+@charset 'utf-8';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 테두리를 포함한 크기를 측정할 수 있다. */
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border: none;
+    vertical-align: top;
+}
+
+body {
+    font-family: 'Nanum Gothic Coding', monospace;
+}
+
+.clearFix::after {
+    content: '';
+    display: block;
+    clear: both;
+}

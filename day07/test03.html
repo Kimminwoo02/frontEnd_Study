@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-image</title>
+    <link rel="stylesheet" href="./css/reset.css">
+
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: burlywood;
+            float: left;
+            margin-left: 50px;
+            margin-bottom: 50px;
+            background-repeat: no-repeat;
+        }
+        
+        .box1 {
+            background-color: blue;
+            background-image: url(./images/bg_m_s_icon01.png), url(./images/bg_m_s_icon02.png), url(./images/bg_m_s_icon03.png);
+            background-position: 0 0, 50px 0, 0 50px;
+            /* background 이미지의 레이어 순서 z-index
+            뒤에 지정한 URL이 레이어 순서가 아래
+            */
+        }
+        
+        .box2 {
+            background-color: blue;
+            background-image: url(./images/bg_m_s_icon01.png), url(./images/bg_m_s_icon02.png), url(./images/bg_m_s_icon03.png);
+            background-position: 0 0, 30px 0, -30px 50px;
+            background-size: 50% 50%, 100% auto, 100px 100px;
+        }
+        
+        .box3 {
+            /* background: red url() position; */
+            background: linear-gradient(pink, skyblue);
+        }
+        
+        .box4 {
+            background: linear-gradient(90deg, pink, skyblue);
+        }
+        
+        .box5 {
+            background: linear-gradient(90deg, pink 50%, skyblue 0);
+            /* 부드럽게 칠해지지 않고 그냥 칠한 느낌이다. */
+        }
+        
+        .box6 {
+            background: linear-gradient(90deg, pink, skyblue);
+            background-size: 20px;
+        }
+        
+        .box7 {
+            background: linear-gradient( pink 50%, skyblue 0);
+            background-size: auto 20px;
+        }
+        
+        .box8 {
+            background: linear-gradient( transparent 50%, skyblue 0), linear-gradient(90deg, transparent 50%, pink 0);
+            background-size: auto 20px;
+        }
+        
+        .box9 {
+            background: linear-gradient( transparent 50%, rgb(91, 105, 110) 0), linear-gradient(90deg, transparent 50%, rgba(156, 150, 151, 0.637) 0);
+            background-size: auto 20px;
+        }
+        
+        .box10 {
+            background: linear-gradient(45deg, pink 50%, blue 0);
+            /* border 삼각형
+                그라디언트로 조절
+                삼각형의 크기는 색이 섞이는 지점으로 조절 */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>background-image</h1>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    <div class="box7"></div>
+    <div class="box8"></div>
+    <div class="box9"></div>
+    <div class="box10"></div>
+
+</body>
+
+</html>

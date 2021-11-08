@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-image</title>
+    <link rel="stylesheet" href="./css/reset.css">
+
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: burlywood;
+            float: left;
+            margin-left: 50px;
+        }
+        
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            background-image: url(./images/f_list01.png);
+            /* 가로 부족해서 잘렸고
+            세로는 남아서 반복해서 표현 */
+        }
+        
+        .box2 {
+            background-color: blue;
+            background-image: url(./images/f_list01.png);
+            background-size: 100% auto;
+            /* 세로 비율은 자동으로 설정하는게 좋다. 
+            auto는 생략 가능
+            */
+        }
+        
+        .box3 {
+            width: 210px;
+            height: 95px;
+            background-image: url(./images/f_list01.png);
+            /* 세로 비율은 자동으로 설정하는게 좋다. 
+            auto는 생략 가능
+            */
+        }
+        
+        .box4 {
+            background-image: url(./images/f_list01.png);
+            background-size: cover;
+            /* 바탕화면에 꽉 차게 이미지 넣을 때 주로 사용 
+            가로를 100% 넣은거랑 비슷하게 나온다
+            background-size:100% auto 랑 같다*/
+        }
+        
+        .box5 {
+            background-image: url(./images/f_list01.png);
+            background-size: contain;
+            /* 가로 세로 꽉 차게 넣는다.*/
+        }
+        
+        .box6 {
+            background-image: url(./images/btn_q_cart.gif);
+        }
+        
+        .box7 {
+            background-image: url(./images/btn_q_cart.gif);
+            background-size: auto 100%;
+        }
+        
+        .box8 {
+            background-image: url(./images/btn_q_cart.gif);
+            background-size: cover;
+            /*  */
+        }
+        
+        .box9 {
+            background-image: url(./images/btn_q_cart.gif);
+            background-size: contain;
+            /*세로로 긴 이미지였을 때
+            background-size: auto 100%  
+           = 세로 100%랑 같은 느낌! */
+        }
+        
+        .box10 {
+            background-image: url(./images/btn_q_cart.gif);
+            background-size: contain;
+            /*세로로 긴 이미지였을 때
+            background-size: auto 100%  
+           = 세로 100%랑 같은 느낌! */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>background-image</h1>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    <div class="box7"></div>
+    <div class="box8"></div>
+    <div class="box9"></div>
+    <div class="box10"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            background-color: greenyellow;
+            background-image: url(./images/bg_m_s_icon02.png);
+            /* 작은 이미지를 큰 공간에 넣으면 패턴으로 나열된다. */
+            /* background-repeat: repeat-x; */
+            /* x축으로만 패턴화하고 y축으로는 하지 않는다. */
+            background-repeat: no-repeat;
+            /* 반복하지 않는다! */
+            /* top, center, bottom, left, center, right
+                단위를 이용한 위치 지정도 가능!
+                음수값도 사용할 수 있다. 음수 지정시 이미지를 가릴 수 있다.
+
+                
+            */
+            /* 백그라운드 포지션은 기본적으로 
+            영역을 9개로 나눈다! 
+            left, right, center
+             top   center  bottom */
+            background-size: 100px;
+            text-align: center;
+            line-height: 500px;
+            font-size: 44px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">box</div>
+</body>
+
+</html>

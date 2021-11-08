@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 500px;
+            height: 200px;
+            /* 
+            border-width: 1px;
+            border-style: solid;
+            border-color: black; 아래와 같은 의미이다.*/
+            border: 2px solid black;
+        }
+        
+        td {
+            border: 1px solid black
+        }
+        
+        tr:first-child td:first-child {
+            border-style: dotted;
+        }
+        /*첫번째 열*/
+        
+        tr:nth-child(1) td:nth-child(2) {
+            border-style: dotted;
+            border-width: 5px;
+        }
+        
+        tr:last-child td:last-child {
+            border-style: double;
+            border-width: 4px;
+            border-color: red;
+        }
+        /* dotted, double, groove, ridge, inset, outset 선의 종류!  */
+        
+        tr:nth-child(2) td:first-child {
+            border: 4px groove skyblue;
+        }
+        
+        tr:nth-child(2) td:nth-child(2) {
+            border: 4px ridge skyblue;
+        }
+        
+        tr:nth-child(3) td:nth-child(2) {
+            border: 4px inset skyblue;
+        }
+        
+        tr:nth-child(3) td:nth-child(1) {
+            border: 4px outset skyblue;
+        }
+        /*첫번째 열*/
+    </style>
+</head>
+
+<body>
+    <h1>테이블 디자인</h1>
+    <hr>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+    </table>
+</body>
+
+</html>

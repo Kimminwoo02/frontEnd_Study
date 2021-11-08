@@ -1,0 +1,26 @@
+@charset 'utf-8';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-size: 12px;
+    font-family: '돋움';
+}
+
+.clearFix::after {
+    content: '';
+    display: block;
+    clear: both;
+}

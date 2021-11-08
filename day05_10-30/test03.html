@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스모델</title>
+    <style>
+        div {
+            background-color: orange;
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            border-top-width: 10px;
+            border-right-width: 100px;
+            /*
+             총너비 : 300 + 왼쪽 border 1px + 오른쪽 border 100px 
+              = 401 너비 
+            
+            */
+            padding: 10px;
+            /* 기존에 있던 오른쪽과 왼쪽의 패딩 10씩 추가되어
+            421 이 된다. */
+            /* 안쪽으로 상하좌우 10px 씩 생긴다 */
+            margin: 50px;
+            /* 
+            오른쪽 + 왼쪽 padding 추가 =>601px
+            */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>박스모델</h1>
+    <!-- 블록형 속성의 태그의 너비와 높이에 관한 이해 
+      width, height, background-color, border,
+    테두리를 기준으로 한 안쪽 여백 = padding
+    테두리를 기준으로 한 바깥쪽 여백 = margin
+
+    content공간은 width, height 지정
+    border, padding, margin
+    실제 width = width + border 좌우너비 + padding좌우 여백 + 
+    margin 좌우여백
+    
+-->
+    <div> BOX </div>
+</body>
+
+</html>

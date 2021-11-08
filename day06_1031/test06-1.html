@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ㅇㅇ</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .clearFix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        h3 {
+            font-size: 22px;
+        }
+        
+        .container {
+            width: 1200px;
+            margin: auto;
+        }
+        
+        .container>div {
+            float: left;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        .box1 {
+            width: 800px;
+            height: 350px;
+            background-color: orange;
+        }
+        
+        .box2 {
+            width: 375px;
+            height: 350px;
+            background-color: rgb(146, 40, 84);
+        }
+        
+        div .box3 {
+            width: 375px;
+            height: 280px;
+            background-color: red;
+            padding: 0;
+        }
+        
+        .box3_1 {
+            height: 140px;
+        }
+        
+        .box3_2 {
+            height: 140px;
+        }
+        
+        .box3>div {
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        /* width를 지정하지 않으면 부모너비 안에서 움직임.
+            100%=375px (2px :테두리 좌우가 포함되어 지정됨)
+        */
+        
+        .box4 {
+            width: 425px;
+            height: calc( 140px * 2);
+            background-color: blue;
+        }
+        
+        .box5 {
+            width: 375px;
+            height: calc( 140px * 2);
+            background-color: pink;
+        }
+        /* .box1 design */
+        
+        .container .box1 {
+            padding-top: calc(( 375px - 46px) / 2);
+            box-sizing: border-box;
+            /* 부모 400px 
+               img 세로 46px;
+            */
+            background-image: url(./images/PC_2.jpg);
+            background-size: 100%;
+        }
+        
+        .box1>img:nth-child(1) {
+            float: left;
+        }
+        
+        .box1>img:nth-child(2) {
+            float: right;
+        }
+        
+        h2 {
+            width: 100px;
+            height: 20px;
+            background-color: rgb(13, 13, 13);
+            color: white;
+            font-size: 14px;
+            text-indent: 1em;
+            line-height: 20px;
+        }
+        
+        .box2 {
+            background-image: url(./images/img_main_newmenu_20210706.jpg);
+            background-size: 100%;
+        }
+        
+        .box3_1 {
+            background-image: url(./images/img_main_bestmenu.jpg);
+            background-size: 100%;
+        }
+        
+        .box3_2 {
+            background-image: url(./images/img_main_hotmenu.jpg);
+            background-size: 100%;
+        }
+        
+        .box4 {
+            background-color: rgb(237, 213, 176);
+            background-size: 100%;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        
+        .box4 form button {
+            color: white;
+            background-color: black;
+            font-size: 2em;
+        }
+        
+        .box4 button {
+            background-color: transparent;
+            border: 1px solid black;
+        }
+        
+        .font12 {
+            font-size: 12px;
+        }
+        
+        #query {
+            width: 78%;
+            height: 40px;
+            background-color: white;
+            border: none;
+        }
+        
+        .box5 {
+            background-color: rgb(188, 224, 217);
+            background-size: 100%;
+        }
+        
+        .listManage {}
+        
+        .indecaterBox {
+            width: 300px;
+            height: 50px;
+            margin: auto;
+            margin-top: 20%;
+        }
+        
+        .indecaterBox .indecator {
+            margin-left: 40%;
+            margin-bottom: 10px;
+        }
+        
+        .indecator>li {
+            float: left;
+        }
+        
+        .indecator a {
+            display: block;
+            width: 20px;
+            height: 17px;
+            background-image: url(./images/bul_bx.png);
+            background-repeat: no-repeat;
+            color: transparent;
+        }
+        
+        .indecator a:hover {
+            background-position: 0 bottom;
+        }
+        
+        .container2 {
+            width: 100%;
+            margin: auto;
+        }
+        
+        .container2 img {
+            float: left;
+            margin-right: 10px;
+            width: 60px;
+        }
+        
+        .container2 ul {
+            margin-top: 5px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        
+        .container2 ul :nth-child(2) {
+            font-size: 12px;
+            color: gray;
+        }
+    </style>
+</head>
+<!--과제 
+1 .box1 우선순위
+2. 인디케이터 아래 가운데에 위치시키기.
+3. 레이아웃 수업내용 중 하나 이상 작업해보기!
+4. 적어도 교촌치킨은 혼자서 만들어보기
+-->
+
+<body>
+
+    <div class="container">
+        <div class="box1">
+            <img src="./images/btn_bx_prev5.png" alt="">
+            <img src="./images/btn_bx_next5.png" alt="">
+            <div class="indecaterBox">
+                <ul class="indecator" id="indecator">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box2">
+            <h2> New Menu </h2>
+        </div>
+        <div class="box3">
+            <div class="box3_1">
+                <h2>
+                    Best Menu
+                </h2>
+            </div>
+            <div class="box3_2">
+                <h2>
+                    Hot Menu
+                </h2>
+            </div>
+        </div>
+        <div class="box4">
+            <h2>Store Search</h2>
+            <h3>매장명 또는 지역을 입력해주세요.<img src="./images/img_shopSch.png" alt=""></h3>
+            <br>
+            <form id="form">
+                <input type="search" id="query" name="q">
+                <button type="button">검색</button>
+            </form>
+            <br>
+            <hr><br>교촌치킨 역삼1호점 <button>지도보기</button> <button>상세보기</button><br><span class="font12">02-566-9942|서울특별시 강남구 역삼로14길12 (역삼동)</span>
+        </div>
+        <div class="box5">
+            <h2>News</h2>
+
+            <div class="container2">
+                <img src="./images/list04.jpg" alt="">
+                <ul>
+
+                    <li>교촌치킨, 유튜브 콘텐츠로 '맥스서밋2021'</li>
+                    <li>2021-10-26</li>
+                </ul>
+            </div>
+            <div class="container2">
+                <img src="./images/list04.jpg" alt="">
+                <ul>
+                    <li>교촌치킨, 뉴로메카와 협동 조리 로봇 개발 업무</li>
+                    <li>2021-10-26</li>
+                </ul>
+            </div>
+            <div class="container2">
+                <img src="./images/list04.jpg" alt="">
+                <ul>
+                    <li>[선정자 발표] 촌스러버(Chon's Love..</li>
+                    <li>2021-10-12</li>
+                </ul>
+            </div>
+            <div class="container2">
+                <img src="./images/list04.jpg" alt="">
+                <ul>
+                    <li>교촌치킨, 치킨과 환상궁합 '교촌 트윙클링'음..</li>
+                    <li>2021-10-01</li>
+                </ul>
+            </div>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

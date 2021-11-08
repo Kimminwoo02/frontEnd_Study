@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    li {
+        list-style: none;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    a :hover {
+        text-decoration: none;
+    }
+    
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: palevioletred;
+    }
+    
+    div:nth-child(2) {
+        background-color: red;
+        padding: 50px 0;
+        margin: 50px;
+    }
+    
+    div:nth-child(1) {
+        margin: 50px;
+        padding: 50px 0;
+    }
+    /* margin은 상하 겹침 현상이 일어난다.
+    다른 사이즈면 큰 값으로 겹쳐진다.
+    margin-bottom: 만 사용하여 오를 빨리 찾도록 함 */
+</style>
+
+<body>
+    <div>box1</div>
+    <div>box2</div>
+</body>
+
+</html>
