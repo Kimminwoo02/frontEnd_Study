@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position:relative</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        header {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: pink;
+            top: 50px;
+            left: 50px;
+            /* 포지션을 주면 float처럼 붕 뜨게 된다. 
+             */
+        }
+        
+        section {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: red;
+            right: 50px;
+            /*오른쪽을 기준으로 50정도 민다.
+            즉 왼쪽으로 들어간다
+             */
+            bottom: 50px;
+            /* 아래 기준으로 위로 올린다. */
+        }
+        
+        footer {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: blue;
+            left: 30px;
+            bottom: 150px;
+            /* z-index 구조상 아래에 있는게 1이고 그 위에가 2이고 이런순으로
+            올라가는게 z-index 이다. */
+        }
+    </style>
+</head>
+
+<body>
+    <header>header</header>
+    <section>
+        static 성격과 비슷함
+        <br> top, left, right, bottom, z-index 사용<br> float 보다 우선순위가 낮다.<br> float> relative <br> fixed 나 앱솔루트랑은 사Float는 사용할 수 없다.
+    </section>
+    <footer></footer>
+</body>
+
+</html>

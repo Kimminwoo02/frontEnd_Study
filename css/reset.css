@@ -1,11 +1,8 @@
+@charset 'utf-8';
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-li {
-    list-style: none;
 }
 
 a {
@@ -13,9 +10,18 @@ a {
     color: #333;
 }
 
+li {
+    list-style: none;
+}
+
 img {
     border: none;
     vertical-align: top;
+}
+
+body {
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .clearFix::after {

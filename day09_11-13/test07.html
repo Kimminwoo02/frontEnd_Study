@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position:fixed</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: chocolate;
+            /* float: right; */
+            position: fixed;
+            /* css 간에도 우선순위가 있으며 float은 포지션 보다 우선순위가 낮으므로
+            같이 사용할 수 없다! */
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        fixed
+    </h1>
+    <div>
+        브라우저 기준으로 위치 지정
+        <!-- 브라우저 기준으로 고정시킨다. -->
+    </div>
+    <div class="box">
+
+    </div>
+</body>
+
+</html>

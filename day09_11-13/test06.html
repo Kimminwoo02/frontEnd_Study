@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+         :root {
+            font-size: 12px;
+            /* div등 모든 태그는 내용물에 의해 높이는 자동으로 설정 */
+        }
+        /*
+        html{}
+        body{} 
+        랑 같다 !
+        */
+        
+        body {
+            overflow-x: hidden;
+        }
+        /* 가로 스크롤바를 생성하지 않는다.
+        세로 스크롤바를 없애고 시키면 오버플로우 y로 하면 된다 */
+        
+        .box1 {
+            width: 100%;
+            height: 200vh;
+            /* 스크롤바 생성되면서 스크롤바가  차지하고 있는 너비가 존재
+             */
+            background-color: orange;
+        }
+        
+        .box1>img {
+            width: 80%;
+            max-width: 1920px;
+            min-width: 1000px;
+            /* 1920*???
+            header 부분 배경이 있다면 
+            min-width, max-width 지정해야 함
+            */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"><img src="./images/size.jpeg" alt=""></div>
+
+
+</body>
+
+</html>

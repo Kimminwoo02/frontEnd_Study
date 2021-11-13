@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시멘틱태그</title>
+    <link rel="stylesheet" href="../css/reset.css">
+</head>
+<style>
+    header {
+        float: left;
+        width: 200px;
+        height: 1000px;
+        background-color: orange;
+    }
+    
+    section {
+        width: calc(100% - 200px);
+        height: 300px;
+        background-color: pink;
+        float: right;
+    }
+    
+    section:nth-of-type(2) {
+        background-color: skyblue;
+    }
+    
+    footer {
+        height: 100px;
+        width: calc(100% - 200px);
+        background-color: gray;
+        float: right;
+    }
+    
+    .lnb>ul>li {
+        /* 1단계 메뉴를 별도로 디자인  */
+    }
+</style>
+
+<body>
+    <header>
+        <h1> 로고 </h1>
+        <nav class="lnb">
+            <ul>
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <section>
+        <h2>h2 제목 반드시 포함</h2>
+    </section>
+    <section>
+        <h2>h2 제목 반드시 포함</h2>
+    </section>
+    <section>
+        <h2>h2 제목 반드시 포함</h2>
+    </section>
+    <footer><address>copyRight &copy; 2021 korea academy</address></footer>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position:absoulte</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .outerBox {
+            width: 800px;
+            height: 800px;
+            background-color: yellow;
+            position: relative;
+            /* 이렇게 하면 포지션상 부모 기준으로 한다 */
+        }
+        
+        .centerBox {
+            width: 600px;
+            height: 600px;
+            background-color: lightblue;
+        }
+        
+        .innerBox {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+        }
+        
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            /* 브라우저 기준으로 위치가 선정된다.   */
+            /* 이너박스가 원래는 부모지만
+            포지션상 부모가 없으면 fixed 처럼 body가 부모가 된다. */
+        }
+    </style>
+</head>
+
+<body>
+    <h1> 앱솔루트: 포지션상 부모를 기준으로 위치 지정</h1>
+    <div class="outerBox">
+        <div class="centerBox">
+            <div class="innerBox">
+                <div class="box">
+                    box
+                    <!-- box의 부모는 innerbox ....
+                     이건 구조상 부모이다.-->
+                    </box>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position:fixed</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            /* width: auto; width 100%
+             같은 효과이다. top, left, right 는 fixed 와 같이 자주사용한다  */
+            right: 0;
+            height: 100px;
+            background-color: chocolate;
+        }
+        
+        section {
+            height: 200vh;
+            background-color: violet;
+        }
+        
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background-color: turquoise;
+        }
+    </style>
+</head>
+
+<body>
+    <header>fixed 포지션은 콘텐츠 너비로 자동 지정</header>
+    <section></section>
+    <footer></footer>
+</body>
+
+</html>

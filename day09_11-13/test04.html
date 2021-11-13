@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         :root {
+            font-size: 12px;
+            /* div등 모든 태그는 내용물에 의해 높이는 자동으로 설정 */
+        }
+        /*
+        html{}
+        body{} 
+        랑 같다 !
+        */
+        
+        .box1 {
+            height: 100px;
+            background-color: orange;
+        }
+        
+        .box2 {
+            height: 10em;
+            background-color: green;
+        }
+        
+        .box3 {
+            height: 10rem;
+            /* :root 의 기본 사이즈를 고정 사용! */
+            background-color: pink;
+        }
+        
+        body {
+            height: 500px;
+            /* 부모를 기준으로 %를 가지므로 부모의 높이는 
+            보통은 콘텐츠의 높이 */
+        }
+        
+        .box4 {
+            height: 100%;
+            background-color: blue;
+            /*  높이는 %단위가 부모기준이다. height는 기본적으로 부모가 body이다.
+             */
+        }
+        
+        .box5 {
+            height: 10%;
+            background-color: skyblue;
+        }
+        
+        .box6 {
+            height: 100vh;
+            /* %단위 v:viewport ( 디바이스의 높이 )
+            디바이스의 높이에 100%를 사용하겠다 라는 의미
+            기본 높이를 가짐 */
+            background-color: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    <div class="box4">box4</div>
+    <div class="box5">box5</div>
+    <div class="box6">box6</div>
+
+</body>
+
+</html>

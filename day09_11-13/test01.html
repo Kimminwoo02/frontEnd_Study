@@ -1,16 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="reset.css">
+    <title>시멘틱태그</title>
+    <link rel="stylesheet" href="../css/reset.css">
 </head>
 
 <body>
+    <!-- div #header 의 변형
+    1. 이름을 정하는 부하를 줄일 수 있다.
+    2. 용도가 같은 정보를 필요한 시멘틱에 넣을 수 있다.
+       -> 검색대상이 잘 되게 
+    3. 시멘틱 태그는 모두 div 성격을 그대로 보유
+    -->
+    <!-- 시멘틱 태그: 내용에 따라서 태그도 달리쓴다. -->
+    <header>
+        <h1>로고</h1>
+        <nav>메뉴와(lnb) 브레드스크럼, 카테고리순서 home>국민과함꼐>정보공개정보공개제도>안내정보공개제도란
+        </nav>
 
+        <!--위와 같은 것들을 검색 가능하게 해줄려면 nav를 사용한다  
+        gnb는 모든 사이트가 가지고 있으니까 굳이 안 넣어도 된다.
+    -->
+        <!-- 메인배너 역시 헤더에 넣을 수 도 있고 아닐 수 도 있다. -->
+    </header>
+    <section>주제가 하나인 콘텐트</section>
+    <section>
+        <article>section 안에서도 주제를 분리할 수 있는 콘텐트</article>
+    </section>
+    <section></section>
+    <aside>웹콘텐츠에서 벗어난 주제, 광고 페이지</aside>
+    <footer>
+        <!-- 회사의 정보보안에 관련된 정보 (주소 등) -->
+        회사정보
+        <address>반드시 포함</address>
+    </footer>
 </body>
 
 </html>

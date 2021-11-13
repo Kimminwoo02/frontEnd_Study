@@ -1,0 +1,73 @@
+#container {
+    width: 1000px;
+    margin: auto;
+    background-color: pink;
+}
+
+header {
+    background-color: cornflowerblue;
+}
+
+h1 {
+    float: left;
+}
+
+.lnb {
+    float: right;
+}
+
+#asideFooter {
+    width: 20%;
+    height: 300px;
+    background-color: greenyellow;
+    float: left;
+}
+
+#centerBanner {
+    width: 40%;
+    background-color: grey;
+    float: left;
+}
+
+#centerBanner>div {
+    width: 50%;
+    height: 200px;
+    float: left;
+    border: 1px solid black;
+}
+
+#contents {
+    width: 40%;
+    background-color: yellow;
+    float: left;
+}
+
+#contents h2 {
+    float: right;
+}
+
+#contents article:nth-of-type(2) ul {
+    clear: both;
+}
+
+#contents article:nth-of-type(2) li {
+    margin-left: 20px;
+    list-style: square;
+}
+
+#contents article:nth-of-type(2) a {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.more {
+    float: left;
+}
+
+#bottomFooter {
+    height: 300px;
+    background-color: khaki;
+    clear: both;
+}
