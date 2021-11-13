@@ -23,6 +23,10 @@
     margin-bottom: 15px;
 }
 
+h2 {
+    margin-bottom: 4px;
+}
+
 h2 span {
     display: block;
     font-weight: normal;
