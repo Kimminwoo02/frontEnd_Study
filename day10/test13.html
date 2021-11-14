@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ㅇㅇ</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        /*  포지션을 이용한 그림 그리기
+        
+        */
+        
+        .btn {
+            width: 300px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+            font-size: 40px;
+        }
+        
+        .btn>span {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            background-color: orange;
+            color: blue;
+            height: 50px;
+            /* 부모 그대로 상속받는다. */
+        }
+        
+        .btn>span>span {
+            display: block;
+            height: 50px;
+            position: absolute;
+            left: 3px;
+        }
+        
+        .btn>span:nth-child(2) {
+            display: block;
+            background-color: blue;
+            color: orange;
+        }
+        
+        .btn>span:nth-child(2) span {
+            top: -45px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="btn">
+        <span><span>BUTTON</span></span>
+        <span><span>BUTTON</span></span>
+    </div>
+</body>
+
+</html>

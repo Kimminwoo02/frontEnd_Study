@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가로메뉴 - 1depth</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        header {
+            background-color: orange;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            height: 40px;
+        }
+        
+        .lnb>ul>li {
+            float: left;
+        }
+        /* 1depth 만 가로로 나열 */
+        
+        .lnb>ul>li>a {
+            display: block;
+            line-height: 40px;
+            padding: 0 1.5em;
+        }
+        
+        .lnb>ul>li:hover>a {
+            background-color: skyblue;
+            display: block;
+        }
+        
+        .subMenu {
+            display: none;
+        }
+        
+        .subMenu {}
+        
+        .subMenu a {
+            display: block;
+            background-color: slateblue;
+            padding: 0.5em;
+            width: 120px;
+            text-indent: 0.5em;
+        }
+        
+        .lnb>ul>li:hover .subMenu {
+            display: block;
+            position: absolute;
+            /* 마우스 호버했을 때 옆의 구조가 흔들리는 걸 막아준다.
+            여기에 레프트나 탑을 주면 안된다.
+            1depth 메뉴에서 호버되고 서브메뉴의 너비에 영향을 미치지 않도록
+             */
+        }
+        
+        .lnb>ul>li:hover>a {
+            color: pink;
+        }
+        
+        .subMenu a:hover {
+            color: pink;
+        }
+        
+        .lnb a:hover {
+            background-color: cornflowerblue;
+        }
+        /* section {
+            height: 200vh;
+        } */
+        
+        section {
+            height: 200vh;
+            margin: 4em 200px 0 200px;
+            /* 이 옵션은 너비 없이도 가운데 정렬 사용 가능하다.
+            내용물이 유동적으로 변한다. */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="lnb">
+            <ul>
+                <li><a href="#">company</a>
+                    <ul class="subMenu">
+                        <li><a href="#">스토리</a></li>
+                        <li><a href="#">인사말</a></li>
+                        <li><a href="#">pr센터</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">product</a>
+                    <ul class="subMenu">
+                        <li><a href="#">치킨</a></li>
+                        <li><a href="#">햄버거</a></li>
+                        <li><a href="#">수제맥주</a></li>
+                        <li><a href="#">사이드</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="#">news</a>
+                    <ul class="subMenu">
+                        <li><a href="#">진행중인 이벤트</a></li>
+                        <li><a href="#">지난 이벤트</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="#">faq</a></li>
+                <li><a href="#">contact</a></li>
+                <li><a href="#">community</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta provident facere maiores eveniet natus asperiores, deleniti nostrum eum explicabo minus tempora eius cupiditate architecto modi aliquid saepe, deserunt omnis molestiae? Lorem ipsum dolor
+        sit amet, consectetur adipisicing elit. Ipsa sed pariatur consequuntur minima atque! Fuga, a dolorum modi unde optio ad tempore, eligendi aut doloribus est consequuntur amet architecto odio. Fugit corrupti debitis rerum. Ipsum, ad accusamus impedit
+        dicta consectetur vel ea minus autem cumque ipsam magni voluptatibus, repudiandae voluptatem repellat fugiat deleniti officiis cum vero, optio tenetur aspernatur saepe. Aut illo odit doloribus adipisci quaerat. Ratione mollitia quod eaque eum
+        aliquam eos quaerat nobis consectetur voluptatum doloribus. Quia laudantium quisquam autem assumenda in enim laborum delectus quo excepturi rerum? Laborum at nisi labore cum et! Ipsa, delectus incidunt. Veniam ullam natus a cupiditate consequatur
+        quo laborum, exercitationem error cum rem sit quisquam rerum dolores. Autem tempore tempora nesciunt earum! Velit harum voluptatibus alias tenetur odio nihil dolore, molestias asperiores perspiciatis autem illo at, vel omnis quo. Veritatis explicabo
+        quam minima, veniam nam repellat inventore harum tempore? Eaque, cupiditate ipsa. Consequuntur reprehenderit et quos officiis autem! Quas veniam velit laboriosam blanditiis, temporibus ullam dolorem, sint fugit dolor provident modi consectetur
+        esse facere aperiam. Molestiae eveniet optio magni beatae quod reiciendis! Temporibus animi laborum omnis non ipsum, voluptate quas natus molestiae hic quis. Quos saepe mollitia commodi vitae voluptatibus minima ex et veritatis culpa sapiente,
+        soluta temporibus? Eligendi voluptatum necessitatibus maxime. Animi laudantium repellat natus sunt praesentium, necessitatibus vero expedita, dicta veritatis asperiores molestiae illum provident quo quae nulla esse cum. Voluptates voluptate facilis
+        in. Voluptatum iure obcaecati ipsum dolorem suscipit. Tenetur ea rerum eos, ducimus error veritatis! Distinctio autem dolore, dolores enim sint tenetur voluptate, ex voluptatibus quos in pariatur officia. Incidunt ipsa cum voluptates laborum perferendis
+        quo atque consequuntur! Architecto magni harum, atque amet omnis deleniti facere eum aperiam. Quibusdam libero facilis blanditiis odio quos, repellendus velit deleniti dolorem maiores saepe explicabo cum consequatur quod numquam eum, modi fugit.
+    </section>
+</body>
+
+</html>

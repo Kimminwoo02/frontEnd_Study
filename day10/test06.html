@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        div {
+            width: 200px;
+            height: 50px;
+            margin: 100px;
+            background-color: orange;
+        }
+        
+        .box1 {
+            position: absolute;
+        }
+        /* 악세사리 */
+        
+        .box1::after {
+            content: '';
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: violet;
+            border-radius: 10px;
+            position: absolute;
+            left: calc(100px - 5px);
+            bottom: -10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">1234
+
+    </div>
+</body>
+
+</html>

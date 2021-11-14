@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        div {
+            width: 200px;
+            height: 50px;
+            margin: 100px;
+            background-color: orange;
+        }
+        
+        .box1::before {
+            content: '';
+            position: absolute;
+            left: 90px;
+            top: -20px;
+            border: 10px solid black;
+            border-right-color: transparent;
+            border-left-color: transparent;
+            border-top-color: transparent;
+        }
+        
+        .box1 {
+            position: relative;
+        }
+        
+        .box1::after {
+            content: 'a';
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">1234
+
+    </div>
+</body>
+
+</html>

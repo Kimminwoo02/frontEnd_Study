@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        div {
+            width: 200px;
+            height: 50px;
+            margin: 100px;
+            background-color: orange;
+        }
+        
+        .box1::before {
+            content: '';
+            position: absolute;
+            left: 0px;
+            bottom: -20px;
+            width: 0px;
+            /* border 늘리는 것은 없음
+             세로줄은 height, 가로줄은 width */
+            height: 3px;
+            background-color: teal;
+            transition-duration: 0.4s;
+        }
+        
+        .box1:hover::before {
+            width: 100%;
+        }
+        
+        .box1 {
+            position: relative;
+        }
+        
+        .box1::after {
+            content: 'a';
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">1234
+
+    </div>
+</body>
+
+</html>

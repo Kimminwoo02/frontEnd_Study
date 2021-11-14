@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가로메뉴 - 1depth</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        header {
+            background-color: chartreuse;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 200px;
+        }
+        
+        .lnb {
+            position: relative;
+            left: 20px;
+            /*  subMenu 의 부모 */
+        }
+        /* .lnb>ul>li {
+            position: relative;
+             이게 subMenu의 부모이다.} */
+        
+        .lnb li {
+            line-height: 30px;
+        }
+        
+        .subMenu {
+            position: absolute;
+            left: 200px;
+            width: 200px;
+            top: 0;
+            background-color: yellow;
+        }
+        
+        .subMenu {
+            display: none;
+        }
+        
+        .lnb>ul>li:hover .subMenu {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="lnb">
+            <ul>
+                <li><a href="#">company</a>
+                    <div class="container3">
+                        <ul class="subMenu">
+                            <li><a href="#">스토리</a></li>
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">pr센터</a></li>
+                            <li><a href="#">치킨</a></li>
+                            <li><a href="#">햄버거</a></li>
+                            <li><a href="#">수제맥주</a></li>
+                            <li><a href="#">사이드</a></li>
+                            <li><a href="#">진행중인 이벤트</a></li>
+                            <li><a href="#">지난 이벤트</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#">product</a>
+                    <div class="container">
+                        <ul class="subMenu">
+                            <li><a href="#">스토리</a></li>
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">pr센터</a></li>
+
+                            <li><a href="#">치킨</a></li>
+                            <li><a href="#">햄버거</a></li>
+                            <li><a href="#">수제맥주</a></li>
+                            <li><a href="#">사이드</a></li>
+
+                            <li><a href="#">진행중인 이벤트</a></li>
+                            <li><a href="#">지난 이벤트</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">news</a>
+                    <div class="container2">
+                        <ul class="subMenu">
+                            <li><a href="#">스토리</a></li>
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">pr센터</a></li>
+
+                            <li><a href="#">치킨</a></li>
+                            <li><a href="#">햄버거</a></li>
+                            <li><a href="#">수제맥주</a></li>
+                            <li><a href="#">사이드</a></li>
+
+                            <li><a href="#">진행중인 이벤트</a></li>
+                            <li><a href="#">지난 이벤트</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">faq</a></li>
+                <li><a href="#">contact</a></li>
+                <li><a href="#">community</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+
+    </section>
+</body>
+
+</html>
