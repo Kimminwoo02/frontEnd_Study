@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition-가속</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        * {
+            box-sizing: content-box;
+        }
+        
+        div {
+            margin: auto;
+            width: 200px;
+            height: 200px;
+            border: 5px solid blue;
+            float: left;
+            margin: 50px;
+            font-size: 36px;
+            text-align: center;
+        }
+        
+        span {
+            display: block;
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            transition-duration: 2s;
+        }
+        
+        div:hover span {
+            transform: rotate(360deg);
+        }
+        
+        span:nth-child(1) {
+            transition-timing-function: ease;
+        }
+        
+        span:nth-child(2) {
+            transition-timing-function: ease-in;
+        }
+        
+        span:nth-child(3) {
+            transition-timing-function: ease-out;
+        }
+        
+        span:nth-child(4) {
+            transition-timing-function: ease-in-out;
+        }
+        
+        span:nth-child(5) {
+            transition-timing-function: linear;
+        }
+        
+        span:nth-child(6) {
+            transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        /* 아날로그 시계: 시, 분, 초 */
+        
+        span:nth-child(7) {
+            transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        
+        span:nth-child(8) {
+            transition-timing-function: cubic-bezier(.53, .8, .87, .84);
+        }
+        
+        div:hover span {
+            transform: translateX(1000px);
+        }
+    </style>
+</head>
+
+<body>
+    <div><span class="box box01">box01</span></div>
+    <div><span class="box box02">box02</span></div>
+    <div><span class="box box03">box03</span></div>
+    <div><span class="box box04">box04</span></div>
+    <div><span class="box box05">box05</span></div>
+    <div><span class="box box06">box06</span></div>
+    <div><span class="box box07">box07</span></div>
+    <div><span class="box box08">box08</span></div>
+    <div><span class="box box09">box09</span></div>
+    <div><span class="box box10">box10</span></div>
+</body>
+
+</html>

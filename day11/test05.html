@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        * {
+            box-sizing: content-box;
+        }
+        
+        div {
+            width: 200px;
+            height: 200px;
+            border: 5px solid blue;
+            float: left;
+            margin: 50px;
+            font-size: 36px;
+        }
+        
+        span {
+            display: block;
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            opacity: 0.7;
+        }
+        
+        div:hover .box01 {
+            width: 400px;
+            transition-duration: 1s;
+        }
+        
+        div:hover .box02 {
+            height: 400px;
+            transition-duration: 1s;
+        }
+        
+        div:hover .box03 {
+            margin: 50px;
+            height: 400px;
+            transition-duration: 1s;
+        }
+        
+        div:hover .box04 {
+            padding: 50px;
+            transition-duration: 1s;
+        }
+        
+        .box05 {
+            letter-spacing: 50px;
+        }
+        
+        div:hover .box05 {
+            letter-spacing: 0;
+            transition-duration: 1s;
+        }
+        
+        div:hover .box06 {
+            background-color: blue;
+            transition-duration: 1s;
+        }
+        
+        div:hover .box07 {
+            border-radius: 100%;
+            transition-duration: 1s;
+        }
+        
+        div:hover .box08 {
+            border-radius: 100%;
+            transform: scale(0);
+            transition-duration: 1s;
+        }
+        
+        div:hover .box09 {
+            transform: rotate(360deg);
+            transition-duration: 1s;
+        }
+        
+        div:nth-of-type(9)~div>span {
+            transition-duration: 1s;
+        }
+        
+        div:hover .box10 {
+            width: 400px;
+        }
+        
+        div:hover .box11 {
+            height: 400px;
+        }
+        
+        div:hover .box12 {
+            margin: 50px;
+        }
+        
+        div:hover .box13 {
+            padding: 50px;
+        }
+        
+        div:hover .box14 {
+            letter-spacing: 50px;
+        }
+        
+        div:hover .box15 {
+            transform: scale(1.2);
+        }
+        
+        div:nth-of-type(16) span {
+            overflow: hidden;
+        }
+        
+        div:nth-of-type(16) span {
+            background-image: url(./images/bono.jpeg);
+            background-size: 100%;
+            opacity: 1;
+        }
+        
+        div:hover .box16 {
+            transform: scale(1.2);
+        }
+        
+        div:nth-of-type(17) span {
+            transition-delay: 2s;
+        }
+        /* 마우스 오버시 반응을 2초 후에 애니메이션 실행 */
+        
+        div:hover .box17 {
+            transform: scale(1.2);
+        }
+        
+        div:hover .box18 {
+            transform: scale(1.2);
+            transition-delay: 2s;
+        }
+        /* 마우스 아웃시 지연시간이 없음. */
+    </style>
+</head>
+
+<body>
+    <h1>
+        transition
+    </h1>
+    <ul>
+        <li>transition-duration:1s</li>
+        <li>transition-property: 애니메이션 될 속성, all</li>
+        <li>transition-timming-function: 가속</li>
+        <li>transition-delay: 지연시간</li>
+    </ul>
+    <div><span class="box box01">box01</span></div>
+    <div><span class="box box02">box02</span></div>
+    <div><span class="box box03">box03</span></div>
+    <div><span class="box box04">box04</span></div>
+    <div><span class="box box05">box05</span></div>
+    <div><span class="box box06">box06</span></div>
+    <div><span class="box box07">box07</span></div>
+    <div><span class="box box08">box08</span></div>
+    <div><span class="box box09">box09</span></div>
+    <div><span class="box box10">box10</span></div>
+    <div><span class="box box11">box11</span></div>
+    <div><span class="box box12">box12</span></div>
+    <div><span class="box box13">box13</span></div>
+    <div><span class="box box14">box14</span></div>
+    <div><span class="box box15">box15</span></div>
+    <div><span class="box box16">box16</span></div>
+    <div><span class="box box17">box17</span></div>
+    <div><span class="box box18">box18</span></div>
+    <div><span class="box box19">box19</span></div>
+    <div><span class="box box20">box20</span></div>
+</body>
+
+</html>
