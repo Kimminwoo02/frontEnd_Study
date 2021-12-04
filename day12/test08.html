@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rect {
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation-name: moveBox4;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            /* 애니메이션이 끝나는 지점에서 멈춘다. */
+        }
+        
+        @keyframes moveBox {
+            to {
+                left: 500px;
+            }
+        }
+        
+        @keyframes moveBox2 {
+            0% {
+                left: 0;
+                top: 0;
+            }
+            /* 기본값은 css 구조에서 정하던지 0%로 지정 */
+            25% {
+                left: 500px;
+                top: 0;
+            }
+            50% {
+                left: 500px;
+                top: 300px;
+            }
+            75% {
+                left: 0;
+                top: 300px;
+            }
+            100% {
+                left: 0;
+                top: 0;
+            }
+        }
+        
+        @keyframes moveBox3 {
+            0% {
+                left: 0;
+            }
+            /* 기본값은 css 구조에서 정하던지 0%로 지정 */
+            25% {
+                left: 500px;
+            }
+            50% {
+                top: 300px;
+            }
+            75% {
+                left: 0;
+            }
+            100% {
+                top: 0;
+            }
+        }
+        
+        @keyframes moveBox4 {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(500px, 0);
+            }
+            50% {
+                transform: translate(500px, 300px);
+            }
+            75% {
+                transform: translate(0px, 300px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rect"></div>
+</body>
+
+</html>

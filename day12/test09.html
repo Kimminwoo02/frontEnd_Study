@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .hello {
+            position: relative;
+            margin: 100px;
+            font-size: 36px;
+        }
+        
+        .hello>span {
+            position: absolute;
+            animation: textAni 0.4s;
+        }
+        
+        .hello>span:nth-child(1) {
+            left: 0;
+            animation-delay: 0;
+        }
+        
+        .hello>span:nth-child(2) {
+            left: 30px;
+            animation-delay: 0.5s;
+        }
+        
+        .hello>span:nth-child(3) {
+            left: 60px;
+            animation-delay: 1.0s;
+        }
+        
+        .hello>span:nth-child(4) {
+            left: 90px;
+            animation-delay: 1.5s;
+        }
+        
+        .hello>span:nth-child(5) {
+            left: 120px;
+            animation-delay: 2.0s;
+        }
+        
+        @keyframes textAni {
+            from {
+                top: 0px;
+            }
+            to {
+                top: -10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hello">
+        <span>H</span>
+        <span>E</span>
+        <span>L</span>
+        <span>L</span>
+        <span>O</span>
+    </div>
+</body>
+
+</html>

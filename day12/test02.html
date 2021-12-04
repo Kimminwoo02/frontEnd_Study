@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <style>
+        .button1 {
+            width: 100px;
+            height: 50px;
+            color: darkgoldenrod;
+            background-color: hotpink;
+            border-radius: 10%;
+            border: none;
+        }
+        
+        .container {
+            padding: 10px;
+        }
+        /* * {
+            box-sizing: content-box;
+        } */
+        
+        .btn {
+            border: 1px solid black;
+            float: left;
+            margin: 10px;
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+            background-color: purple;
+            color: orange;
+            font-weight: bold;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 5px;
+            letter-spacing: 1px;
+            transition: all 0.5s ease 0.1s;
+        }
+        
+        .elBtn {
+            text-align: center;
+            line-height: 50px;
+        }
+        
+        .btn:hover {
+            background-color: orange;
+            color: purple;
+            cursor: pointer;
+            border: 4px solid orange;
+        }
+        
+        .btn:hover.elBtn {
+            line-height: 45px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <button class="btn">BUTTON</button>
+        <input type="button" value="BUTTON" class="btn">
+        <a href="#" class="btn elBtn">BUTTON</a>
+        <div class="btn elBtn">BUTTON</div>
+    </div>
+
+</body>
+
+</html>

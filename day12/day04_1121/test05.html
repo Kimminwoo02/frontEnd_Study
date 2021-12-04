@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        *{ box-sizing: content-box;}
+        div{ width: 200px; height: 200px; 
+            border: 5px solid black; float:left; margin: 50px;
+            transform-style: preserve-3d;
+            /*  공간을 만들어 준다.  */
+        }
+        div>span{ display: block; width:100%; height: 100%;
+            background-color: rgba(255, 166, 0, 0.329); text-align: center;
+            line-height: 200px; font-size: 44px; 
+        }
+        div:nth-child(1){ perspective: 200px;}
+        .box01{ transform:translateZ(100px);}
+        
+        div:nth-child(2){ perspective: 500px;}
+        .box02{ transform:translateZ(100px);}
+
+        div:nth-child(3){ perspective: 1000px;}
+        .box03{ transform:translateZ(100px);}
+
+        div:nth-child(4)~div{ perspective: 500px;}
+        .box04{ transform:translateZ(-100px);}
+        
+        .box05{ transform: rotateX(45deg);}
+        .box06{ transform: rotateX(45deg);
+                transform-origin: top left;
+        }
+        .box07{ transform: rotateX(45deg);
+                transform-origin: bottom left;
+        }
+        .box08{ transform: rotateY(45deg);}
+        .box09{ transform: rotateY(45deg);
+                transform-origin: top left;
+        }
+        .box10{ transform: rotateY(45deg);
+                transform-origin: bottom right;
+        }
+
+    </style>
+</head>
+<body>
+    <div><span class="box01">box01</span></div>
+    <div><span class="box02">box02</span></div>
+    <div><span class="box03">box03</span></div>
+    <div><span class="box04">box04</span></div>
+    <div><span class="box05">box05</span></div>
+    <div><span class="box06">box06</span></div>
+    <div><span class="box07">box07</span></div>
+    <div><span class="box08">box08</span></div>
+    <div><span class="box09">box09</span></div>
+    <div><span class="box10">box10</span></div>
+    <div><span class="box11">box11</span></div>
+    <div><span class="box12">box12</span></div>
+    <div><span class="box13">box13</span></div>
+    <div><span class="box14">box14</span></div>
+    <div><span class="box15">box15</span></div>
+    <div><span class="box16">box16</span></div>
+    <div><span class="box17">box17</span></div>
+    <div><span class="box18">box18</span></div>
+    <div><span class="box19">box19</span></div>
+    <div><span class="box20">box20</span></div>
+</body>
+</html>

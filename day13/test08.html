@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        label {
+            display: inline-block;
+            border: 1px solid black;
+            width: 200px;
+            height: 50px;
+        }
+        
+        .content>div {
+            display: none;
+            width: 600px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        /* 같은 요소들 중에서 번호를 주는 것이다. */
+        /* .content>div:nth-child(1){display: block;}
+       
+        */
+        
+        input:nth-of-type(1):checked~label:nth-of-type(1) {
+            background-color: black;
+            color: white;
+        }
+        
+        input:nth-of-type(1):checked~.content>div:nth-of-type(1) {
+            display: block;
+            background-color: orange;
+        }
+        
+        input:nth-of-type(2):checked~label:nth-of-type(2) {
+            background-color: black;
+            color: white;
+        }
+        
+        input:nth-of-type(2):checked~.content>div:nth-of-type(2) {
+            display: block;
+            background-color: green;
+        }
+        
+        input:nth-of-type(3):checked~label:nth-of-type(3) {
+            background-color: black;
+            color: white;
+        }
+        
+        input:nth-of-type(3):checked~.content>div:nth-of-type(3) {
+            display: block;
+            background-color: skyblue;
+        }
+        
+        input[name='tabs'] {
+            /* 속성을 이용해서 데이터를 디자인 */
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tabs">
+        <input type="radio" id="tab01" name="tabs" checked>
+        <input type="radio" id="tab02" name="tabs">
+        <input type="radio" id="tab03" name="tabs">
+        <label for="tab01"> 쇼핑몰 </label>
+        <label for="tab02"> 상품 </label>
+        <label for="tab03"> MEN </label>
+        <div class="content">
+            <div>쇼핑몰 콘텐츠</div>
+            <div>상품 콘텐츠</div>
+            <div>Men 콘텐츠</div>
+        </div>
+    </div>
+</body>
+
+</html>

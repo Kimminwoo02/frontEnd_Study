@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        * {
+            box-sizing: content-box;
+        }
+        
+        div {
+            width: 200px;
+            height: 200px;
+            border: 5px solid black;
+            float: left;
+            margin: 50px;
+            transform-style: preserve-3d;
+            /*공간을 만들어 준다. */
+            perspective: 200px;
+        }
+        
+        div>span {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: orange;
+            text-align: center;
+            line-height: 200px;
+            font-size: 44px;
+            opacity: 0.7;
+        }
+        
+        div:nth-child(1) {
+            perspective: 200px;
+        }
+        
+        div:nth-child(2) {
+            perspective: 500px;
+        }
+        
+        .box02 {
+            transform: translateZ(200px);
+        }
+        
+        div:nth-child(3) {
+            perspective: 500px;
+        }
+        
+        .box03 {
+            transform: translateZ(100px);
+        }
+        
+        div:nth-child(4) {
+            perspective: 200px;
+        }
+        
+        .box04 {
+            transform: translateZ(-100px);
+        }
+        
+        div:nth-child(4)~div {
+            perspective: 500px;
+        }
+        
+        .box05 {
+            transform: rotateX(45deg);
+            transition: 1s;
+        }
+        
+        div:nth-child(1) {
+            perspective: 200px;
+        }
+        
+        div:nth-child(1) {
+            perspective: 200px;
+        }
+        
+        .box06 {
+            transform: rotateX(45deg);
+            transform-origin: top left;
+        }
+        
+        .box07 {
+            transform: rotateX(45deg);
+            transform-origin: bottom left;
+        }
+        
+        .box08 {
+            transform: rotateY(45deg);
+            transform-origin: top left;
+        }
+        
+        .box09 {
+            transform: rotateY(45deg);
+            transform-origin: bottom left;
+        }
+        
+        .box10 {
+            transform: rotateY(45deg);
+            transform-origin: bottom right;
+        }
+        /* rotateZ == 2d 의 rotate 처럼 보임 */
+        
+        .box11 {
+            transform: rotateZ(45deg);
+        }
+        
+        .box12 {
+            transform: rotateZ(45deg);
+            transform-origin: top left;
+        }
+        
+        .box13 {
+            transform: rotateZ(45deg);
+            transform-origin: bottom right;
+        }
+        
+        div:nth-child(13)~div span {
+            transition: 1s;
+        }
+        
+        div:nth-child(14):hover .box14 {
+            transform: rotateX(360deg);
+        }
+        
+        div:nth-child(15):hover .box15 {
+            transform: rotateZ(360deg);
+        }
+        
+        .box16 {
+            transform: rotateX(45deg) translateX(30px);
+        }
+        
+        div:nth-child(17):hover .box17 {
+            transform: rotateX(45deg) translateX(30px);
+            /* 어떤 속성을 먼저 지정하나 */
+        }
+        
+        div:nth-child(18):hover .box18 {
+            transform: translateX(30px)rotateX(45deg);
+            /* 어떤 속성을 먼저 지정하나 */
+        }
+    </style>
+</head>
+
+<body>
+    1.transform:3d 2. 부모: 원근감 3. perspective: 숫자가 작을수록 원근감이 큼. 4. transform-style: flat , 3d translateX, translateY, translateZ => scale 조절한 거 같은 효과
+
+    <div><span class="box01">box01</span></div>
+    <div><span class="box02">box02</span></div>
+    <div><span class="box03">box03</span></div>
+    <div><span class="box04">box04</span></div>
+    <div><span class="box05">box05</span></div>
+    <div><span class="box06">box06</span></div>
+    <div><span class="box07">box07</span></div>
+    <div><span class="box08">box08</span></div>
+    <div><span class="box09">box09</span></div>
+    <div><span class="box10">box10</span></div>
+    <div><span class="box11">box11</span></div>
+    <div><span class="box12">box12</span></div>
+    <div><span class="box13">box13</span></div>
+    <div><span class="box14">box14</span></div>
+    <div><span class="box15">box15</span></div>
+    <div><span class="box16">box16</span></div>
+    <div><span class="box17">box17</span></div>
+    <div><span class="box18">box18</span></div>
+    <div><span class="box19">box19</span></div>
+    <div><span class="box20">box20</span></div>
+</body>
+
+</html>

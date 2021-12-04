@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 메타 네임 뷰포트 코드는 장비를 정확하게 인식하게 해준다. ㅈ -->
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        body {
+            background-color: yellow;
+        }
+        /* 데스크탑 퍼스트 */
+        
+        @media screen and (max-width:1600px) {
+            /* 스크린은 모니터 
+             프린트등 장비를 넣을 수 있다.
+             //breakpoint가 1600px 이다.
+             최대사이즈 : 1600px 이하일 때 동작*/
+            body {
+                background-color: skyblue;
+            }
+        }
+        
+        @media screen and (max-width:1280px) {
+            body {
+                background-color: orange;
+            }
+        }
+        
+        @media screen and (max-width:960px) {
+            body {
+                background-color: red;
+            }
+        }
+        
+        @media screen and (max-width:600px) {
+            body {
+                background-color: green;
+            }
+        }
+        
+        @media screen and (max-width:480px) {
+            body {
+                background-color: pink;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    올리는 방법 :front 폴더안에 day06 등을 통째로 업로드 한다. 오늘 날짜 폴더에 주소를 검색해보고 반응형페이지 어떻게 나오는지 확인해본다.
+</body>
+
+</html>

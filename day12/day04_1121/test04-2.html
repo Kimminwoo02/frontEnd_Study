@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+       .btn{ display: block; width:200px; height:50px; 
+            background-color: rgba(255, 255, 255, 0.5);
+            text-align: center;
+            line-height: 50px;  color:orange; 
+            position: relative;
+            margin:50px;
+        }
+        .btn span{ display: block; width:200px; height:50px; 
+            text-align: center; position: absolute; left:0; top:0;
+            line-height: 50px;  color:purple;
+            transition:1s; 
+        }
+        .btn>.outer{ background-color:sandybrown; width:0;
+                overflow:hidden; 
+        }
+
+        .btn:hover .outer{ width:200px; }
+        .inner{ left:0; top:0; }
+    </style>
+</head>
+<body>
+    <a href="#" class="btn">
+        <span>BUTTON</span>
+        <span class="outer">
+        <span class="inner">BUTTON</span></span>
+    </a>
+</body>
+</html>

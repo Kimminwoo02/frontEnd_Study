@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .container {
+            display: flex;
+            /* 기본적으로 flex-dircetion이 가로로 나열된다. */
+            height: 600px;
+            background-color: skyblue;
+        }
+        
+        .container>div {
+            width: 200px;
+            height: 100px;
+            background-color: orange;
+            margin: 5px;
+        }
+        
+        .container:nth-of-type(2) {
+            justify-content: flex-start;
+            flex-direction: column;
+        }
+        
+        .container:nth-of-type(3) {
+            flex-direction: row-reverse;
+        }
+        
+        .container:nth-of-type(4) {
+            flex-direction: column-reverse;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>display:flex</h1>
+    <div class="container">
+        <!--  자식은 전부다 아이템 -->
+        <div>box01</div>
+        <div>box01</div>
+        <div>box01</div>
+        <div>box01</div>
+        <div>box01</div>
+    </div>
+
+
+    <h1>justify-content:flex-start</h1>
+    <div class="container">
+        <!--  자식은 전부다 아이템 -->
+        <div>box01</div>
+        <div>box01</div>
+        <div>box01</div>
+        <div>box01</div>
+        <div>box01</div>
+    </div>
+
+    <h1>justify-content:flex-end</h1>
+    <div class="container">
+        <!--  자식은 전부다 아이템 -->
+        <div>box01</div>
+        <div>box01</div>
+        <div>box01</div>
+        <div>box01</div>
+        <div>box01</div>
+    </div>
+
+    <h1>flex-dircetion:column-reverse</h1>
+    <div class="container">
+        <div>box01</div>
+        <div>box02</div>
+        <div>box03</div>
+        <div>box04</div>
+        <div>box05</div>
+    </div>
+
+
+</body>
+
+</html>

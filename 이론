@@ -1,0 +1,31 @@
+translateY,
+translateZ => scale
+
+
+// 제어가 없이 애니
+// 시간 제어 (시간에 키를 건다.)
+@keyframes name{
+    0%{}
+    50%{}
+    100%{}
+}
+@keyframes name{
+    from{ }
+    to{ }
+}
+
+
+12월 11일 javascript
+
+12월 18일 까지 기본페이지(서브페이지 5개까지), 반응형 페이지 만들기!
+스스로 제작해 보세요!
+2022년 1월 11일 까지라도 제작(javascript 로 화면의내용을 표시)
+
+dothome.co.kr 회원가입
+> 로그인
+> 웹호스팅 > 무료호스팅
+>ftp 아이디 비밀번호
+ db 아이디 비밀번호
+ 
+브라우저 주소창에 아이디.dothome.co.kr 엔터
+filezila client 다운로드 (ftp 도구) 

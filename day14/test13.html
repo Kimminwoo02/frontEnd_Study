@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        header {
+            position: fixed;
+            width: 15%;
+            height: 100%;
+            background-color: skyblue;
+            top: 0;
+            left: 0;
+            opacity: 0.5;
+        }
+        
+        nav {
+            margin: 0 0 0 15%;
+            height: 30px;
+            background-color: black;
+            /* width: auto; */
+        }
+        
+        section {
+            margin: 0 0 0 15%;
+            height: 100vh;
+            background-color: orange;
+            /* width: auto; */
+        }
+        
+        article {
+            width: 260px;
+            height: 260px;
+            border: 1px solid black;
+            float: left;
+        }
+        
+        @media screen and (max-width:1280px) {
+            header {
+                position: static;
+                /* 원래 포지션 상태로 돌아간다. fix가 다시 기본으로 돌아간다 
+                relative를 주면 ... (직접 공부)
+                static: left,top 등 다 무시
+                */
+                width: auto;
+            }
+            nav {
+                margin: 0;
+            }
+            section {
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="header">title</header>
+
+    <nav></nav>
+    <section>
+        <article>article*01</article>
+        <article>article*02</article>
+        <article>article*03</article>
+        <article>article*04</article>
+        <article>article*05</article>
+        <article>article*06</article>
+        <article>article*07</article>
+        <article>article*08</article>
+        <article>article*09</article>
+        <article>article*10</article>
+        <article>article*11</article>
+        <article>article*12</article>
+    </section>
+
+
+</body>
+
+</html>

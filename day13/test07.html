@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red+li {
+            /* 뒤의 요소 하나만 바뀐다. */
+            background-color: red;
+        }
+        
+        #blue~li {
+            background-color: blue;
+            /* 뒤의 요소들이 전부 바뀐다. */
+        }
+        /* 부모요소를 이용한 자식을 제어가능 
+            형제요소 중에서 형을 이용한 동생요소는 제어가능*/
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>list01</li>
+        <li>list02</li>
+        <li class="red">list03</li>
+        <li>list04</li>
+        <li>list05</li>
+        <li id="blue">list06</li>
+        <li>list07</li>
+        <li>list08</li>
+        <li>list09</li>
+        <li>list10</li>
+    </ul>
+</body>
+
+</html>

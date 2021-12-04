@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .container {
+            display: flex;
+        }
+        
+        .item {
+            width: 200px;
+            height: 100px;
+            background-color: orangered;
+            border: 1px solid black;
+            flex-grow: 1;
+        }
+        
+        div.item:nth-child(2) {
+            flex-shrink: 2;
+            /* 은 여백을 손대지 않는다
+            1은 전체적으로 비율을 1씩 줄인다 
+            
+            부족한너비/(5+1) 
+            
+            */
+        }
+        
+        div.item:nth-child(3) {
+            flex-shrink: 2;
+            /* 부족한 너비/(5+2) */
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>flex-shrink</h1>
+    <div class="container">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+        <div class="item">item5</div>
+    </div>
+
+</body>
+
+</html>

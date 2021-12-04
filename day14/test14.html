@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        header {
+            width: 15%;
+            height: calc(260px * 4 + 30px);
+            background-color: skyblue;
+            opacity: 0.5;
+            float: left;
+        }
+        
+        nav {
+            float: left;
+            width: 85%;
+            height: 30px;
+            background-color: black;
+            /* width: auto; */
+        }
+        
+        section {
+            float: left;
+            width: 85%;
+            /* height: 100vh; */
+            background-color: orange;
+            /* width: auto; */
+        }
+        
+        article {
+            width: 20%;
+            height: 260px;
+            border: 1px solid black;
+            float: left;
+        }
+        
+        article:nth-child(1) {
+            width: 60%;
+            height: 520px;
+        }
+        
+        article:nth-child(2) {
+            width: 40%;
+        }
+        
+        article:nth-child(6) {
+            width: 40%;
+        }
+        
+        article:nth-child(9) {
+            width: 40%;
+        }
+        
+        @media screen and (max-width:1280px) {
+            header {
+                width: 100%;
+                height: 100px;
+            }
+            nav {
+                width: 100%;
+            }
+            section {
+                width: 100%;
+            }
+        }
+        
+        @media screen and (max-width:1024px) {
+            article {
+                width: 25%;
+            }
+            article:nth-child(1) {
+                width: 75%;
+            }
+            article:nth-child(2) {
+                width: 25%;
+            }
+            article:nth-child(6) {
+                width: 50%;
+            }
+            article:nth-child(7) {
+                width: 50%;
+            }
+            article:nth-child(9) {
+                width: 25%;
+            }
+            article:nth-child(12) {
+                width: 50%;
+            }
+        }
+        
+        @media screen and (max-width:760px) {
+            article {
+                width: 33.33333333333333333%;
+            }
+            article:nth-child(1) {
+                width: 100%;
+            }
+            article:nth-child(2) {
+                width: 66.666666%;
+            }
+            article:nth-child(5) {
+                width: 66.666666%;
+            }
+            article:nth-child(6) {
+                width: 33.3333333%;
+            }
+            article:nth-child(7) {
+                width: 33.3333333%;
+            }
+            article:nth-child(8) {
+                width: 33.3333333%;
+            }
+            article:nth-child(9) {
+                width: 33.3333333%;
+            }
+            article:nth-child(10) {
+                width: 66.666666%;
+            }
+            article:nth-child(12) {
+                width: 66.666666%;
+            }
+        }
+        
+        @media screen and (max-width:480px) {
+            header {
+                height: 600px;
+            }
+            article {
+                width: 100%;
+            }
+            article:nth-child(1) {
+                width: 100%;
+            }
+            article:nth-child(2) {
+                width: 100%;
+            }
+            article:nth-child(5) {
+                width: 100%;
+            }
+            article:nth-child(6) {
+                width: 100%;
+            }
+            article:nth-child(7) {
+                width: 100%;
+            }
+            article:nth-child(8) {
+                width: 100%;
+            }
+            article:nth-child(9) {
+                width: 100%;
+            }
+            article:nth-child(10) {
+                width: 100%;
+            }
+            article:nth-child(12) {
+                width: 100%;
+            }
+        }
+        
+        @media screen and (max-width:320px) {
+            header {
+                min-width: 480px;
+            }
+            nav {
+                min-width: 480px;
+            }
+            section {
+                min-width: 480px;
+            }
+            /* 최소 사이즈를 지정 후 가로 스크롤을 이용해서 이동하도록 제작
+            시간이 되면 13번에 넣어본다.
+            12 번에 넣을 때 더 편한 점이 있는데 둘 
+            */
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="header">title</header>
+
+    <nav></nav>
+    <section class="clearFix">
+        <article>article*01</article>
+        <article>article*02</article>
+        <article>article*03</article>
+        <article>article*04</article>
+        <article>article*05</article>
+        <article>article*06</article>
+        <article>article*07</article>
+        <article>article*08</article>
+        <article>article*09</article>
+        <article>article*10</article>
+        <article>article*11</article>
+        <article>article*12</article>
+    </section>
+
+
+</body>
+
+</html>

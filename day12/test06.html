@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .rect {
+            margin: 100px;
+            width: 200px;
+        }
+        
+        .rect>div {
+            width: 200px;
+            height: 200px;
+            opacity: 0.5;
+            background-color: sandybrown;
+            margin: 10px;
+            position: relative;
+        }
+        
+        span {
+            display: block;
+            width: 30px;
+            height: 30px;
+            background-color: black;
+            border-radius: 30px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+        }
+        
+        .box1 span {
+            left: 50%;
+            top: 50%;
+        }
+        
+        .box2 span:nth-child(1) {
+            left: 25%;
+            top: 25%;
+        }
+        
+        .box2 span:nth-child(2) {
+            right: 25%;
+            bottom: 25%;
+        }
+        
+        .box3 span:nth-child(3) {
+            left: 50%;
+            top: 50%;
+        }
+        
+        .box3 span:nth-child(1) {
+            left: 25%;
+            top: 25%;
+        }
+        
+        .box3 span:nth-child(2) {
+            left: 75%;
+            top: 75%;
+        }
+        
+        .box4 span:nth-child(1) {
+            left: 25%;
+            top: 25%;
+        }
+        
+        .box4 span:nth-child(2) {
+            left: 75%;
+            top: 25%;
+        }
+        
+        .box4 span:nth-child(3) {
+            left: 75%;
+            top: 75%;
+        }
+        
+        .box4 span:nth-child(4) {
+            left: 25%;
+            top: 75%;
+        }
+        
+        .box5 span:nth-child(1) {
+            left: 25%;
+            top: 25%;
+        }
+        
+        .box5 span:nth-child(2) {
+            left: 75%;
+            top: 25%;
+        }
+        
+        .box5 span:nth-child(3) {
+            left: 75%;
+            top: 75%;
+        }
+        
+        .box5 span:nth-child(4) {
+            left: 25%;
+            top: 75%;
+        }
+        
+        .box5 span:nth-child(5) {
+            left: 50%;
+            top: 50%;
+        }
+        
+        .box6 span:nth-child(1) {
+            left: 25%;
+            top: 25%;
+        }
+        
+        .box6 span:nth-child(2) {
+            left: 25%;
+            top: 50%;
+        }
+        
+        .box6 span:nth-child(3) {
+            left: 25%;
+            top: 75%;
+        }
+        
+        .box6 span:nth-child(4) {
+            left: 75%;
+            top: 25%;
+        }
+        
+        .box6 span:nth-child(5) {
+            left: 75%;
+            top: 50%;
+        }
+        
+        .box6 span:nth-child(6) {
+            left: 75%;
+            top: 75%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rect">
+        <div class="box1"><span></span></div>
+        <div class="box2"><span></span><span></span>
+        </div>
+        <div class="box3"><span></span><span></span><span></span></div>
+        <div class="box4"><span></span><span></span><span></span><span></span></div>
+        <div class="box5"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="box6"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    </div>
+</body>
+
+</html>

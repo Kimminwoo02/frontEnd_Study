@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        /* 변수 */
+        
+         :root {
+            --box: 300px;
+        }
+        
+        div {
+            position: relative;
+            width: var(--box);
+            height: var(--box);
+            margin: 100px;
+            background-color: yellow;
+        }
+        
+        span {
+            display: block;
+            color: red;
+            opacity: 0.3;
+            font-size: 30px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            animation: heartbeat 1s 5;
+        }
+        
+        span:nth-child(1) {
+            --size: 1.5;
+            animation-delay: 0;
+        }
+        
+        span:nth-child(2) {
+            --size: 2.5;
+            animation-delay: 0.5s;
+        }
+        
+        span:nth-child(3) {
+            --size: 2;
+            animation-delay: 1.5s;
+        }
+        
+        span:nth-child(4) {
+            --size: 5;
+            animation-delay: 2s;
+        }
+        
+        span:nth-child(5) {
+            --size: 3.5;
+            animation-delay: 2.5s;
+        }
+        
+        @keyframes heartbeat {
+            100% {
+                transform: scale(var(--size));
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>ㅁ</span>
+        <span>ㅁ</span>
+        <span>ㅁ</span>
+        <span>ㅁ</span>
+        <span>ㅁ</span>
+    </div>
+</body>
+
+</html>

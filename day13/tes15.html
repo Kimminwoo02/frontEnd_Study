@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .container {
+            width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+        
+        .flexBox {
+            width: 300px;
+            border: 1px solid black;
+        }
+        
+        .flexBox:nth-of-type(1) {
+            width: 600px;
+            height: 400px;
+        }
+        
+        .flexBox:nth-of-type(1) {
+            width: 600px;
+        }
+        
+        .flexBox:nth-of-type(1) {
+            width: 600px;
+        }
+        
+        .flexBox:nth-of-type(4) {
+            height: 400px;
+        }
+        
+        .flexBox:nth-of-type(5) {
+            width: 900px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .flexBox>div {
+            height: 200px;
+            margin: 5px;
+            background-color: orange;
+        }
+        
+        .flexBox:nth-of-type(1)>div {
+            height: 100%;
+        }
+        
+        .flexBox:nth-of-type(4)>div {
+            height: 100%;
+        }
+        
+        .flexBox:nth-of-type(5)>div:nth-of-type(1) {
+            width: 60%;
+        }
+        
+        .flexBox:nth-of-type(5)>div:nth-of-type(2) {
+            width: 300px;
+        }
+        
+        .flexBox:nth-of-type(5)>div:nth-of-type(3) {
+            width: 300px;
+        }
+        
+        .flexBox:nth-of-type(5)>div:nth-of-type(4) {
+            width: 60%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="flexBox">
+            <div>box</div>
+        </div>
+
+        <div class="flexBox">
+            <div>box01</div>
+            <div>box02</div>
+        </div>
+
+        <div class="flexBox">
+            <div>box01</div>
+            <div>box02</div>
+        </div>
+
+        <div class="flexBox">
+            <div>box01</div>
+
+        </div>
+        <div class="flexBox">
+
+            <div>box01</div>
+            <div>box01</div>
+            <div>box01</div>
+            <div>box01</div>
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>

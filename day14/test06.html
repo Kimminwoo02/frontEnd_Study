@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .container {
+            display: flex;
+            height: 500px;
+            background-color: skyblue;
+        }
+        
+        .item {
+            width: 200px;
+            height: 100px;
+            background-color: orangered;
+            border: 1px solid black;
+            flex-basis: 20%;
+            /* order: 번호 */
+            font-size: 30px;
+            order: 5;
+        }
+        
+        div.item:nth-child(1) {}
+        
+        div.item:nth-child(2) {
+            order: 1;
+        }
+        
+        div.item:nth-child(3) {
+            order: 6;
+        }
+        
+        div.item:nth-child(5) {}
+    </style>
+</head>
+
+
+<body>
+    <h1>align-content</h1>
+    <div class="container">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+        <div class="item">item5</div>
+    </div>
+    <!-- 
+        자식: item 
+            flex: 0 g s ;
+            flex-glow : 자식의 너비가 넘칠 때
+            flex-shrink : 여백이 남을 때? 
+            align-self: 특정한 item을 별도로 배치할 때
+            flex-baise : width와 함께 사용하는데 width처럼 사용 
+
+        부모: container
+            display:flex;
+            flex-direction: row, column, row-reverse, column-reverse
+            //가로 간격
+            
+            justify-content: flex-start, flex-end, center,
+                              space-between, space-around, space-evenly
+            //flex-wrap: wrap, nowrap;
+            세로간격
+            align-item :flex-start, flex-end, center,
+                              space-between, space-around, space-evenly
+                               (justfy랑 똑같이 있다. 아이템이 한 줄일떄 )
+            
+            // 아이템이 여러줄일 때 사용!
+            align-content : flex-start, flex-end, center,
+                              space-between, space-around, space-evenly        
+     -->
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .container{ padding: 10px;;}
+        .btn{ border:none; display: inline-block;
+            width:200px; height: 50px; 
+            background-color: purple; color:orange; 
+            font-weight: bold; text-align: center; line-height: 50px;
+            border-radius: 5px; letter-spacing: 1px;
+            /* transition-property: background-color;
+            transition-duration: 0.5s;
+            transition-timing-function: ease;
+            transition-delay: 0.1s; */
+            transition: background-color 0.5s ease 0.1s;
+            cursor: pointer; 
+            /* MDN REFERACE 참조 
+                https://developer.mozilla.org/ko/docs/Web/CSS/cursor
+            */
+        }
+        .btn:hover{ 
+            background-color: orange; color:purple;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+        
+          <button class="btn">BUTTON</button>
+          <input type="button" value="BUTTON"  class="btn"> 
+          <a href="#"  class="btn">BUTTON</a>
+          <div class="btn">BUTTON</div>
+   </div>
+</body>
+</html>

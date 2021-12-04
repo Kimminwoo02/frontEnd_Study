@@ -6,9 +6,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <style>
+        .button1 {
+            width: 100px;
+            height: 50px;
+            color: darkgoldenrod;
+            background-color: hotpink;
+            border-radius: 10%;
+            border: none;
+        }
+        
+        .button1:hover {
+            background-color: darkmagenta;
+            transition-duration: 0.4s;
+        }
+        
+        .container {
+            padding: 10px;
+        }
+        
+        .btn {
+            border: 1px solid black;
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+            background-color: purple;
+            color: orange;
+            font-weight: bold;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 5px;
+            letter-spacing: 1px;
+            /* transition-property: background-color;
+            -o-transition-duration: 0.5s;
+            transition-timing-function: ease;
+            transition-delay: 0.1s; */
+            transition: background-color 0.5s ease 0.1s;
+            /* 이렇게 주는게 위에랑 똑같다. */
+        }
+        
+        .btn:hover {
+            background-color: orange;
+            color: purple;
+            cursor: pointer;
+            /* MDN REFERANCE 참조 
+                https://developer.mozilla.org/ko/docs/Web/CSS/cursor
+            */
+        }
+    </style>
 </head>
 
 <body>
+    <div class="container">
+
+        <button class="btn">BUTTON</button>
+        <input type="button" value="BUTTON" class="btn">
+        <a href="#" class="btn">BUTTON</a>
+        <div class="btn">BUTTON</div>
+    </div>
 
 </body>
 

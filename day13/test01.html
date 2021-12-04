@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        /* 변수를 사용 가능하다 */
+        
+        div {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 100px;
+            background-color: royalblue;
+        }
+        
+        span {
+            display: block;
+            color: red;
+            font-size: 30px;
+            position: absolute;
+            animation: heartbeat 1s 5;
+        }
+        
+        span:nth-child(2) {
+            color: gold;
+            left: 50%;
+            top: 50%;
+            animation: heartbeat 1s 5;
+        }
+        
+        span:nth-child(3) {
+            color: gold;
+            left: 100%;
+            top: 50%;
+            animation: heartbeat 1s 5;
+        }
+        
+        span:nth-child(4) {
+            color: gold;
+            left: 50%;
+            top: 100%;
+            animation: heartbeat 1s 5;
+        }
+        
+        span:nth-child(5) {
+            color: gold;
+            left: 100%;
+            top: 100%;
+            animation: heartbeat 1s 5;
+        }
+        
+        @keyframes heartbeat {
+            100% {
+                transform: scale(1.5);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>ㅁ</span>
+        <span>ㅁ</span>
+        <span>ㅁ</span>
+        <span>ㅁ</span>
+        <span>ㅁ</span>
+    </div>
+</body>
+
+</html>

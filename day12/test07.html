@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .rect {
+            margin: 100px;
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            transform-style: preserve-3d;
+            position: relative;
+            transform: rotateX(-30deg) rotateY(-30deg) rotateZ(0);
+            animation: ani2 5s infinite linear;
+            /* animation-timming-function: */
+        }
+        
+        @keyframes ani {
+            100% {
+                transform: rotateX(-30deg) rotateY(330deg);
+            }
+        }
+        
+        @keyframes ani2 {
+            30% {
+                transform: rotateX(-30deg) rotateY(330deg);
+            }
+            60% {
+                transform: rotateX(330deg) rotateY(330deg);
+            }
+            100% {
+                transform: rotateX(330deg) rotateY(330deg);
+            }
+        }
+        
+        .rect>div {
+            width: 200px;
+            height: 200px;
+            background-color: sandybrown;
+            position: absolute;
+            border: 1px solid black;
+            /* 면의 중심점 맞춤 */
+        }
+        
+        span {
+            display: block;
+            width: 30px;
+            height: 30px;
+            background-color: black;
+            border-radius: 30px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+        }
+        /* 주사위 면, 천정, 바닥면, 왼쪽면, 오른쪽 면, 앞면 뒷면 */
+        
+        .box1 {
+            transform: translateY(-100px) rotateX(90deg);
+        }
+        
+        .box2 {
+            transform: translateY(100px) rotateX(90deg);
+        }
+        
+        .box3 {
+            transform: translateX(-100px) rotateY(90deg);
+        }
+        
+        .box4 {
+            transform: translateX(100px) rotateY(90deg);
+        }
+        
+        .box5 {
+            transform: translateZ(100px);
+        }
+        
+        .box6 {
+            transform: translateZ(-100px);
+        }
+        
+        .box1 span {
+            left: 50%;
+            top: 50%;
+        }
+        
+        .box2 span:nth-child(1) {
+            left: 25%;
+            top: 25%;
+        }
+        
+        .box2 span:nth-child(2) {
+            left: 75%;
+            top: 75%;
+        }
+        
+        .box3 span:nth-child(3) {
+            left: 50%;
+            top: 50%;
+        }
+        
+        .box3 span:nth-child(1) {
+            left: 25%;
+            top: 25%;
+        }
+        
+        .box3 span:nth-child(2) {
+            left: 75%;
+            top: 75%;
+        }
+        
+        .box4 span:nth-child(1) {
+            left: 25%;
+            top: 25%;
+        }
+        
+        .box4 span:nth-child(2) {
+            left: 75%;
+            top: 25%;
+        }
+        
+        .box4 span:nth-child(3) {
+            left: 75%;
+            top: 75%;
+        }
+        
+        .box4 span:nth-child(4) {
+            left: 25%;
+            top: 75%;
+        }
+        
+        .box5 span:nth-child(1) {
+            left: 25%;
+            top: 25%;
+        }
+        
+        .box5 span:nth-child(2) {
+            left: 75%;
+            top: 25%;
+        }
+        
+        .box5 span:nth-child(3) {
+            left: 75%;
+            top: 75%;
+        }
+        
+        .box5 span:nth-child(4) {
+            left: 25%;
+            top: 75%;
+        }
+        
+        .box5 span:nth-child(5) {
+            left: 50%;
+            top: 50%;
+        }
+        
+        .box5 span:nth-child(1) {
+            left: 25%;
+            top: 25%;
+        }
+        
+        .box5 span:nth-child(2) {
+            left: 75%;
+            top: 25%;
+        }
+        
+        .box5 span:nth-child(3) {
+            left: 75%;
+            top: 75%;
+        }
+        
+        .box5 span:nth-child(4) {
+            left: 25%;
+            top: 75%;
+        }
+        
+        .box5 span:nth-child(5) {
+            left: 50%;
+            top: 50%;
+        }
+        
+        .box6 span:nth-child(1) {
+            left: 25%;
+            top: 25%;
+        }
+        
+        .box6 span:nth-child(2) {
+            left: 25%;
+            top: 50%;
+        }
+        
+        .box6 span:nth-child(3) {
+            left: 25%;
+            top: 75%;
+        }
+        
+        .box6 span:nth-child(4) {
+            left: 75%;
+            top: 25%;
+        }
+        
+        .box6 span:nth-child(5) {
+            left: 75%;
+            top: 50%;
+        }
+        
+        .box6 span:nth-child(6) {
+            left: 75%;
+            top: 75%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rect">
+        <div class="box1"><span></span></div>
+        <div class="box2"><span></span><span></span>
+        </div>
+        <div class="box3"><span></span><span></span><span></span></div>
+        <div class="box4"><span></span><span></span><span></span><span></span></div>
+        <div class="box5"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="box6"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    </div>
+</body>
+
+</html>
