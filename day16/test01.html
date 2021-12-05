@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        section {
+            width: 100%;
+            height: 970px;
+            background-size: cover;
+            /* 가로를 꽉 채운다. */
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* 구조물 위치를 고정시킨다 마우스 휠 제어로 
+            굉장히 애니메이션 같은 효과가 난다. */
+        }
+        
+        #section1 {
+            background-image: url(./images/bg1.jpg);
+        }
+        
+        #section2 {
+            background-image: url(./images/bg2.jpg);
+        }
+        
+        #section3 {
+            background-image: url(./images/bg3.jpg);
+        }
+        
+        #section4 {
+            background-image: url(./images/bg4.jpg);
+        }
+        
+        header {
+            position: fixed;
+            left: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        header a {
+            font-weight: bold;
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="section1">
+        <h1>SECTION1</h1>
+    </section>
+    <section id="section2">
+        <h1>SECTION2</h1>
+    </section>
+    <section id="section3">
+        <h1>SECTION3</h1>
+    </section>
+    <section id="section4">
+        <h1>SECTION4</h1>
+    </section>
+
+    <header>
+        <nav class="lnb">
+            <ul>
+                <li><a href="#section1">menu1</a></li>
+                <li><a href="#section2">menu2</a></li>
+                <li><a href="#section3">menu3</a></li>
+                <li><a href="#section4">menu4</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>

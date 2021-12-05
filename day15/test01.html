@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 엣지로 실행하도록 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 위는 장비 인식하는 부분 -->
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        /* 데스크탑 
+        @media and (max-width:너비) {}
+    */
+        /* 모바일 화면 */
+        
+        body {
+            background-color: orange;
+        }
+        
+        @media screen and (min-width:481px) {
+            /* min-width:481px 이상 */
+            /* 모바일 페이지를 만들 때 사용한다 */
+            body {
+                background-color: green;
+            }
+        }
+        
+        @media screen and (min-width:971px) {
+            /* min-width:971px 이상이면 아래 색깔 출력 */
+            body {
+                background-color: yellow;
+            }
+        }
+        
+        @media screen and (min-width:1201px) {
+            /* min-width:1201px 이상이면 아래 색깔 출력 */
+            body {
+                background-color: skyblue;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

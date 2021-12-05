@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+         :root {
+            --width--desktop: 25%;
+            --width--table: 50%;
+            --width--mobile: 100%;
+            font-size: 12px;
+        }
+        
+        body {
+            background: linear-gradient(90deg, skyblue 50%, lavender 0);
+            background-size: 20px;
+        }
+        /* 데스크탑 */
+        
+        h1 {
+            font-size: 0;
+        }
+        
+        .container {
+            width: 1000px;
+            margin: auto;
+        }
+        
+        header {
+            background-color: rgb(232, 218, 177);
+        }
+        
+        .header_bg {
+            background-image: url(./images/topbg3.png);
+            height: 200px;
+            background-repeat: no-repeat;
+        }
+        
+        .lnb {
+            background-color: red;
+        }
+        
+        .lnb>ul {
+            display: flex;
+            gap: 1em;
+            /* 한 글자만큼 좌우에 여백을 넣는다. */
+        }
+        
+        .lnb li {
+            padding: 0.5em 1em;
+            /* ul에 gap 1em 준 효과랑 같다. 
+            gap은 맨 끝 여백을 제외하고 여백 계산 즉 
+            좌우 여백이 없다. */
+        }
+        
+        .lnb a {
+            display: block;
+            color: white;
+            font-weight: bold;
+            padding: 1em;
+        }
+        
+        .lnb a:hover {
+            color: red;
+            background-color: white;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        section {
+            display: flex;
+            /* float:left 였으면 가로 스크롤바가 생길 것이다. 
+            지금은 플렉스라서 안 생긴다.
+            부모의 안쪽에 자식을 다 꽊 채워서 집어넣는다.*/
+            background-color: white;
+        }
+        
+        section:nth-of-type(1) article:nth-child(1) {
+            width: 400px;
+        }
+        
+        section:nth-of-type(1) article:nth-child(2) {
+            width: 600px;
+            padding: 1em;
+            line-height: 2em;
+        }
+        
+        h2 {
+            margin-bottom: 1em;
+        }
+        
+        section>ul {
+            display: flex;
+            gap: 1%;
+            width: 100%;
+        }
+        
+        section>ul>li {
+            width: 25%;
+            padding: 2em 0;
+        }
+        
+        section>ul>li:nth-of-type(1)~li {
+            border: 1px dotted black;
+            border-radius: 10px;
+            background-repeat: no-repeat;
+            position: relative;
+            background-color: white;
+        }
+        
+        section>ul>li:nth-of-type(1)~li>h2 {
+            position: absolute;
+            bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            width: 100%;
+            text-align: right;
+        }
+        
+        section>ul>li:nth-of-type(1)~li span {
+            display: block;
+        }
+        
+        section>ul>li:nth-of-type(2) {
+            background-image: url(./images/f2.jpg);
+        }
+        
+        section>ul>li:nth-of-type(3) {
+            background-image: url(./images/f3.jpg);
+        }
+        
+        section>ul>li:nth-of-type(4) {
+            background-image: url(./images/f4.jpg);
+        }
+        
+        .info_title {
+            background-color: coral;
+            display: block;
+            padding: 1em;
+            font-weight: bold;
+            color: white;
+            font-size: 16px;
+            margin-bottom: 1em;
+        }
+        
+        .info_title+ul li {
+            list-style: square;
+            margin-left: 20px;
+            line-height: 2em;
+        }
+        
+        .info_title+ul li:last-child {
+            list-style: none;
+        }
+        
+        .info_title+ul span {
+            display: inline-block;
+            /* 너비는 정하지만 줄은 안 바뀐다. */
+            width: 60px;
+        }
+        
+        footer {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            background-color: gray;
+            color: white;
+        }
+        
+        footer a {
+            color: white;
+        }
+        
+        footer ul {
+            display: flex;
+            gap: 5px;
+        }
+        
+        @media screen and (max-width:1024px) {
+            .container {
+                width: 100%;
+            }
+            section:nth-of-type(1) article:nth-child(1) {
+                width: 40%;
+            }
+            section:nth-of-type(1) article:nth-child(2) {
+                width: 60%;
+            }
+        }
+        
+        @media screen and (max-width:760px) {
+            .container {
+                /* 760과 10000 사이에 가로 스크롤바가 생긴다.
+               1000과 760 사이의 갭 차이를 없애야 된다.
+                잘 만들어진 페이지가 아니다 */
+            }
+            header {
+                background-color: #eee0bb
+            }
+            .header_bg {
+                background-image: url(./images/topbg2.png);
+                height: 190px;
+            }
+            section:nth-of-type(1) article:nth-child(1) {
+                width: 50%;
+            }
+            section:nth-of-type(1) article:nth-child(2) {
+                width: 50%;
+            }
+            section>ul {
+                flex-wrap: wrap;
+                gap: 1%;
+            }
+            section>ul>li {
+                width: 49%;
+                height: 200px;
+                margin-bottom: 1%;
+                /* margin 1%는 세로 높이의 %가 아니라 가로너비의 %를 세로로 
+            가져다가 사용 */
+            }
+        }
+        
+        @media screen and (max-width:480px) {
+            header {
+                background-color: #eee0bb
+            }
+            .header_bg {
+                background-image: url(./images/topbg1.png);
+                height: 190px;
+            }
+            section {
+                flex-wrap: wrap;
+            }
+            section:nth-of-type(1) article:nth-child(1) {
+                width: 100%;
+            }
+            section:nth-of-type(1) article:nth-child(2) {
+                width: 100%;
+            }
+            section>ul>li {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="header_bg">
+                <h1>향기나는 꽃집 </h1>
+            </div>
+        </header>
+        <nav class="lnb">
+            <ul>
+                <li><a href="#">꽃다발</a></li>
+                <li><a href="#">꽃바구니</a></li>
+                <li><a href="#">화환</a></li>
+                <li><a href="#">화분</a></li>
+            </ul>
+        </nav>
+        <section>
+            <article><img src="./images/shop.png" alt=""></article>
+            <article>
+                <h2>향기나는 꽃집입니다.</h2>
+                <p>향기나는 꽃집은 식물과 함께하는 건강한 삶, 꽃으로 전하는 사랑이야기,.....</p>
+            </article>
+        </section>
+        <section>
+            <ul>
+                <li>
+                    <span class="info_title">고객상담 안내</span>
+                    <ul>
+                        <li><span>전화</span>021-2355-4564</li>
+                        <li><span>팩스</span>021-2355-4564</li>
+                        <li><span>운영시간</span>021-2355-4564</li>
+                        <li><span>&nbsp;</span>점심: 12~1시</li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><span>꽃다발</span><span>말괄량이</span></h2>
+
+                </li>
+                <li>
+                    <h2><span>꽃바구니</span><span>장미 100송이</span></h2>
+                </li>
+                <li>
+                    <h2><span>화환</span><span>근조화환</span></h2>
+                </li>
+            </ul>
+        </section>
+        <footer>
+            <!--  -->
+            <ul>
+                <li><a href="#">홈</a></li>
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보취급방침</a></li>
+            </ul>
+            <address> copyRight &copy;</address>
+        </footer>
+    </div>
+    <!-- .container end -->
+</body>
+
+</html>

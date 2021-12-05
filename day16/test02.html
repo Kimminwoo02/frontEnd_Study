@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        section {
+            width: 100%;
+            height: 970px;
+            position: relative;
+        }
+        
+        section>* {
+            position: absolute;
+        }
+        
+        img {
+            width: 100%;
+            height: 650px;
+        }
+        
+        @media screen and(max-width: 1000px) {
+            section {
+                width: 100%;
+                height: 570px;
+                /* 비율계산을 정확히 맞출 필요가 있다.
+                section의 height: 오토로 둔다. */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section id="section1">
+        <img src="./images/bg1.jpg" alt="">
+        <h1>SECTION1</h1>
+    </section>
+    <section id="section2">
+        <img src="./images/bg2.jpg" alt="">
+        <h1>SECTION2</h1>
+    </section>
+    <section id="section3">
+        <img src="./images/bg3.jpg" alt="">
+        <h1>SECTION3</h1>
+    </section>
+    <section id="section4">
+        <img src="./images/bg4.jpg" alt="">
+        <h1>SECTION4</h1>
+    </section>
+</body>
+
+</html>

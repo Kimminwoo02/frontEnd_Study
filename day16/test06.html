@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+         :root {
+            font-size: 12px;
+        }
+        
+        header {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            background-color: teal;
+            height: 90px;
+            align-items: center;
+            /* 세로 가운데 정렬 */
+            position: relative;
+        }
+        
+        .bars {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+        
+        .lnb {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .lnb li {
+            margin: 0 1rem;
+        }
+        
+        .lnb a {
+            display: block;
+            padding: 1rem 0;
+            /* 옆에 0 붙여야 딱 벽에 붙는다. */
+        }
+        
+        .mainBanner {
+            width: 100%;
+            height: 500px;
+            background-image: url(./images/visual.jpg);
+            background-position: center center;
+        }
+        
+        .innerBox {
+            width: 1200px;
+            margin: auto;
+            padding-top: 200px;
+        }
+        
+        @media screen and(max-width:1250px) {
+            /* header {
+                width: 100%;
+                justify-content: space-around;
+            } */
+            header {
+                width: 100%;
+            }
+            .innerBox {
+                width: 100%;
+            }
+        }
+        
+        @media screen and(max-width:970px) {
+            h1 {
+                text-align: center;
+                width: 100%;
+            }
+            .lnb {
+                display: none;
+            }
+            .bars {
+                display: block;
+            }
+            .innerBox img {
+                width: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="bars">
+            <img src="./images/btnMenu.png" alt="">
+        </div>
+        <h1>로고</h1>
+        <ul class="lnb">
+            <li><a href="#">menu01</a></li>
+            <li><a href="#">menu02</a></li>
+            <li><a href="#">menu03</a></li>
+            <li><a href="#">menu04</a></li>
+            <li><a href="#">menu05</a></li>
+
+        </ul>
+    </header>
+    <div class="mainBanner">
+        <div class="ineerBox">
+            <span class="smallBanner">
+            <img src="./images/txtBox.png" alt="">
+        </span></div>
+    </div>
+</body>
+
+</html>

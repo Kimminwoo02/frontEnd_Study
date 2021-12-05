@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .container {
+            width: 1200px;
+            margin: auto;
+            background-color: pink;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        header {
+            width: 200px;
+            height: 100vh;
+            background-color: teal;
+        }
+        
+        .contents {
+            width: 1000px;
+            display: flex;
+        }
+        
+        section {
+            width: 80%;
+            background-color: coral;
+        }
+        
+        section img {
+            width: 100%;
+        }
+        
+        aside {
+            width: 20%;
+            background-color: skyblue;
+        }
+        
+        aside img {
+            width: 100%;
+        }
+        
+        footer {
+            width: 100%;
+            height: 200px;
+            background-color: gray;
+        }
+        
+        @media screen and (max-width: 1250px) {
+            .container {
+                width: 100%;
+            }
+            .contents {
+                width: calc(100% - 200px);
+            }
+        }
+        
+        @media screen and (max-width:970px) {
+            section {
+                width: 100%;
+            }
+            .contents {
+                flex-wrap: wrap;
+            }
+            aside {
+                width: 100%;
+            }
+            aside img {
+                width: 33.333333333%;
+            }
+        }
+        
+        @media screen and (max-width:600px) {
+            header {
+                width: 100%;
+                height: 200px;
+            }
+            .contents {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header></header>
+        <div class="contents">
+            <section>
+                <div class="topBanner"><img src="./images/box07_bg.jpg" alt=""></div>
+            </section>
+            <aside>
+                <img src="./images/con24.png" alt=""><img src="./images/con24.png" alt=""><img src="./images/con24.png" alt="">
+            </aside>
+        </div>
+
+        <footer></footer>
+    </div>
+</body>
+
+</html>
