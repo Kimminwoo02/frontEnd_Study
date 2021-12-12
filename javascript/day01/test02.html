@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <style>
+
+    </style>
+    <script>
+        console.log('hello javascript!!');
+        document.write('html로 쓰기');
+    </script>
+
+</head>
+
+<body>
+    <div class="box" id='idbox'> BOX </div>
+    <script>
+        console.log('javascript body write')
+        document.getElementsByTagName('div')[0].style.color = 'red';
+        document.getElementById('idbox').style.backgroundColor = 'green'
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style></style>
+</head>
+
+<body>
+    <h1> 연산자 </h1>
+    <script>
+        //논리연산자 && || ! & |
+        // 논리 연산 후  연산의 결과는 true, false 
+        // && 피연산자의 연산 결과가 모두 true 일때 ture;
+        // || 피연산자의 연산 결과가 하나라도 True 면 ture
+        console.log(`3+10>20 && 50<20  =${3+10>20 && 50<20}`);
+        console.log(`ture && true =${true && true}`);
+        console.log(`ture && false =${true && false}`);
+        console.log(`false && ture =${false && true}`);
+        console.log(`false && false =${false && false}`);
+        // 첫번째 피연산자 값이 false 이면 이면 두번째 피연산자 값은 확인하지 않고 종료
+        // 처리속도가 빨라진다. 
+
+        console.log(`0 && 3+10>20 =${!!(0 &&  3+10>20)}`);
+        console.log(`0 && 3+10>20 =${0 &&  3+10>20}`);
+
+
+
+
+        console.log(`ture || true =${true ||true}`);
+        console.log(`ture || false =${true || false}`);
+        console.log(`false || ture =${false || true}`);
+        console.log(`false || false =${false || false}`);
+        // 피연산자가 true 결과인 지점에서 연산종료
+        // 처리속도가 빨라진다. 
+
+        console.log(`0 || 30+10>20 =${!!(0||  30+10>20)}`);
+        console.log(`0 || 30+10>20 =${0 ||  'HELLO'}`);
+        console.log(`0 || 30+10>20 =${'HELLO' && 0}`);
+
+        console.log(!false);
+        console.log(!true);
+    </script>
+</body>
+
+</html>
