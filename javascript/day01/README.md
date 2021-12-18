@@ -178,4 +178,117 @@ document.write('<div class='box'> box </div>');
             name: 'kim'
         })
     ```
+
 ````
+
+## 논리연산자
+
+```
+
+        //논리연산자 && || ! & |
+        // 논리 연산 후  연산의 결과는 true, false
+        // && 피연산자의 연산 결과가 모두 true 일때 ture;
+        // || 피연산자의 연산 결과가 하나라도 True 면 ture
+        console.log(`3+10>20 && 50<20  =${3+10>20 && 50<20}`);
+        console.log(`ture && true =${true && true}`);
+        console.log(`ture && false =${true && false}`);
+        console.log(`false && ture =${false && true}`);
+        console.log(`false && false =${false && false}`);
+        // 첫번째 피연산자 값이 false 이면 이면 두번째 피연산자 값은 확인하지 않고 종료
+        // 처리속도가 빨라진다.
+
+        console.log(`0 && 3+10>20 =${!!(0 &&  3+10>20)}`);
+        console.log(`0 && 3+10>20 =${0 &&  3+10>20}`);
+
+
+
+
+        console.log(`ture || true =${true ||true}`);
+        console.log(`ture || false =${true || false}`);
+        console.log(`false || ture =${false || true}`);
+        console.log(`false || false =${false || false}`);
+        // 피연산자가 true 결과인 지점에서 연산종료
+        // 처리속도가 빨라진다.
+
+        console.log(`0 || 30+10>20 =${!!(0||  30+10>20)}`);
+        console.log(`0 || 30+10>20 =${0 ||  'HELLO'}`);
+        console.log(`0 || 30+10>20 =${'HELLO' && 0}`);
+```
+
+## 데이터 형변환
+
+```
+ //console.log();
+        // alert()
+        // confirm()
+        //prompt()
+        //
+        // 자동 형변환
+        let num = '20';
+        console.log(`num type: ${typeof num}`);
+        console.log(`num + 20 : ${num+20}`);
+        console.log(`num > 20 : ${num>20}`);
+
+        //문자를 숫자로 변경
+        let intNumber = parseInt(10 / 3);
+        console.log(intNumber)
+
+        let userAge = parseInt(prompt('나이를 입력하세요.')); // '20' -> 20
+        console.log(typeof userAge);
+        console.log(parseInt(3.678342));
+        console.log(parseInt(4.75632));
+        console.log(userAge + 20);
+```
+
+## 조건문
+
+```
+  // 분기 제어문 if
+        // if (조건식){ 조건식 == true 일때 처리할 일.......}
+        // Else{ 조건식 == false 일때 처리할 일.......}
+        // 조건식 ? true: false;
+        let num = 50;
+        if (num >= 50) {
+            console.log('화이팅');
+        } else {
+            console.log('점프');
+        }
+
+        if (num >= 50) console.log('화이팅');
+        else console.log('점프');
+
+        //같은 결과가 나온다.
+
+        let userAge = prompt('나이를 입력하세요.');
+        if (userAge > 60) {
+            console.log('복지제도를 활용하세요.')
+        } else {
+            console.log('')
+        }
+
+        // let jumsu = prompt('점수를 입력하세요. ');
+        // // 학점 : >90, >= 80, >=70, >=60, 나머지
+        // if (jumsu >= 90) console.log(`당신의 점수 ${jumsu} 는 A학점 입니다.`);
+        // else if (jumsu >= 80) console.log(`당신의 점수 ${jumsu} 는 B학점 입니다.`);
+        // else if (jumsu >= 70) console.log(`당신의 점수 ${jumsu} 는 C학점 입니다.`);
+        // else if (jumsu >= 60) console.log(`당신의 점수 ${jumsu} 는 D학점 입니다.`);
+        // else console.log(`당신의 점수 ${jumsu} 는 F학점 입니다.`);
+
+
+        let jumsu = prompt('점수를 입력하세요. ');
+        // 학점 : >90, >= 80, >=70, >=60, 나머지
+        if (jumsu >= 90) console.log(`당신의 점수 ${jumsu} 는 A학점 입니다.`);
+        else if (jumsu >= 80) console.log(`당신의 점수 ${jumsu} 는 B학점 입니다.`);
+        else if (jumsu >= 70) console.log(`당신의 점수 ${jumsu} 는 C학점 입니다.`);
+        else if (jumsu >= 60) console.log(`당신의 점수 ${jumsu} 는 D학점 입니다.`);
+        else console.log(`당신의 점수 ${jumsu} 는 F학점 입니다.`);
+
+        let grade = null;
+        if (jumsu >= 90) grade = 'A';
+        else if (jumsu >= 80) grade = 'B';
+        else if (jumsu >= 70) grade = 'C';
+        else if (jumsu >= 60) grade = 'D';
+        else grade = 'F';
+        let msg = `당신의 점수 ${jumsu} 는 ${grade}학점 입니다.`;
+        console.log((msg))
+```

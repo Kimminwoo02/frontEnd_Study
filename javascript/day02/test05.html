@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <ul id="element">
+            <li class="lists"><a href="">list01</a></li>
+            <li class="lists"><a href="">list02</a></li>
+            <li class="lists"><a href="">list03</a></li>
+            <li class="lists"><a href="">list04</a></li>
+            <li class="lists"><a href="">list05</a></li>
+            <li class="lists"><a href="">list06</a></li>
+            <li class="lists"><a href="">list07</a></li>
+            <li class="lists"><a href="">list08</a></li>
+            <li class="lists"><a href="">list09</a></li>
+            <li class="lists"><a href="">list010</a></li>
+        </ul>
+    </div>
+
+    <script>
+        // 반복 제어문
+        for (let i = 0; i < 5; i++) {
+            // 초기식 ; 조건식 ; 증감식 
+            console.log(i);
+        }
+        // 초기식, 증감식은 여러 개 사용할 수 있으나 조건식은 true 나 false 되는 식 1개만 필요
+
+        for (let i = 0, j = 0; i < 5 && j >= -5; i++, j--) {
+            // 초기식 ; 조건식 ; 증감식 
+            console.log(i, j);
+        }
+        let array = ['red', 'green', 'blue', 'purple'];
+        for (let a = 0; a < array.length; a++) {
+            console.log(array[a], a)
+        }
+
+        array.forEach(function(arr, a) {
+                console.log(arr, a);
+            }) // arr은 각각 인덱스
+
+        const lists = document.getElementsByClassName('lists');
+        for (let a = 0; a < lists.length; a++) {
+            if (a % 5 == 0) {
+                console.log(lists[a]);
+
+
+            }
+        }
+        // 전개연산자: 유사배열이라 forEach를 사용할 수 없다.
+        // 배열처럼 보이게 하는 것을 전개연산자라고 한다.
+        [...lists].forEach(function(list, a) {
+            if (a % 5 == 0) {
+                console.log(list)
+            }
+        })
+    </script>
+</body>
+
+</html>

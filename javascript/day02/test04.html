@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <ul id="element">
+            <li class="lists"><a href="">list01</a></li>
+            <li class="lists"><a href="">list02</a></li>
+            <li class="lists"><a href="">list03</a></li>
+            <li class="lists"><a href="">list04</a></li>
+            <li class="lists"><a href="">list05</a></li>
+            <li class="lists"><a href="">list06</a></li>
+            <li class="lists"><a href="">list07</a></li>
+            <li class="lists"><a href="">list08</a></li>
+            <li class="lists"><a href="">list09</a></li>
+            <li class="lists"><a href="">list010</a></li>
+        </ul>
+    </div>
+
+    <script>
+        document.write(); // 도큐먼트가 바디이다!
+        const element = document.getElementById('element');
+        console.log(element);
+
+        const elements = document.getElementsByClassName('lists');
+        // 유사배열 : 배열처럼 보이지만 배열은 아니고 순서대로 나열된 것
+        // 배열처럼 사용될 수도 있고 그렇지 않을 수 도 있다.
+        console.log(elements, elements.length);
+        //elements.push('<li class="lists"><a href="">list010</a></li>');
+
+        console.log(elements[9]);
+    </script>
+</body>
+
+</html>

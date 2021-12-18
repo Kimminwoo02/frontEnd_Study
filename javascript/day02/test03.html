@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 베열 :  다량의 데이터
+        /*
+         동일한 데이터를 메모리에 연속적으로 나열하는 자료구조
+        자바스크립트에서는 동일한 데이터가 아니어도 상관없음 
+        */
+
+        let array = []; // 빈 배열 선언
+        array[0] = 'red';
+        array[1] = 'blue';
+        console.log(array, array.length);
+        // 함수 : 범용, 특정 클래스 : 메소드
+        // 변수 : d
+
+        array.push('green')
+        array.push('red')
+        console.log(array, array.length);
+
+        let array2 = ['사과', '바나나', '딸기'];
+        console.log(array2, array2[2]);
+        array2.push('포도');
+        console.log(array2);
+        array2.pop();
+        array2.pop();
+        console.log(array2)
+            // 자료구조 : stack
+
+
+        let array3 = new Array('곰돌이', '마른인형', '축구공');
+        console.log(array3);
+        array3.shift(); // 맨 앞에 있는 곰돌이가 없어진다. pop 기능은 맨 뒤를 버리고 쉬프트는 맨 앞을 버린다.
+        console.log(array3)
+        array3.unshift('124'); //push랑 반대! push는 맨 뒤에 삽입, unshift는 맨 앞에 삽입
+        console.log(array3);
+    </script>
+</body>
+
+</html>

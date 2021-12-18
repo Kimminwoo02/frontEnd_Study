@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 큰 수 구하기
+        // 2개의 숫자를 입력 받아서 큰 수를 출력
+        // let num1 = parseInt(prompt('값1을 입력하세요'))
+        // let num2 = parseInt(prompt('값2을 입력하세요'))
+
+        // if (num1 > num2) {
+        //     console.log(`큰 값은${num1}`)
+        // } else {
+        //     console.log(`큰 값은 ${num2}`)
+        // }
+
+        // 3개의 숫자를 입력받아서 제일 큰 수를 구하기.
+        let num1 = parseInt(prompt('값1을 입력하세요'))
+        let num2 = parseInt(prompt('값2을 입력하세요'))
+        let num3 = parseInt(prompt('값3을 입력하세요'))
+        let large
+
+        if (num1 > num2 && num1 > num3) {
+            large = num1
+        } else if (num2 > num1 && num2 > num3) {
+            large = num2
+        } else {
+            large = num3
+        }
+        console.log(`가장 큰 수는 ${large} 입니다.`)
+            // 여러개일 때 처리
+    </script>
+</body>
+
+</html>
