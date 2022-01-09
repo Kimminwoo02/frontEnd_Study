@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        aside {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 100vh;
+            background-color: orange;
+        }
+        
+        aside>button {
+            position: absolute;
+            border: none;
+            top: 50%;
+            transform: translateX(-100%) translateY(-50%);
+            background-color: orange;
+            font-weight: bold;
+        }
+        
+        aside.active {
+            right: -300px;
+        }
+        
+        .box.active {
+            position: absolute;
+            background-color: red;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/reset.css">
+</head>
+
+<body>
+
+    <aside><button>&gt;</button></aside>
+    <div class="box active"></div>
+    <script src="../script/jquery-3.6.0.js"></script>
+    <script>
+        $('button').click(function() {
+                $('.aside').toggleClass('active');
+            })
+            // 버튼의 모양이 변경되지 않고 기능이 없을 때
+
+
+
+
+        /*
+        let toggle = true;
+        $('button').click(function() {
+            if (toggle) {
+                toggle = false;
+                $('aside').css({
+                    'right': '-300px'
+
+
+                })
+            } else {
+                toggle = true;
+                $('aside').css({
+                    'right': '0'
+                });
+            }
+
+        })
+
+
+        */
+    </script>
+</body>
+
+</html>

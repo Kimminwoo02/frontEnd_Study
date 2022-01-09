@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+
+</head>
+
+<body>
+    <button class="back">history.back</button>
+    <button class="forward">history.forward</button>
+    <button class="go">history.go</button>
+    <button class="go-1">history.go-1</button>
+    <script>
+        const back = document.querySelector('.back');
+        //위를 이렇게도 사용 가능 const back = document.getElementsByClassName('.back')[0];
+        console.log(back);
+        back.addEventListener('click', function() {
+            history.back(); // 모바일에서 자주사용하는 백기능
+        })
+
+
+        const forward = document.querySelector('.forward');
+
+        console.log(forward);
+        forward.addEventListener('click', function() {
+            history.forward();
+        })
+
+
+        const go2 = document.querySelector('.go');
+        go.addEventListener('click', function() {
+            history.go(-2); // -1 이면 .back() 이랑 같은 기능
+            // +1 이면 .forward() 와 같은 기능
+        })
+
+        const go1 = document.querySelector('.go-1');
+        go.addEventListener('click', function() {
+            history.go(-1); // -1 이면 .back() 이랑 같은 기능
+            // +1 이면 .forward() 와 같은 기능
+        })
+    </script>
+</body>
+
+</html>

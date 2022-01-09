@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>샘플</title>
+  <style>
+    @import url(../../common/css/base_photo.css);
+body {
+  background-size: cover;
+  background: url('../common/bg_snow.jpg') center;
+}
+
+h1 {
+  -webkit-text-stroke: 1px white;
+  text-stroke: 1px white;
+  font-weight: bold;
+}
+
+main {
+  padding: 10px;
+}
+
+.section-wrapper {
+  display: flex;
+}
+
+section {
+  width: calc(100% / 3);
+  padding-left: 5px;
+  padding-right: 5px;
+  box-sizing: border-box;
+}
+
+.button {
+  width: 100%;
+  text-transform: none;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  background-color: #2673a6;
+}
+
+.button:hover {
+  background-color: #2688bc;
+}
+
+.button:active {
+  background-color: #265c8f;
+}
+
+.button + .content {
+  display: none;
+  font-size: 20px;
+  margin-top: 10px;
+  border: 1px solid white;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 2px;
+  padding: 10px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3) inset;
+  text-align: left;
+  color: white;
+}
+
+.button + .content.show {
+  display: block;
+}
+
+.button + .content h2 {
+  font-size: 22px;
+}
+
+.button + .content dt {
+  margin-bottom: 10px;
+}
+
+.button + .content dl,
+.button + .content dt,
+.button + .content dd {
+  margin: 0;
+}
+  </style>
+</head>
+<body>
+<main class="main large">
+  <h1>웹 페이지 기술</h1>
+  <div class="section-wrapper">
+    <section>
+      <button class="button">HTML</button>
+      <div class="content">
+        <p>HyperText Markup Language. <br>웹에서 사용하는 마크업 언어</p>
+        <dl class="">
+          <dt>코드 샘플</dt>
+          <dd>
+            <code class="block">
+              <pre>&lt;h1&gt;문장&lt;/h1&gt;
+&lt;p&gt;타이틀&lt;/p&gt;</pre>
+            </code>
+          </dd>
+        </dl>
+      </div>
+    </section>
+    <section>
+      <button class="button">CSS</button>
+      <div class="content">
+        <p>Cascading Style Sheets.<br>HTML과 XML의 디자인을 위한 문서</p>
+        <dl>
+          <dt>코드 샘플</dt>
+          <dd>
+            <code class="block">
+              <pre>h1 {
+  font-color: red;
+  margin-bottom: 10px;
+}</pre>
+            </code>
+          </dd>
+        </dl>
+      </div>
+    </section>
+    <section>
+      <button class="button">JavaScript</button>
+      <div class="content">
+        <p>웹 브라우저 서버에서 동작하는 프로그래밍 언어</p>
+        <dl>
+          <dt>코드 샘플</dt>
+          <dd>
+            <code class="block">
+              <pre>alert("Hello world");</pre>
+            </code>
+          </dd>
+        </dl>
+        </div>
+    </section>
+  </div>
+</main>
+</body>
+</html>

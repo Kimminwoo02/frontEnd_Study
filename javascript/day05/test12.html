@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./script/jquery-ui.css">
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="../css/reset.css">
+</head>
+
+<body>
+    <button> move box </button>
+    <div class="box"></div>
+    <div class="drag">
+        <pre>
+            .animate({속성 : 값, 속성: 값.....}, speed, ease, callback);
+            - 속성 : css() 와 달리 값이 숫자로 돼있는 속성만 사용가능
+            width, height, top, left, right, bottom, z-index, margin, padding,
+            font-size, letter-spacing, line-height, border-width, 
+            color 속성은 red, #006644(문자로 취급된다) 애니메이션 불가능
+            - 1000 = 1s, 기본시간 400
+            - ease : 'swing', 'linear'
+            -callback : animate 가 끝나고 처리할 일
+        </pre>
+    </div>
+    <script src="../script/jquery-3.6.0.js"></script>
+    <script src="./script/jquery-ui.js"></script>
+    <script>
+        $('button').click(function() {
+            $('.box').animate({
+                "margin-left": '500px'
+            }, 3000, 'easeInOutBounce', function() {
+                console.log('실행종료');
+            }).animate({
+                "background-color": 'red'
+            }, 3000, 'linear', function() {
+                console.log('색상변경 종료');
+            });
+
+        })
+        $('.drag').draggable();
+    </script>
+</body>
+
+</html>

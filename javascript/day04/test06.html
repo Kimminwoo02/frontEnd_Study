@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        /* 
+
+effect Method
+3. slideDown() / slideUp() / slideToggle()
+
+
+*/
+    </style>
+</head>
+
+<body>
+    <button>slideDown </button>
+    <button>slideUp</button>
+    <button>slideToggle</button>
+
+    <div class="box"></div>
+    <script src="../script/jquery-3.6.0.js"></script>
+    <script>
+        $(function() {
+            const speed = 2000;
+            const $btn = $('button');
+            const $box = $('.box');
+
+            $btn.eq(0).click(function() {
+                $box.stop().slideDown(speed);
+            })
+
+            $btn.eq(1).click(function() {
+                $box.stop().slideUp(speed);
+            })
+            $btn.eq(2).click(function() {
+                $box.stop().slideToggle(speed);
+            })
+
+
+
+        })
+    </script>
+</body>
+
+</html>

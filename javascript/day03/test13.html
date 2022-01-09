@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funtion</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>함수</h1>
+    <div>
+        함수 호출 : call
+
+    </div>
+    <script>
+        Str_concat('홍길동', '님 추워요')
+        Str_concat('홍길동', '님 감기 조심하세요')
+
+
+        function Str_concat(str, msg) { // n1 = 100 , n2 = 200; 
+            let result = str + msg;
+            console.log(result)
+        }
+        // names('kim', 'hello'); // 함수를 변수처럼 사용하면 선언이 먼저 와야 된다. 변수처럼 함수를 선언하므로 함수 호출 불가능.
+
+        let names = function(str, msg) { // 함수의 변수화
+            console.log(str + msg);
+
+        }
+    </script>
+</body>
+
+</html>

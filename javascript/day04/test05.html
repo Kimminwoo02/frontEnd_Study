@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        /* 
+
+effect Method
+ - 기본적으로 transition을 포함하고 있다.
+ - css : transition, animation 과 jquery.effect 충돌!
+ - 큐 메모리 구조로 동작 
+ - 실시간 처리를 위해 .stop()로 앞에 싸인 큐 애니메이션을 삭제할 필요가 있다.
+
+1. show(speed) / hide(speed) 
+    파라미터로 speed를 전달할 수 있고
+    기본 speed : 400 
+    1s : 1000 
+    'fast' : 200
+    'slow': 600
+    5s : 5000
+
+    function show(speed = 0) { }  파라미터 값이 없으면 디폴트가 0으로 전달.
+
+    2.fadeIn(speed) /fadeOut(speed)/ fadeTo(speed, opacity) / fadeToggle(speed)
+
+*/
+    </style>
+</head>
+
+<body>
+    <button>height 0 </button><button>height 200</button>
+    <button>width 0</button><button>width 200</button>
+
+    <div class="box"></div>
+    <script src="../script/jquery-3.6.0.js"></script>
+    <script>
+        $(function() {
+            const speed = 3000;
+            const $btn = $('button');
+            const $box = $('.box');
+            $btn.eq(0).click(function() {
+                // $box.css({
+                //     'height': 0
+                // });
+                $box.height(0).css('transition', '1s')
+            })
+
+            $btn.eq(1).click(function() {
+                // $box.css({
+                //     'height': 200
+                // });
+                $box.height(0).css('transition', '1s')
+            })
+
+            $btn.eq(2).click(function() {
+                // $box.css({
+                //     'height': 200
+                // });
+                $box.width(0);
+            })
+
+            $btn.eq(3).click(function() {
+                // $box.css({
+                //     'height': 200
+                // });
+                $box.width(200);
+            })
+
+        })
+    </script>
+</body>
+
+</html>

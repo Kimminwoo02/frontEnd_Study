@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        button {
+            position: fixed;
+            top: 50px;
+            padding: 10px
+        }
+        
+        .brand {
+            left: 50px;
+        }
+        
+        .back {
+            left: 500px;
+        }
+        
+        .forward {
+            left: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="log"> blur</div>
+
+
+    <button class="brand">300</button>
+
+    <script>
+        window.addEventListener('focus', function() {
+            document.querySelector('.log').innerHTML = 'FOCUS';
+            // 멀티미디어 등 메모리가 많이 드는 APP을 멈추거나 꺼지도록 설정할 수 있다.
+
+        })
+
+
+        window.addEventListener('blur', function() {
+            document.querySelector('.log').innerHTML = 'BLUR';
+        })
+    </script>
+</body>
+
+</html>

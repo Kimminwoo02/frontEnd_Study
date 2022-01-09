@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+
+</head>
+
+<body>
+    <script>
+        console.log(window.ontouchstart);
+        console.log(navigator.pointerEnabled > 0);
+        // 터치할 수 있는 좌표를 인식해서 0보다 크면 터치할 수 있고
+        // 0 보다 작으면 터치 불가!
+        // false인 경우는 데스크탑이거나 모바일 장비가 아니다.
+
+        console.log(navigator.maxTouchPoints);
+    </script>
+</body>
+
+</html>

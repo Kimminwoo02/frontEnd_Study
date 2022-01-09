@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        /* 
+
+effect Method
+1. show(speed) / hide(speed) 
+    파라미터로 speed를 전달할 수 있고
+    기본 speed : 400 
+    1s : 1000 
+    'fast' : 200
+    'slow': 600
+    5s : 5000
+
+    function show(speed = 0) { }  파라미터 값이 없으면 디폴트가 0으로 전달.
+*/
+    </style>
+</head>
+
+<body>
+    <button>보임</button><button>숨김</button>
+    <div class="box"></div>
+    <script src="../script/jquery-3.6.0.js"></script>
+    <script>
+        $(function() {
+            //{
+            //     $('button').click(function(){
+
+            //     })  
+            $('button:nth-child(1)').on('click', function() {
+                // $('.box').css({
+                //     'display': 'block'
+                // });
+                $('.box').show(200);
+            })
+
+            $('button:nth-child(2)').on('click', function() {
+                $('.box').hide(3000);
+            })
+
+
+            document.querySelector('button').addEventListener('click', function() {
+
+
+            })
+        })
+    </script>
+</body>
+
+</html>

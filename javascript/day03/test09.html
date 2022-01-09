@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .log {
+            position: fixed;
+            top: 50px;
+            padding: 10px
+        }
+        
+        .brand {
+            left: 50px;
+        }
+        
+        .back {
+            left: 500px;
+        }
+        
+        .forward {
+            left: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="log">
+        <button class="DefalutBtn">기본화면</button>
+        <button class="fullBtn">전체화면</button>
+
+    </div>
+
+
+    <button class="brand"> 메뉴명 </button>
+
+    <script>
+        const fullBtn = document.querySelector('.fullBtn')
+        const defaultBtn = document.querySelector('.DefalutBtn')
+        const myBody = document.body;
+        fullBtn.addEventListener('click', function() {
+
+            myBody.requestFullscreen();
+            //fullscreen 모드 실행
+            // 콘텐츠 전체화면 표시해야 할 때
+            // 새 창이 열리면서 전체화면 홍보영상을 재생하고 싶을 때
+            // safari, 크롬
+            myBody.webkitRequestFullscreen();
+            // firefox
+            myBody.mozRequestFullscreen();
+            //IE 11+
+            myBody.msRequestFullscreen();
+
+        })
+
+        defaultBtn.addEventListener('click', function() {
+            document.exitFullscreen();
+            // // 풀 스크린 모드 해제
+            // // 사파리, 크롬
+            // myBody.webkitRequestFullscreen();
+
+
+
+            // myBody.mozRequestFullscreen();
+            // // 파폭
+
+            // myBody.msRequestFullscreen();
+            // // IE
+
+
+        })
+    </script>
+</body>
+
+</html>

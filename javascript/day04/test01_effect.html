@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        /* 
+보인다/안보인다 관련 키워드들
+1. display:block;|inline|inline-block
+    display:none;
+    
+2. opacity : 0 ~1 ; 
+3. width / height : 0 이거는 overflow:hidden 과 같이 사용해야 된다.
+
+*/
+    </style>
+</head>
+
+<body>
+    <button>보임</button><button>숨김</button>
+    <div class="box"></div>
+    <script src="../script/jquery-3.6.0.js"></script>
+    <script>
+        $(function() {
+            //{
+            //     $('button').click(function(){   
+
+            //     })
+            $('button:nth-child(1)').on('click', function() {
+                // $('.box').css({          
+                //     'display': 'block'
+                // }); 
+                $('.box').css({
+                    'opacity': '1',
+                    'transition': '1s'
+                });
+            })
+
+            $('button:nth-child(2)').on('click', function() {
+                $('.box').css({
+                    'opacity': '0',
+                    'transition': '1s'
+                });
+            })
+
+            /**/
+            document.querySelector('button').addEventListener('click', function() {
+
+
+
+            })
+        })
+    </script>
+</body>
+
+</html>

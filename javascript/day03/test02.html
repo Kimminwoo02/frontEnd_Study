@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+
+</head>
+
+<body>
+    <script>
+        let array = [1, 2, 3, 4, 4, 5, 5, 6, 4, 6, 6, 98];
+        let max = array[0];
+        for (let a = 0; a < array.length; a++) {
+            if (array[a] > max) {
+                max = array[a];
+            }
+
+        }
+        console.log(max);
+
+        a = Math.max(1, 2, 3, 4, 5, 5, 6)
+        console.log(a)
+
+        let min = array[0]
+        for (let a = 0; a < array.length; a++) {
+            if (array[a] < min) {
+                min = array[a];
+            }
+
+        }
+        console.log(min)
+
+        console.log(Math.min(1, 2, 3, 4, 5, 5, 6, 6, 7, 45, 3, ))
+        console.log(Math.round(1.543)) //반올림 올라간다.
+        console.log(Math.round(1.343)) //반올림 내려간다.
+
+
+        console.log(Math.ceil(1.543))
+        console.log(Math.ceil(1.343))
+            //1~9 사이의 모든 수 올린다.
+
+
+        console.log(Math.floor(1.543))
+        console.log(Math.floor(1.343))
+            //1~9 사이의 모든 수 내린다.
+
+
+        console.log(Math.trunc(1.543))
+        console.log(Math.trunc(1.343))
+            // 무조건 내림
+
+
+
+        console.log(parseInt(1.543))
+        console.log(parseInt(1.343))
+            // 무조건 내림
+
+
+        for (let a = 0; a < 10; a++) {
+            // 난수 : 0~1 이하의 임의의 수.
+            // 정수 부분이 10이하의 정수가 생성
+            console.log(Math.floor(Math.random() * 10));
+
+        }
+        console.log(Math.abs(-5));
+        console.log(Math.abs(5));
+        console.log(Math.pow(5, 5));
+
+
+        for (let a = 1; a <= 10; a++) {
+            console.log((Math.pow(2, a)))
+
+        }
+
+        console.log(Math.sqrt(3))
+    </script>
+</body>
+
+</html>

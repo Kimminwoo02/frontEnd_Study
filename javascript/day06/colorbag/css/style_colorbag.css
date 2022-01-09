@@ -1,0 +1,272 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family: "나눔고딕", "맑은 고딕", "돋움", Dotum, Verdana, Tahoma;
+	font-size: 9pt;
+	line-height:170%
+	color: #333;		
+	margin: 0;
+	padding: 0;
+	background-image: url(../images/color_topbg.jpg);
+	background-repeat: repeat-x;	
+
+}
+
+.wrap{
+	margin: 0 auto;
+	width: 999px;
+	padding:0px;
+}
+
+img{
+	border:0px;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+	padding:0;
+	margin:0;
+}
+
+
+
+
+/*상단 디자인*/
+
+.page_header{
+	width:999px;
+	height:92px;
+
+}
+
+.toplogo{
+	float:left;
+	width:242px;
+	margin:17px 0px 0px 370px;
+}
+
+.topmini{
+	clear:both;
+	float:left;
+	margin:5px 0px 7px 370px;
+	width:242px;
+}
+.topmini ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+.topmini ul li {
+	float: left;
+	display:block;
+}
+
+.topnav{
+	clear: both;
+	float:left;
+	height:33px;
+	margin:0px;
+	padding:0px;
+	
+}
+.topnav ul {
+	list-style-position: inside;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px 0px 0px 15px;;
+}
+.topnav ul li {
+	display: block;
+	float: left;
+}
+
+.topmenuline{
+	background:url(images/color_topmenuline.jpg) no-repeat;
+	width:74px;
+	height:33px;
+}
+
+
+
+/*중앙 메인이미지*/
+
+.content{
+	width:999px;
+}
+
+.imgani{
+	position:relative;
+	clear: both;
+	float:left;	
+	margin-top:10px;
+}
+.mainimg{
+	width:999;
+	height:376px;
+	position:absolute;
+}
+
+.imgmenu{
+	width:999px;
+	clear:both;
+	float:left;
+	padding-top:377px;
+}
+.imgmenu ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+.imgmenu ul li a{
+	display: block;
+	float: left;
+	width: 33%;
+	height: 22px;
+	padding: 6px 0px 5px 0px;;
+	font-size: 10pt;
+	color: #FFF;
+	background-color: #97a3ae;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #FFF;
+}
+.imgmenu ul li a:hover {
+	background-color:#425b71;
+}
+
+.imgmenu:after {
+	content:'';
+	display:block;
+	clear:both;
+}
+.imgmenu ul .imgmenusize a {
+	width: 336px;
+}
+
+
+/*상품진열 부분*/
+.best{
+	clear:both;
+	padding:30px 0px 0px 0px;
+}
+
+
+.content .best .prolist {
+	float:left;
+	padding:0px 0px 15px 0px;
+	margin:0px;
+	width:249px;
+	text-align:center;
+}
+
+.content .best .prolist p {
+	padding:2px;
+	text-align:center;
+}
+
+
+
+.content:after {
+	content:'';
+	display:block;
+	clear:both;
+}
+
+
+/*고객센터*/
+
+.callcenter{
+	width:999px;
+	clear:both;
+	float:left;
+	padding:30px 0px 0px 0px;
+}
+.notice{
+	float:left;
+	width:350px;
+	height:91px;
+	padding:10px 0px 0px 0px;
+	background:url(images/title_notice.jpg) top left no-repeat;
+}
+
+.notice ul {
+	margin: 0px;
+	padding:10px 0px 0px 0px;
+	list-style-type: none;
+}
+.notice ul li {
+	height:20px;
+}
+.notice ul li a {
+	color: #333;
+	text-decoration: none;
+}
+.notice ul li a:hover {
+	color: #F69;
+	text-decoration: underline;
+
+}
+
+.callban1{
+	float:left;
+	margin:0px 20px 0px 0px;
+}
+.callban2{
+	float:right;
+}
+
+
+.callcenter:after {
+	content:'';
+	display:block;
+	clear:both;
+}
+
+/*하단*/
+
+.page_footer{
+
+	clear:both;
+	width:999px;
+	padding:20px 0px 0px 0px;
+	
+}
+
+.rootbtn{
+	width:986px;
+	float:left;
+	padding:7px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #CCC;
+	border-bottom-color: #CCC;	
+
+}
+
+.rootbtn ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+.rootbtn ul li {
+	float: left;
+	margin-right:15px;
+}
+.rootbtn ul li a {
+	color: #333;
+	text-decoration: none;
+}
+.rootbtn ul li a:hover {
+	color:#F69;
+	text-decoration: underline;
+}
+.copy{
+	clear:both;
+	padding:7px;
+	margin:15px 0px 15px 0px;
+}

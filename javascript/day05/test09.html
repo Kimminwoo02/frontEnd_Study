@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            height: 70px;
+            background-color: black;
+            width: 100%;
+        }
+        
+        .clone.sticky {
+            position: fixed;
+            top: 10px;
+            width: 80%;
+            left: 10%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        header.clone {
+            height: 70px;
+            background-color: black;
+            width: 80%;
+            transition: 1s;
+            position: absolute;
+            top: -200px;
+        }
+        
+        body {
+            height: 3000px;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/reset.css">
+</head>
+
+<body>
+    <header class="clone"></header>
+    <header class="sticky"></header>
+
+
+
+
+    <script src="../script/jquery-3.6.0.js"></script>
+
+
+    <script>
+        $(window).scroll(function() {
+            let st = $(this).scrollTop();
+            console.log(st);
+
+            if (st > 1000) {
+                $('header.clone').addClass('sticky');
+
+            } else {
+                $('header.clone').removeClass('sticky');
+            }
+        })
+    </script>
+</body>
+
+</html>

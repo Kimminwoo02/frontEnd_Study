@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funtion</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>함수</h1>
+    <div>
+        함수 호출 : call
+
+    </div>
+    <div>
+        재사용할 수 있는 기능을 이용해서 엄격한 문법을 지켜가면서 만들어진 함수들의 모임 Jquery(프레임워크, 라이브러리): javascript로 만들어진 도구 : node.js (노드는 패키지 관리(모듈을 관리),서버 생성), jQuery
+
+    </div>
+
+    <script src="./console.js"></script>
+    <script>
+        function print(a = 0, b = 1, c = 2, d = 3) { // 매개변수의  디폴트 값을 정할 수 있다. 
+            // 값 전달이 안됐으면 디폴트 값이 넘어간다.
+            if (a != undefined && b != undefined && c != undefined && d != undefined)
+                console.log(`${a},${b},${c},${d} = ${a + b + c + d}`);
+
+
+        }
+        print(1, 2, 3, 4)
+        print(1, 2)
+    </script>
+</body>
+
+</html>

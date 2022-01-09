@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funtion</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+
+    </style>
+    <script src="../script/jquery-3.6.0.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+                document.getElementsByTagName('h1')[0].innerHTML = 'title';
+                console.log('loaded')
+            }) //페이지를 다 읽어드린 다음에 뒤에 함수 실행
+
+        // window.onload = function(){
+
+        // }
+
+        $(function() {
+            $('h1').text('브랜드네임') // h1 태그 선택자이다.
+                //document.getElementsByTagName('h1')[0].innerHTML = 'title'; 이걸 줄인거다.
+        })
+    </script>
+</head>
+
+<body>
+    <h1></h1>
+
+
+
+</body>
+
+</html>

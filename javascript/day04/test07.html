@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        .container {
+            height: 100vh;
+            background-color: cadetblue;
+        }
+        
+        aside {
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 200px;
+            height: 100vh;
+            background-color: orange;
+        }
+        
+        aside>button {
+            position: absolute;
+            top: 50%;
+            transform: translate(-100%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container"></div>
+    <aside><button>닫기</button></aside>
+    <script src="../script/jquery-3.6.0.js"></script>
+    <script>
+        $(function() {
+            //html, css 조립형 언어
+            // 객체지향 언어(도구,논리적 사고) : 수학, 
+            // jquery : 조립형 언어 
+            const $btn = $('aside>button ');
+            let open = true; // true 일 때 열림, false 일 때 닫힘
+            $btn.on('click', function() {
+
+                // 클릭시 aside를 숨기기  $('aside')
+                //$(this).parent()
+                if (open) {
+                    $('aside').css('right', '-200px');
+                    open = false;
+                } else {
+                    $('aside').css('right', '0');
+                    open = true;
+                }
+
+            })
+
+        })
+    </script>
+</body>
+
+</html>

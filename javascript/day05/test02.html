@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+        }
+        
+        .active {
+            background-color: red;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="../script/jquery-3.6.0.js"></script>
+    <div class="imgbox"><img src="http://placekitten.com/300/300" alt=""></div>
+    <script>
+        $('.imgbox').click(function() {
+            let path = $(this).find('img').attr('src'); ///getter
+            console.log(path);
+            let pathSet = `http://placekitten.com/400/400`;
+            $('.imgbox img').attr('src', pathSet);
+            // class를 제어할 때 불편함이 있다.
+            // 그 외의 다른 속성들을 다룰 때 사용한다.
+        })
+    </script>
+</body>
+
+</html>

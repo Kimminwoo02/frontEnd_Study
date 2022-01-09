@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>01_아이디로_엘리먼트찾기</title>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <style>
+        html * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body span {
+            color: red;
+            font-size: 30px;
+        }
+        
+        div {
+            border: 1px solid green;
+            margin: 5px;
+        }
+        
+        li {
+            border: 1px solid blue;
+            list-style: none;
+            margin: 5px;
+        }
+    </style>
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const element = document.getElementsById('element');
+            element.style.backgroundColor = 'red';
+            console.log(element);
+        })
+    </script> -->
+    <script>
+        $(function() {
+            //$('#element').css('background-color', 'red')
+            $('#element').css('backgroundColor', 'red')
+            $('#element').css('color', 'white')
+                // 스타일 시트를 수정하고 싶을 때 사용한다.
+                // 선택자 사용이 css  선택자를 그대로 사용한다.
+            console.log($('#element'));
+
+
+        })
+    </script>
+</head>
+
+<body>
+    <span>'element'아이디를 선택하여 해당 엘리먼트의 색을 바꿔 주세요.</span>
+    <div>
+        1
+        <div>
+            1-1
+        </div>
+    </div>
+    <div>
+        2
+        <div>
+            2-1
+            <div>
+                <!-- 이 디비전 입장에서 안에 있는 요소들 다 innerHTML이다 -->
+                2-1-1
+                <ul>
+                    <li>2-1-1-1</li>
+                    <li>2-1-1-2</li>
+                    <li id="element">2-1-1-3 ( 이부분을 고쳐주세요 )</li>
+                    <li>2-1-1-4</li>
+                    <li>2-1-1-5</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            2-2
+            <ul>
+                <li>2-2-1</li>
+                <li>2-2-2</li>
+                <li>2-2-3</li>
+                <li>2-2-4</li>
+                <li>2-2-5</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

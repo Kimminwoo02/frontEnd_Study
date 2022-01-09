@@ -1,0 +1,21 @@
+@charset 'utf-8';
+.header {
+    margin: auto;
+    width: 100%;
+    background-color: orangered;
+    height: 100px;
+}
+
+li {
+    float: left;
+}
+
+.gnb {
+    float: right;
+    line-height: 2em;
+}
+
+.lnb {
+    width: 500px;
+    font-weight: 10px;
+}

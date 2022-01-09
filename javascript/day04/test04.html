@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        li {
+            height: 50px;
+            border: 1px solid black;
+            background-color: blue;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>List1</li>
+        <li>List2</li>
+        <li>List3</li>
+        <li>List4</li>
+        <li>List5</li>
+    </ul>
+    <script src="../script/jquery-3.6.0.js"></script>
+    <script>
+        $(function() {
+            $('li').mouseover(function() {
+                $(this).stop(false).fadeOut();
+            })
+
+            $('li').mouseout(function() {
+                $(this).stop(false).fadeIn();
+            })
+
+        })
+    </script>
+</body>
+
+</html>

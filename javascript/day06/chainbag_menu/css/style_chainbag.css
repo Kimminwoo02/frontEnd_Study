@@ -1,0 +1,265 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	width:999px;
+	font-family: "나눔고딕", "맑은 고딕", "돋움", Dotum, Verdana, Tahoma;
+	font-size: 9pt;
+	line-height:170%
+	color: #333;	
+	background:url(images/topbg.jpg) top left repeat-x;	
+	margin:0 auto;
+}
+
+img{
+	border:0px;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+	padding:0;
+	margin:0;
+}
+
+
+
+
+/*상단 디자인*/
+
+.page_header{
+	width:999px;
+	height:163px;
+	position:relative;
+}
+
+.toplogo{
+	float:left;
+	width:208px;
+	margin:74px 0px 0px 393px;
+}
+
+.topmini{
+	float:right;
+	margin:11px 0px 0px 0px;
+}
+.topmini ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+.topmini ul li {
+	float: left;
+	margin-left: 25px;
+}
+
+.topnav {
+	clear: both;
+}
+.topnav ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	list-style-position: inside;
+	
+}
+.topnav ul li a {
+	float: left;
+	display: block;
+	width: 140px;
+	height: 25px;
+	text-align: center;
+	color: #777777;
+	text-decoration: none;
+	font-weight: bold;
+	border: 1px solid #999;
+	margin-top: 8px;
+	padding: 10px 0px 0px 0px;
+}
+.topnav ul li a:hover {
+	color: #ffffff;
+	font-size:10pt;
+	background:#98bdbe;
+}
+.topnav ul .totalmenu a {
+	width: 123px;
+	color: #000;
+	background-image: url(images/arrow.jpg);
+	background-repeat: no-repeat;
+	background-position: 120px;
+	text-align: left;
+	padding-left: 22px;
+}
+
+/*서브레이어창 디자인 */
+#showmenu ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	width: 14%;
+	display: block;
+}
+#showmenu ul li a {
+	display: block;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	text-align: center;
+	color: #333333;
+	text-decoration: none;
+}
+#showmenu ul li a:hover {
+	font-weight: bold;
+	color: #8db7b8;
+	text-decoration: underline;
+}
+#showmenu img {
+	float: right;
+	margin-top: 6px;
+}
+
+
+
+
+
+/*중앙 메인이미지*/
+
+.content{
+	width:999px;
+	position:relative;
+}
+
+.mainimg{
+	width:999;
+	height:376px;
+}
+
+#showmenu {
+	position: absolute;
+	padding: 15px;
+	height: 133px;
+	width: 967px;
+	background-color: #FFF;
+	border: 1px solid #98bdbe;
+	z-index: 100;
+
+}
+
+.best{
+	clear:both;
+	padding:30px 0px 0px 0px;
+}
+
+
+.content .best .prolist {
+	float:left;
+	padding:0px;
+	margin:0px;
+	width:249px;
+	text-align:center;
+}
+
+.content .best .prolist p {
+	padding:2px;
+	text-align:center;
+}
+
+
+
+.content:after {
+	content:'';
+	display:block;
+	clear:both;
+}
+
+
+/*고객센터*/
+
+.callcenter{
+	width:999px;
+	clear:both;
+	float:left;
+	padding:30px 0px 0px 0px;
+}
+.notice{
+	float:left;
+	width:350px;
+	height:91px;
+	padding:10px 0px 0px 0px;
+	background:url(images/title_notice.jpg) top left no-repeat;
+}
+
+.notice ul {
+	margin: 0px;
+	padding:10px 0px 0px 0px;
+	list-style-type: none;
+}
+.notice ul li {
+	height:20px;
+}
+.notice ul li a {
+	color: #333;
+	text-decoration: none;
+}
+.notice ul li a:hover {
+	color: #F69;
+	text-decoration: underline;
+
+}
+
+.callban1{
+	float:left;
+	margin:0px 20px 0px 0px;
+}
+.callban2{
+	float:right;
+}
+
+
+.callcenter:after {
+	content:'';
+	display:block;
+	clear:both;
+}
+
+/*하단*/
+
+.page_footer{
+	clear:both;
+	width:999px;
+	padding:20px 0px 0px 0px;
+}
+
+.rootbtn{
+	width:986px;
+	float:left;
+	padding:7px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #CCC;
+	border-bottom-color: #CCC;	
+
+}
+
+.rootbtn ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+.rootbtn ul li {
+	float: left;
+	margin-right:15px;
+}
+.rootbtn ul li a {
+	color: #333;
+	text-decoration: none;
+}
+.rootbtn ul li a:hover {
+	color:#F69;
+	text-decoration: underline;
+}
+.copy{
+	clear:both;
+	padding:7px;
+	margin:15px 0px 15px 0px;
+}

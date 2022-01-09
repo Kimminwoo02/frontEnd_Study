@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .log {
+            position: fixed;
+            top: 50px;
+            padding: 10px
+        }
+        
+        .brand {
+            left: 50px;
+        }
+        
+        .back {
+            left: 500px;
+        }
+        
+        .forward {
+            left: 250px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        //실행 예제
+
+        window.addEventListener('onLine', function() {
+            console.log('온라인 상태입니다.');
+        })
+
+
+
+        window.addEventListener('offLine', function() {
+            console.log('오프라인 상태입니다.');
+        })
+
+        if (navigator.onLine) {
+            console.log('온라인상태')
+        } else {
+            console.log('오프라인 상태')
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            margin: 100px;
+        }
+        
+        div.background {
+            background-color: red;
+        }
+        
+        .border {
+            border: 10px solid blue;
+        }
+        
+        .borderRadius {
+            border-radius: 100%;
+        }
+        
+        .boxShadow {
+            box-shadow: 0 0 30px black;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/reset.css">
+</head>
+
+<body>
+    <h1>classs 제어</h1>
+    <button>background</button>
+    <button>border</button>
+    <button>borderRadius</button>
+    <button>boxShadow</button>
+    <div class="box"></div>
+    <div>
+        <pre>
+        attr() : 속성을 관리하는 메소드
+        addClass() : 클래스를 추가
+        removeClass() : 클래스를 제거
+        toggleClass() : 클래스가 있으면 제거, 없으면 추가
+        hasClass() : 클래스가 있으면 True, 없으면 False 값을 반환
+     </pre>
+
+    </div>
+
+
+
+
+
+    <script src="../script/jquery-3.6.0.js"></script>
+
+
+
+    <script>
+        $('button').click(function() {
+            // button 의 텍스트를 가져오세요
+            let userclass = $(this).text(); // getter
+            //$('.box').addClass('background');
+            $('.box').toggleClass(userclass)
+            console.log(userClass, $('.box').hasClass(userclass));
+        })
+    </script>
+</body>
+
+</html>
