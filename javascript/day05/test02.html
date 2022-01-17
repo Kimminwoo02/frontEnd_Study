@@ -26,7 +26,7 @@
     <div class="imgbox"><img src="http://placekitten.com/300/300" alt=""></div>
     <script>
         $('.imgbox').click(function() {
-            let path = $(this).find('img').attr('src'); ///getter
+            let path = $(this).find('img').attr('src'); ///getter src의 속성값을 가져온다.
             console.log(path);
             let pathSet = `http://placekitten.com/400/400`;
             $('.imgbox img').attr('src', pathSet);

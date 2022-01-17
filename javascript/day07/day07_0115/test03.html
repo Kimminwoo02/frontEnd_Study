@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/reset.css">
+</head>
+<body>
+  <h1> dom : document object model </h1>
+  <ul id="menu">
+    <li><a href="">menu1</a></li>
+    <li><a href="">menu2</a></li>
+    <li><a href="">menu3</a></li>
+    <li><a href="">menu4</a></li>
+    <li><a href="">menu5</a></li>
+  </ul>
+
+  <script>
+    // $(function(){ })
+    document.addEventListener('DOMContentLoaded', function(){
+       const links1 = document.getElementsByTagName('a');
+       const links2 = document.querySelectorAll('#menu a');
+
+       const linkAry1 = [...links1];
+       const linkAry2 = [...links2];
+
+       console.log( links2 );
+       console.log( linkAry2 );
+
+       [...links1].forEach(function(link, count){
+           console.log( link, count );
+       })
+    })
+  </script>
+</body>
+</html>

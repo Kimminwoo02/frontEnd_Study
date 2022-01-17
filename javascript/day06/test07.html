@@ -24,6 +24,7 @@
         
         .section-wrapper {
             display: flex;
+            flex-direction: column;
         }
         
         section {
@@ -139,14 +140,10 @@
     <script>
         const $btn = $('section>.button');
         $btn.on('click', function() {
+            $('.content').removeClass('show');
             $(this).next().toggleClass('show');
-            // addClass, removeClass, hasClass, toggleClass는 클래스 제어
-            // .을 사용하지 않음
-
-
 
         })
-        $btn.eq(2).trigger('click');
     </script>
 </body>
 

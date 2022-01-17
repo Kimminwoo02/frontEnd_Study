@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/reset.css">
+</head>
+<body>
+  <h1> dom : document object model </h1>
+  <div>
+      $('#아이디')
+      $('.클래스')
+      $('태그')
+      .next().prev()
+
+      $()
+  </div>
+  <div>
+      document.getElementById('아이디');
+      document.getElementsByClassName('클래스');
+      document.getElementsByTagName('태그');
+      document.getElementByName('form');
+      document.querySelector('#아이디');
+      document.querySelector('.클래스');
+      document.querySelectorAll('.클래스');
+  </div>
+
+  <ul id="menu">
+    <li><a href="">menu1</a></li>
+    <li><a href="">menu2</a></li>
+    <li><a href="">menu3</a></li>
+    <li><a href="">menu4</a></li>
+    <li><a href="">menu5</a></li>
+  </ul>
+
+  <script>
+    // $(function(){ })
+    document.addEventListener('DOMContentLoaded', function(){
+        const $ul = document.getElementById('menu');
+        const $ul2 = document.querySelector('#menu');
+
+        console.log( $ul === $ul2 );
+
+        const $list = document.getElementsByTagName('li');
+        console.log($list); //  유사배열
+
+        const $list2 = document.querySelector('li');
+        console.log($list2);
+        
+        const $list3 = document.querySelectorAll('li');
+        console.log($list3); // 유사배열
+
+        // HTMLCollection과 NodeList 의 비교 
+        
+
+    })
+  </script>
+</body>
+</html>

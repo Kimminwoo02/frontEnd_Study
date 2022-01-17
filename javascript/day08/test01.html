@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+    .slider-container{ width:1000px; margin: auto;}
+    .slider{ width:100%; position: relative; border: 5px solid black; height: 500px; }
+    .slider>div{ width:100%; position: absolute; left:100%;   }
+    /* .slider>div:nth-child(1){ left:0; } */
+    .slider img{ width:100%; }
+  </style>
+</head>
+<body>
+    <div class="slider-container">
+      <div class="slider">
+          <div>
+            <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/13/1d4aa83d667966a2712d880b457cd3a4.gif" alt="">
+          </div>
+          <div>
+            <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/11/8e3aba21e5618f57517b92e5d516c4c0.jpg" alt="">
+          </div>
+          <div>
+            <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/11/951bdf10d2634698a17c330fa31e8c69.jpg" alt="">
+          </div>
+      </div>
+    </div>
+
+    <div class="slider-controls">
+      <button class="prev">PREV</button>
+      <button class="next">NEXT</button>
+    </div>
+
+    <script>
+      const  sliderContainer = document.querySelector('.slider-container');
+      const  slider = document.querySelector('.slider');
+      const  sliderImg = document.querySelectorAll('.slider>div');
+      
+      sliderImg[0].style.left = 0;
+      // sliderImg[1].style.left = 0;
+      // sliderImg[2].style.left = 0;
+      let count = 0; 
+      let currentImg = count; 
+
+      let timer = setInterval( function(){
+          // 애니메이션 작업 
+          [...sliderImg].forEach((img, index)=>{
+              img.style.transitionDuration = '1s';
+          })
+
+          sliderImg[currentImg%3].style.left = '-100%';
+          // 현재 보여지고 있는 이미지는 나가는 이미지 
+          count++;
+          sliderImg[count%3].style.left = 0;
+          // 들어오는 이미지 
+          
+          sliderImg[currentImg%3].addEventListener('transitionend', function(){
+              this.style.transition = 'none';
+              this.style.left = '100%';
+          })
+
+          currentImg = count; 
+      }, 3000);
+
+    </script>
+</body>
+</html>

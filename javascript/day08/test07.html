@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+    /* #bxSlider>div{position: relative;}
+    #bxSlider>div>*{position: absolute;}
+    #bxSlider>div>caption{top:50%; background-color: #fff; font-size:50px; } */
+
+    .caption{ position: absolute; top:50%; width: 100%;
+    }
+    .caption>div{ position: absolute; background-color: #fff; font-size:50px;
+              width: 100%; text-align: center;  left: 80%; }
+  </style>
+</head>
+<body>
+  <div class="slider-container">
+    <div class="slider  bxSlider" id="bxSlider">
+        <div>
+          <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/13/1d4aa83d667966a2712d880b457cd3a4.gif" alt="">
+          <caption> 첫번째 이미지 </caption>
+        </div>
+        <div>
+          <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/11/8e3aba21e5618f57517b92e5d516c4c0.jpg" alt="">
+          <caption> 두번째 이미지 </caption>
+        </div>
+        <div>
+          <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/11/951bdf10d2634698a17c330fa31e8c69.jpg" alt="">
+          <caption> 세번째 이미지 </caption>
+        </div>
+ 
+     </div>
+     <!--  slider end -->
+     <div class="animationBox">
+            <span>★</span>
+            <span>♠</span>
+            <span>◈</span>
+    </div>  
+
+     <div class="caption">
+       <div>PAGE01</div>
+       <div>PAGE02</div>
+       <div>PAGE03</div>
+     </div>
+  </div>
+  <!--  slider-container end  -->
+
+  <div class="controls">
+    <button class="prev"></button><button class="next"></button>
+  </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  
+    <script>
+      $(function(){
+         $('.bxSlider').bxSlider({
+             // controls:false,
+             nextText:'▶',
+             prevText:'◀',
+             nextSelector:'.next',
+             prevSelector:'.prev',
+             pagerType:'short',
+             pagerShortSeparator:'-',
+             auto:true,
+             onSliderLoad: myuse,
+             onSliderResize: myResize,
+             onSlideBefore : before,
+             onSlideAfter : after,
+         });
+         function  myuse(){ 
+               $('.caption>div').eq(0).css({ 'left': '100%'}).animate({'left':0});
+         }
+
+         function myResize(){
+              console.log( $(window).width() );
+         }
+         
+         function before(){
+              console.log( '슬라이드 전 실행' );
+         }
+
+         function after(oldindex, newindex){
+              console.log( '슬라이드 실행 후 실행', oldindex, newindex);
+              $('.caption>div').css({ 'left': '100%'}).eq(newindex).animate({'left':0});
+         }
+
+
+      });
+    </script>
+</body>
+</html>

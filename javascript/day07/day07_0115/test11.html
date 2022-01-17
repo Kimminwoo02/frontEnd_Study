@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+     .pager{ display: flex;}
+     .pager li{ width: 50px; height: 50px; background: gray;
+          margin: 5px;
+     }
+     .pager li.active{ background: chocolate;}
+  </style>
+</head>
+<body>
+  <h1>pager, indecator</h1>
+  <!-- slider, carousel, gallery -->
+
+  <div class="slider-container">
+    <div class="slider"></div>
+    <ul class="pager">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li class="active"></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  
+  <script>
+    const pager = document.querySelector('.pager');
+    const pagerli = document.querySelectorAll('.pager li');
+
+    pager.addEventListener('click', function(event){
+        
+        pagerli.forEach((li)=>{
+            li.classList.remove('active');
+        })
+
+        event.target.classList.add('active');
+    })
+  </script>
+</body>
+</html>

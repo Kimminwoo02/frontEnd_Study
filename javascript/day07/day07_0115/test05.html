@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{ margin:0; padding:0; }
+    .box{ width:200px; height:200px; background-color: orange;}
+    .active{  background-color: red;}
+  </style>
+</head>
+<body>
+  
+   <div class="box"> BOX </div>
+
+   <script>
+      const box  = document.querySelector('.box');
+      box.addEventListener('click', function(){
+        box.setAttribute('class', 'active');
+        // class 추가 되는 것이 아니라 기존의 클래스를  active 대체함 
+        // class  제어로 변경 해서 사용해야 한다. 
+      })
+   </script>
+<!--    
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script>
+     $('.box').click(function(){
+       $(this).attr('class', "box active");
+     })
+
+   </script> -->
+</body>
+</html>

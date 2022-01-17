@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/reset.css">
+</head>
+<body>
+  <h1> dom : document object model </h1>
+  <ul id="menu">
+    <li class="list" id="first"><a href="">list1</a></li>
+    <li class="list"><a href="">list2</a></li>
+    <li class="list"><a href="">list3</a></li>
+    <li class="list"><a href="">list4</a></li>
+    <li class="list"><a href="">list5</a></li>
+  </ul>
+  <div>
+    setAttibute('속성');
+    getAttibute('속성', '값');
+    Attributes : 불특정 속성값 사용
+
+
+  </div>
+  <script>
+    // $(function(){ })
+    document.addEventListener('DOMContentLoaded', function(){
+        const list = document.querySelector('.list');
+        const list2 = document.getElementsByClassName('list')[0];
+
+        console.log( list.getAttribute('id'));
+
+        const idList = document.querySelectorAll('.list');
+        idList.forEach(function(idlist, index){
+            idlist.setAttribute('data-user', 'user-'+index );
+        })
+    })
+  </script>
+</body>
+</html>

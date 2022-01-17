@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+    .container{ width:200px; height: 200px;
+        background-color: cadetblue;
+    }
+    .active{ background-color: chocolate;}
+
+    div.background{ background-color: red;}
+    .border{ border: 10px solid skyblue;}
+    .borderRadius{ border-radius: 100%;}
+    .boxShadow{ box-shadow: 0 0 30px black;}
+  </style>
+</head>
+<body>
+    <div class="btnGroup">
+      <button>background</button>
+      <button>border</button>
+      <button>borderRadius</button>
+      <button>boxShadow</button>
+    </div>
+    <div class="container"></div>
+
+    <script>
+        const box = document.querySelector('.container');
+        const btn = document.querySelector('.btnGroup');
+        
+        btn.addEventListener('click', function(event){
+            let btnClass = event.target.innerHTML; 
+            console.log(btnClass);
+
+            //box.classList.add( btnClass );
+            box.classList.toggle( btnClass );
+            //box.classList.remove( btnClass );
+        })
+
+        /*  1번
+        box.addEventListener('click', function(){
+          // box.className = 'active';
+          // 기존의 있던 클래스명에 덮어쓰기
+
+          box.classList.add('active');
+          // 기존의 클래스 목록에  클래스 추가
+        })
+        */
+    </script>
+</body>
+</html>

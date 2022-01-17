@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+    .slider-container{ position:relative;}
+    .bx-controls .bx-controls-direction{
+          position: absolute;  top:50%;  transform: translateY(-50%);
+          width: 100%; 
+    } 
+    .bx-wrapper .bx-next, 
+    .bx-wrapper .bx-prev { display: block; width: 50px; height: 50px; background: red;
+            position: absolute; background-size:50px 50px; color:transparent;
+    } 
+    .bx-wrapper .bx-next{ right: 100px; background-image: url(./images/forward-solid.svg); }
+    .bx-wrapper .bx-prev{ left: 100px; background-image: url(./images/backward-solid.svg);  }
+    .bx-pager{ width: 200px; margin: auto; display: flex; }
+    .bx-pager .bx-pager-item a{ display: block; width: 15px; height: 10px;
+          background-color: gray; margin: 5px; font-size:0;
+          transition:1s;
+    }
+    .bx-pager .bx-pager-item a.active{ background-color: red; width:25px; }
+  </style>
+</head>
+<body>
+  <div class="slider-container">
+    <div class="slider  bxslider" id="bxSlider">
+        <div>
+          <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/13/1d4aa83d667966a2712d880b457cd3a4.gif" alt="">
+        </div>
+        <div>
+          <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/11/8e3aba21e5618f57517b92e5d516c4c0.jpg" alt="">
+        </div>
+        <div>
+          <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/11/951bdf10d2634698a17c330fa31e8c69.jpg" alt="">
+        </div>
+        
+        <div>
+          <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/13/1d4aa83d667966a2712d880b457cd3a4.gif" alt="">
+        </div>
+        <div>
+          <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/11/8e3aba21e5618f57517b92e5d516c4c0.jpg" alt="">
+        </div>
+        <div>
+          <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/11/951bdf10d2634698a17c330fa31e8c69.jpg" alt="">
+        </div>
+        <div>
+          <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/13/1d4aa83d667966a2712d880b457cd3a4.gif" alt="">
+        </div>
+        <div>
+          <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/11/8e3aba21e5618f57517b92e5d516c4c0.jpg" alt="">
+        </div>
+        <div>
+          <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/11/951bdf10d2634698a17c330fa31e8c69.jpg" alt="">
+        </div>
+
+    </div>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  
+    <script>
+      $(function(){
+         $('#bxSlider').bxSlider();
+
+      });
+    </script>
+</body>
+</html>

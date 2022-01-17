@@ -54,7 +54,7 @@
             myBody.mozRequestFullscreen();
             //IE 11+
             myBody.msRequestFullscreen();
-
+            // 변수.에드이벤트리스너
         })
 
         defaultBtn.addEventListener('click', function() {
@@ -71,7 +71,16 @@
             // myBody.msRequestFullscreen();
             // // IE
 
+            /*도쿠먼트와 윈도우의 차이점!
+            윈도우는 브라우저 탭에 존재하는 자바스크립트 전역 최상위 객체이다. 윈도우로 어디서든 접근 가능!
+            윈도우 객체 안에 도쿠먼트 객체가 존재하고 도쿠먼트에는 잠재적으로 보여질 수 있는 돔에 대한 정보가 저장되어 있다. 
+            도쿠먼트 객체는 window.document, 또는 document로 접근 가능!
 
+            윈도우 객체는 전역으로 선언되기 때문에 윈도 객체 안에 window. 과 같이 윈도우 객체를 참조하지 않고
+            property로 적ㅂ근 가능! 
+            
+            
+            */
         })
     </script>
 </body>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+
+  </style>
+</head>
+<body>
+  <div class="btnGroup">
+    <button>red</button>
+    <button>green</button>
+    <button>blue</button>
+    <button>purple</button>
+    <button>skyblue</button>
+    <button>All</button>
+  </div>
+  <div class="container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+
+  <script>
+    const colorAry = ['red', 'green', 'blue', 'purple', 'skyblue'];
+    const box = document.querySelectorAll('.box');
+
+    for(let a = 0; a<box.length ; a++){
+      //console.log(Math.floor(Math.random()*5));
+        let userColor = colorAry[ Math.floor(Math.random()*5) ];
+        // 난수 발생 
+        box[a].setAttribute('data-color', userColor ) ;
+        // 발생된 난수로 .box 의 속성값 지정 
+    }
+
+    box.forEach(function( item, index){
+       // item.getAttribute('data-color'); 값을 가져옴 
+       item.style.background = item.getAttribute('data-color');
+       // 자동으로 알아서 색칠하기
+    })
+
+    /// button 6개 동작 제어 
+    const btn1 = document.getElementsByTagName('button')[0];
+    const btn2 = document.getElementsByTagName('button')[1];
+    const btn3 = document.getElementsByTagName('button')[2];
+    const btn4 = document.getElementsByTagName('button')[3];
+    const btn5 = document.getElementsByTagName('button')[4];
+
+    btn1.addEventListener('click', function(){
+      let keyword = btn1.innerHTML;
+       //box.forEach(function(){})
+       box.forEach((item, index)=>{
+         console.log( item.getAttribute('data-color'));
+         if( !(item.getAttribute('data-color') == keyword)){
+            item.style.display = "none";
+         }else{
+            item.style.display = "block";
+         }
+       })
+    })
+
+    
+    btn2.addEventListener('click', function(){
+      let keyword = btn2.innerHTML;
+       //box.forEach(function(){})
+       box.forEach((item, index)=>{
+         console.log( item.getAttribute('data-color'));
+         if( !(item.getAttribute('data-color') == keyword)){
+            item.style.display = "none";
+         }else{
+            item.style.display = "block";
+         }
+       })
+    })
+
+
+  </script>
+</body>
+</html>

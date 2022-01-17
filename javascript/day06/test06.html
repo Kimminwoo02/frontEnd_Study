@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <style>
+        #slidercontainer {
+            height: 200px;
+            overflow: hidden;
+            width: 300px;
+            margin: auto;
+        }
+        
+        .bx-wrapper .bx-prev {
+            left: 51px;
+        }
+        
+        li:last-child {
+            position: relative;
+        }
+        
+        li:last-child img {
+            position: absolute;
+            top: -40px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- <div class="slider">
+        <div><img src="http://placekitten.com/200/200" alt=""></div>
+        <div><img src="http://placekitten.com/200/300" alt=""></div>
+        <div><img src="http://placekitten.com/200/400" alt=""></div>
+        <div><img src="http://placekitten.com/300/300" alt=""></div>
+        <div><img src="http://placekitten.com/400/200" alt=""></div>
+    </div> -->
+
+    <div class="slidercontainer">
+        <ul id="mySlider">
+            <li><img src="http://placekitten.com/200/200" title="300/200"></li>
+            <li><img src="http://placekitten.com/200/300" title="300/200"></li>
+            <li><img src="http://placekitten.com/200/400" title="300/200"></li>
+            <li><img src="http://placekitten.com/300/300" title="300/200"></li>
+            <li><img src="http://placekitten.com/400/200" title="300/200"></li>
+        </ul>
+    </div>
+    <script>
+        $(function() {
+            $('#mySlider').bxSlider({
+                mode: 'fade',
+                captions: true,
+            });
+        });
+    </script>
+</body>
+
+</html>

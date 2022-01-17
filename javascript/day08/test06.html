@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+    #caption{ position: absolute; width:100%; height: 50px; bottom: -100%;
+          background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider-container">
+    <div class="slider  bxslider" id="bxSlider">
+        <div>
+          <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/13/1d4aa83d667966a2712d880b457cd3a4.gif" alt="">
+          
+        </div>
+        <div>
+          <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/11/8e3aba21e5618f57517b92e5d516c4c0.jpg" alt="">
+        </div>
+        <div>
+          <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/11/951bdf10d2634698a17c330fa31e8c69.jpg" alt="">
+        </div>
+        
+        <div>
+          <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/13/1d4aa83d667966a2712d880b457cd3a4.gif" alt="">
+        </div>
+        <div>
+          <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/11/8e3aba21e5618f57517b92e5d516c4c0.jpg" alt="">
+        </div>
+        <div>
+          <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/11/951bdf10d2634698a17c330fa31e8c69.jpg" alt="">
+        </div>
+        <div>
+          <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/13/1d4aa83d667966a2712d880b457cd3a4.gif" alt="">
+        </div>
+        <div>
+          <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/11/8e3aba21e5618f57517b92e5d516c4c0.jpg" alt="">
+        </div>
+        <div>
+          <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/11/951bdf10d2634698a17c330fa31e8c69.jpg" alt="">
+        </div>
+        
+     </div>
+     <!--  slider end -->
+     <span id="caption">로딩됨</span>   
+  </div>
+  <!--  slider-container end  -->
+
+  <div class="controls">
+    <button class="prev"></button><button class="next"></button>
+  </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  
+    <script>
+      $(function(){
+         $('#bxSlider').bxSlider({
+             // controls:false,
+             nextText:'▶',
+             prevText:'◀',
+             nextSelector:'.next',
+             prevSelector:'.prev',
+             pagerType:'short',
+             pagerShortSeparator:'-',
+             auto:true,
+             onSliderLoad: function(){ 
+                    console.log('이미지슬라이드가 로딩됨');
+                    $('#caption').animate({'bottom':'30%'})
+             },
+             onSliderResize: myResize,
+             onSlideBefore : before,
+             onSlideAfter : after,
+         });
+
+         function myResize(){
+              console.log( $(window).width() );
+         }
+         
+         function before(){
+              console.log( '슬라이드 전 실행' );
+         }
+
+         function after(){
+              console.log( '슬라이드 실행 후 실행' );
+         }
+
+
+      });
+    </script>
+</body>
+</html>

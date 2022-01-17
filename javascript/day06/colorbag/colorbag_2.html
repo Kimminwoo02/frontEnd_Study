@@ -6,6 +6,7 @@
     <title>ColorBag</title>
     <link href="./css/style_colorbag.css" rel="stylesheet" type="text/css">
 
+
 </head>
 
 <body>
@@ -80,7 +81,11 @@
 
         <div class="content">
             <div class="imgani">
-                <div class="mainimg"><img src="images/color_main1.jpg" alt="chainbag"></div>
+                <div class="mainimg">
+                    <img src="images/color_main1.jpg" alt="chainbag">
+                    <img src="images/color_main2.jpg" alt="chainbag">
+                    <img src="images/color_main3.jpg" alt="chainbag">
+                </div>
                 <div class="imgmenu">
                     <ul>
                         <li><a href="#">스퀘어 토드 숄더백(합성피혁)</a></li>
@@ -213,15 +218,32 @@
         // const $menu = $('.imgmenu>li'); // index() => 0 1 2
 
         $menu.on('mouseenter', function() {
-            let num = $(this).parent().index() + 1;
-            console.log(num);
-            let path = `images/color_main${num}.jpg`;
-            console.log(path)
-            $img.attr('src', path);
+            let num = $(this).parent().index();
+            // 이미지 번호와 메뉴번호가 동일하므로 번호 보정할 필요 없음
+            showImg(num);
 
         })
-    </script>
 
+        showImg(0); // init()
+        function showImg(num) {
+            $img.stop().fadeOut();
+            $img.eq(num).stop().fadeIn();
+
+        }
+        $menu.eq(2).trigger('mouseenter');
+    </script>
+    <!-- <style>
+    .mainimg {
+        position: absolute;
+    }
+    
+    .mainimg>img {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    
+</style> -->
 </body>
 
 </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+     .pager{ display: flex;}
+     .pager li{ width: 50px; height: 50px; background: gray;
+          margin: 5px;
+     }
+     .pager li.active{ background: chocolate;}
+  </style>
+</head>
+<body>
+  <h1>pager, indecator</h1>
+  <!-- slider, carousel, gallery -->
+
+  <div class="slider-container">
+    <div class="slider"></div>
+    <ul class="pager">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li class="active"></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <!-- 
+      const timer = setTimeout(callback, delay);
+      // delay  이후  callback 호출 
+      // 실행될 환경이 되면 처리 
+      clearTimeout(timer);
+
+      const timer = setInterval(callback, delay);
+      // delay  마다  callback 호출 
+      clearInterval(timer);
+   -->
+  <script>
+    const timer = setTimeout(hello, 3000);
+
+    function hello(){
+        alert('hello');
+        clearTimeout(timer);
+        console.log('timeout');
+    }
+  </script>
+</body>
+</html>

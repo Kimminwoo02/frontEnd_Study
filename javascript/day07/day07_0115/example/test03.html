@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{ display: flex; gap: 1em; flex-wrap: wrap;}
+    .container>div{ width:200px; height: 200px;}
+    .red{ background-color: red;}
+    .green{ background-color: green;}
+    .blue{ background-color: blue;}
+    .pink{ background-color: pink;}
+    .purple{ background-color: purple;}
+    button{ padding: 1em;}
+  </style>
+</head>
+<body>
+  <button>red</button>
+  <button>green</button>
+  <button>blue</button>
+  <button>pink</button>
+  <button>purple</button>
+  <button>All</button>
+  <div class="container">
+    <div class="red"    data-keyword="red"></div>
+    <div class="green"  data-keyword="green"></div>
+    <div class="red"    data-keyword="red"></div>
+    <div class="green"  data-keyword="green"></div>
+    <div class="blue"   data-keyword="blue"></div>
+    <div class="red"    data-keyword="red"></div>
+    <div class="green"  data-keyword="green"></div>
+    <div class="blue"   data-keyword="blue"></div>
+    <div class="pink"   data-keyword="pink"></div>
+    <div class="purple" data-keyword="purple"></div>
+    <div class="pink"   data-keyword="pink"></div>
+    <div class="purple" data-keyword="purple"></div>
+    <div class="red"    data-keyword="red"></div>
+    <div class="green"  data-keyword="green"></div>
+    <div class="blue"   data-keyword="blue"></div>
+    <div class="red"    data-keyword="red"></div>
+    <div class="green"  data-keyword="green"></div>
+    <div class="red"    data-keyword="red"></div>
+    <div class="green"  data-keyword="green"></div>
+    <div class="blue"   data-keyword="blue"></div>
+    <div class="pink"   data-keyword="pink"></div>
+    <div class="purple" data-keyword="purple"></div>
+    <div class="blue"   data-keyword="blue"></div>
+    <div class="pink"   data-keyword="pink"></div>
+    <div class="purple" data-keyword="purple"></div>
+    <div class="pink"   data-keyword="pink"></div>
+    <div class="purple" data-keyword="purple"></div>
+    <div class="blue"   data-keyword="blue"></div>
+    <div class="pink"   data-keyword="pink"></div>
+    <div class="purple" data-keyword="purple"></div>
+    <div class="red"    data-keyword="red"></div>
+    <div class="green"  data-keyword="green"></div>
+    <div class="blue"   data-keyword="blue"></div>
+    <div class="pink"   data-keyword="pink"></div>
+    <div class="purple" data-keyword="purple"></div>
+    <div class="red"    data-keyword="red"></div>
+    <div class="green"  data-keyword="green"></div>
+    <div class="blue"   data-keyword="blue"></div>
+    <div class="pink"   data-keyword="pink"></div>
+    <div class="purple" data-keyword="purple"></div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $('button').click(function(){
+        let keyword = $(this).text();
+        
+        let $box = $('.container>div');
+
+        let count = 0;
+        $box.each(function(){ 
+            let boxKeyword = $(this).attr('data-keyword');
+            // 현재 루틴 돌고 있는 div 의  키워드 리턴 
+            //console.log( count++,  $(this) );
+            if( keyword == 'All'){
+              $(this).show();
+            }else if( keyword !=  boxKeyword){
+              $(this).hide();
+            }else{
+              $(this).show();
+            }
+        })
+
+        /*
+        for( let a = 0; a< $('.container>div').length ; a++ ){
+            //console.log( $box.eq(a).attr('data-keyword') );
+            if( keyword == 'All'){
+              $box.eq(a).show();
+            }else if( keyword != $box.eq(a).attr('data-keyword') ){
+              $box.eq(a).hide();
+            }else{
+              $box.eq(a).show();
+            }
+        }
+        */
+    })
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./script01/jquery-ui.min.js">
+    <style>
+        .accordion-container {
+            width: 700px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="accordion-container">
+        <dl>
+            <dt>title1</dt>
+            <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, ea consequuntur! Minima amet delectus odit voluptate soluta laborum magnam quis mollitia porro, repellat non accusamus modi maxime velit quae numquam.</dd>
+            <dt>title2</dt>
+            <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quos ducimus asperiores, laudantium vel accusantium labore ipsum atque. Quibusdam ab rem commodi expedita aut alias fugit, aperiam blanditiis libero pariatur!</dd>
+            <dt>title3</dt>
+            <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quos ducimus asperiores, laudantium vel accusantium labore ipsum atque. Quibusdam ab rem commodi expedita aut alias fugit, aperiam blanditiis libero pariatur!</dd>
+        </dl>
+    </div>
+    <script src="../script/jquery-3.6.0.js"></script>
+    <script src="./script01/jquery-ui.min.js"></script>
+    <script>
+        $(function() {
+            $("dl").accordion();
+        });
+    </script>
+</body>
+
+</html>

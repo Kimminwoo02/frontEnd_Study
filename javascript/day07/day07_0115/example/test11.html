@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+    aside{ position: fixed; top:0; right:0; width:300px; height: 100vh; background-color: orange;  transition: 0.5s;
+    }
+    aside>button{ border:none; transform: translateX(-100%) translateY(-50%);
+      background-color: orange; top: 50%; position: absolute;
+      font-weight: bold;
+    }
+    /*
+    @keyframes  asideAni{ 
+      100%{ right:-300px;}
+    }
+   
+    aside.active{  animation: asideAni .5s forwards; }
+    */
+    aside.active{ right:-300px; }
+    .box.active{ background-color: red;}
+  </style>
+</head>
+<body>
+  <aside><button>&gt;</button></aside>
+  <div class="box active"></div>
+  <script src="../script/jquery-3.6.0.min.js"></script>
+  <script>
+    const duration = 300; 
+    let toggle = true; 
+    // button 을 클릭하면 닫히고 , 다시 클릭하면 열리게 작성하세요. 
+    $('button').click(function(){
+      if( !$('aside').hasClass('active')){
+          $('aside').addClass('active');
+          $(this).html('&lt;');
+      }else{
+          $('aside').removeClass('active');
+          $(this).html('&gt;');
+      }
+
+      /*
+        if( toggle ){ 
+            $('aside').animate({ "right": "-300px"}, duration);    
+            toggle = false; 
+            $(this).html('&lt;');
+        }else{ 
+            $('aside').animate({ "right": "0"}, duration);  
+            $(this).html('&gt;');
+            toggle = true; 
+        }
+      */  
+    })
+    
+  </script>
+</body>
+</html>

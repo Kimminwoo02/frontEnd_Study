@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+    .slider-container{ width:1000px; margin: auto;
+      border: 5px solid black; height: 500px;  overflow: hidden;
+    }
+    .slider{ width:5000px;  display: flex;  }
+    .slider>div{ width:1000px;  }
+    .slider img{ width:100%; }
+
+    /* .slider{ transform: translateX(-1000px);} 
+    .slider{ transform: translateX(-2000px);}
+    .slider{ transform: translateX(-3000px);}
+    .slider{ transform: translateX(-4000px);}
+    .slider{ transform: translateX(-0px);} */
+  </style>
+</head>
+<body>
+    <div class="slider-container">
+      <div class="slider">
+          <div class="lastClone">
+            <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/11/951bdf10d2634698a17c330fa31e8c69.jpg" alt="">
+          </div>
+          <div>
+            <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/13/1d4aa83d667966a2712d880b457cd3a4.gif" alt="">
+          </div>
+          <div>
+            <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/11/8e3aba21e5618f57517b92e5d516c4c0.jpg" alt="">
+          </div>
+          <div>
+            <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/11/951bdf10d2634698a17c330fa31e8c69.jpg" alt="">
+          </div>
+          <div class="firstClone">
+            <img src="https://app-storage-edge-002.cafe24.com/bannermanage2/mylady333/2022/01/13/1d4aa83d667966a2712d880b457cd3a4.gif" alt="">
+          </div>
+      </div>
+    </div>
+
+    <div class="slider-controls">
+      <button class="prev">PREV</button>
+      <button class="next">NEXT</button>
+    </div>
+
+    
+    <script>
+        const sliderContainer = document.querySelector('.slider-container');
+        const slider = document.querySelector('.slider');
+        const sliderImg = document.querySelectorAll('.slider>div');
+        const prev = document.querySelector('.prev');
+        const next = document.querySelector('.next');
+
+        let count = 1;
+        let size = sliderImg[0].getBoundingClientRect().width; 
+        console.log(size);
+
+        slider.style.transform = `translateX(${-size*count}px)`;
+
+        next.addEventListener('click', function(){
+            if( count>= sliderImg.length - 1) return; 
+            slider.style.transition = `1s`;
+            //
+            count++; 
+            slider.style.transform = `translateX(${-size*count}px)`;
+        })
+
+        prev.addEventListener('click', function(){
+            if( count <=0 ) return; 
+            slider.style.transition = `1s`;
+            count--; 
+            slider.style.transform = `translateX(${-size*count}px)`;
+        })
+        
+        slider.addEventListener( 'transitionend', function(){
+            console.log( 'transitionend ');
+            if( sliderImg[count].getAttribute('class') === 'firstClone'){
+                slider.style.transition = "none";
+                count = sliderImg.length - count; 
+                // 5 - 3 = 2
+                slider.style.transform = `translateX(${-size*count}px)`;
+            }
+
+            if( sliderImg[count].getAttribute('class') === 'lastClone'){
+                slider.style.transition = "none";
+                count = sliderImg.length - 2; 
+                // 5 - 2 = 3
+                slider.style.transform = `translateX(${-size*count}px)`;
+            }
+        })
+    </script>
+</body>
+</html>

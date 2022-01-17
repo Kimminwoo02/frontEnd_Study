@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+    aside{ position: fixed; top:0; right:0; width:300px; height: 100vh; background-color: orange;}
+    aside>button{ border:none; transform: translateX(-100%) translateY(-50%);
+      background-color: orange; top: 50%; position: absolute;
+      font-weight: bold;
+    }
+    aside.active{ right:-300px; }
+    .box.active{ background-color: red;}
+  </style>
+</head>
+<body>
+  <button> 콘텐츠 추가 </button>
+  <div class="box"> text </div>
+
+  <script src="../script/jquery-3.6.0.min.js"></script>
+  <script>
+    $('button').click(function(){
+      const tag = `<span> <b> &times; </b> </span>`;
+      // $('.box').text(tag);
+      // $('.box').html(tag);
+      // $('.box').append(tag);
+      // $('.box').prepend(tag);
+      // $('.box').after(tag);
+      $('.box').before(tag);
+    })
+  </script>
+</body>
+</html>
