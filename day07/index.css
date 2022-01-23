@@ -32,16 +32,13 @@ h1 {
     padding-left: 400px;
 }
 
-.gnb {
-    float: right;
-}
-
 .headerContent li {
     float: left;
 }
 
 .gnb {
     padding-top: 20px;
+    float: right;
 }
 
 .search {

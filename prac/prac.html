@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        #header {
+            margin: auto;
+            width: 800px;
+            background-color: pink;
+            height: 200px;
+            position: relative;
+        }
+        
+        .logo {
+            width: 150px;
+            height: 50px;
+            font-size: 16px;
+            background-color: orange;
+            padding: 10px;
+            margin-left: 10px;
+        }
+        
+        .fnb {
+            position: absolute;
+            width: 150px;
+            background-color: green;
+            height: 100px;
+            left: 200px;
+            top: 0;
+        }
+        
+        li {
+            float: left;
+            padding: 5px;
+        }
+        
+        .lnb {
+            position: absolute;
+            top: 100px;
+            right: 20px;
+        }
+        
+        .lnb li {
+            padding: 10px;
+        }
+        
+        .gnb {
+            top: 100px;
+            float: right;
+            padding-right: 1em;
+        }
+        
+        .gnb li {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="logo">
+            맛난치킨
+        </div>
+        <div class="fnb">맛난치킨
+        </div>
+        <div class="main"></div>
+        <ul class="gnb">
+            <li>고객센터</li>
+            <li>사이트 맵</li>
+            <li>가맹점 개설안내</li>
+        </ul>
+        <ul class="lnb">
+            <li><a href="#">a</a></li>
+            <li>b</li>
+            <li>c</li>
+            <li>d</li>
+            <li>e</li>
+        </ul>
+    </div>
+</body>
+
+</html>

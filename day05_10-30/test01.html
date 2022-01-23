@@ -12,6 +12,10 @@
             width: 120px;
             height: 40px;
             display: inline-block;
+            /* 인라인 블럭은 기본적으로는 inline처럼 
+            옆에 엘리먼트가 오지만 기존 inline 에서 불가능했던
+            width와 height 속성 지정 및 margin과 padding 
+            등의 속성 조정 가능하다. */
             border: 1px solid black;
             line-height: 40px;
             /*세로 가운데 정렬*/
@@ -20,7 +24,7 @@
         }
         
         div:last-child span {
-            border-bottom: 1px solid black
+            border-bottom: 1px solid black;
         }
         /* 인라인속성의 태그: 너비와 높이를 지정할 수 없다.
            display 속성 block, inline, inline-block, flex
