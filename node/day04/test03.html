@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/jquery.fullPage.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        header {
+            position: fixed;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            top: 0;
+        }
+        
+        body {
+            font-size: 12px;
+        }
+        
+        .lnb>ul {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .lnb a {
+            display: block;
+            padding: 1rem;
+        }
+        
+        .fp-controlArrow.fp-prev {
+            left: 102px;
+            color: black;
+        }
+        
+        .fp-controlArrow.fp-next {
+            right: 102px;
+            color: black;
+        }
+        
+        .fp-slidesNav {
+            width: 115px;
+            background-color: orange;
+        }
+        
+        #myHeight {
+            height: 500px;
+        }
+        
+        .mySlider {
+            width: 800px;
+            height: 500px;
+            margin: auto;
+        }
+        
+        .mySlider>div {
+            width: 800px;
+            height: 500px;
+        }
+        
+        .mySlider>div:nth-child(1) {
+            background-color: orangered;
+        }
+        
+        .mySlider>div:nth-child(2) {
+            background-color: greenyellow;
+        }
+        
+        .mySlider>div:nth-child(3) {
+            background-color: yellow;
+        }
+        
+        .mySlider>div:nth-child(4) {
+            background-color: purple;
+        }
+        
+        #fp-nav ul li .fp-tooltip.right {
+            right: 20px
+        }
+        
+        #fp-nav ul li .fp-tooltip {
+            border: 1px solid black;
+            padding: 0.5rem;
+            top: -10px;
+            border-radius: 4px;
+            background-color: black;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        #fp-nav ul li a.active span {
+            box-shadow: 0 0 0 2px yellow;
+            outline: 1px solid rgb(236, 231, 231);
+            outline-offset: -3px;
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fullpage">
+        <div class="content">
+            <h2>SECTION</h2>
+        </div>
+        <div class="content">
+            <div class="mySlider">
+                <div class="bx-slider">
+                    <div>I am a slide.</div>
+                    <div>I am another slide.</div>
+                    <div>I am another slide2.</div>
+                    <div>I am another slide3.</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content fp-auto-height">
+            <div id="myHeight">제어하고 싶은 구조물 안에 내용물 넣기</div>
+        </div>
+        <footer class="content">
+            <h2 class="animate__animated animate__bounce">FOOTER</h2>
+        </footer>
+
+    </div>
+    <header>
+        <nav class="lnb">
+            <ul id='myMenu'>
+                <li data-menuanchor="firstPage" class="active"></li>><a href="#section1">section1</a></li>
+                <li data-menuanchor="secondPage" class="active"><a href="#section2">section2</a></li>
+                <li data-menuanchor="thirdPage" class="active"><a href="#section3">section3</a></li>
+                <li data-menuanchor="fourthPage" class="active"><a href="#section4">section4</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="./script/jquery.fullPage.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                //options here
+                autoScrolling: true,
+                scrollHorizontally: true,
+                sectionsColor: ['pink', 'yello', 'red', 'blue'],
+                anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+                menu: '#myMenu',
+                navigation: true,
+                navigationPosition: 'right',
+                navigationTooltips: ['first page', 'second page', 'third page', 'fourth page'],
+                slidesNavigation: true,
+                slidesNavPosition: 'bottom',
+                sectionSelector: '.content',
+                autoScrolling: false
+
+
+
+            });
+            $('.bx-slider').bxSlider();
+
+        });
+    </script>
+</body>
+
+</html>

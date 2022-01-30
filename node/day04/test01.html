@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <style>
+        a {
+            color: inherit;
+        }
+        
+        section {
+            height: 100vh;
+            text-align: center;
+            line-height: 100vh;
+            font-size: 100px;
+        }
+        
+        #section1 {
+            background-color: orange;
+        }
+        
+        #section2 {
+            background-color: green;
+        }
+        
+        #section3 {
+            background-color: blue;
+        }
+        
+        #section4 {
+            background-color: red;
+        }
+        
+        header {
+            position: fixed;
+            left: 100px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .lnb li.active {
+            color: red;
+            border-bottom: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="section1">section1</section>
+    <section id="section2">section2</section>
+    <section id="section3">section3</section>
+    <section id="section4">section4</section>
+
+    <header>
+        <nav class="lnb">
+            <ul>
+                <li><a href="#section1">section1</a></li>
+                <li><a href="#section2">section2</a></li>
+                <li><a href="#section3">section3</a></li>
+                <li><a href="#section4">section4</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./script/jquery.mousewheel.js"></script>
+    <script>
+        $('section').mousewheel((event) => {
+            console.log(event.deltaY)
+            let sectionTop = 0;
+            if (event.deltaY < 0) {
+                sectionTop = $(this).next().offset.top;
+
+            } else if (event.deltaY > 0) {
+                sectionTop = $(this).prev().offset.top;
+            }
+            $('html,body').stop().animate({
+                'scroll': sectionTop
+            });
+        })
+
+        // console.log($('#section1').offset().top); // offset은 현재 시점 기준으로 위치를 알 수 있다.
+        // console.log($('#section2').offset().top);
+        // console.log($('#section3').offset().top);
+        // console.log($('#section4').offset().top);
+
+        $('.lnb a').click(function() {
+            let menutop = $(this).attr('href');
+            let sectiontop = $(`${menutop}`).offset().top;
+            $('html, body').stop().animate({
+                'scrollTop': sectiontop
+            }, 500);
+
+
+            //스크롤 스파이
+            $('.lnb li').each(function() {
+                $(this).removeClass('active');
+            })
+            $(this).parent().addClass('active');
+        })
+
+        $(window).scroll(function() {
+            let st = $(this).scrollTop();
+            $('section').each(function() {
+                if (st >= $(this).offset().top - 20) {
+                    let num = $(this).index();
+                    $('.lnb li').each(function() {
+                        $(this).removeClass('active');
+                    })
+                    $(`.lnb li`).eq(num).addClass('active')
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

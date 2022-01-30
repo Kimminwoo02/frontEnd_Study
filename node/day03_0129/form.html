@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <form action="">
+      <input type="text" name="userId" id="userId" placeholder="아이디" onchange="change()">
+      <input type="text" name="userPw" id="userPw" placeholder="비밀번호" onchange="change()">
+      <button onclick="move"> 확인 </button>
+  </form>
+
+  <div id="msg">      </div>
+  <script>
+      function change(){
+           
+            
+      }
+
+      function move(){
+            const user = {
+                id : document.querySelector('#userId').value,
+                pw : document.querySelector('#userPw').value,
+            }
+            document.querySelector('#msg').innerHTML = user.id; 
+
+            // 서버 전달 
+      }
+  </script>
+</body>
+</html>

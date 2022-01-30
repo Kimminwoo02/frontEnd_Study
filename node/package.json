@@ -1,0 +1,19 @@
+{
+  "name": "frontend_4",
+  "version": "1.0.0",
+  "description": "fontend class",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "jemicom",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.2",
+    "nconf": "^0.11.3",
+    "server-static": "^2.0.5"
+  }
+}

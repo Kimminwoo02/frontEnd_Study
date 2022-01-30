@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/jquery.fullPage.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <style>
+        header {
+            position: fixed;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            top: 0;
+        }
+        
+        body {
+            font-size: 12px;
+        }
+        
+        .lnb>ul {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .lnb a {
+            display: block;
+            padding: 1rem;
+        }
+        
+        .fp-controlArrow.fp-prev {
+            left: 102px;
+            color: black;
+        }
+        
+        .fp-controlArrow.fp-next {
+            right: 102px;
+            color: black;
+        }
+        
+        .fp-slidesNav {
+            width: 115px;
+            background-color: orange;
+        }
+        
+        #myHeight {
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fullpage">
+        <div class="section">section</div>
+        <div class="section">
+            <div class="slide" data-anchor="slide1"> Slide 1 </div>
+            <div class="slide" data-anchor="slide2"> Slide 2 </div>
+            <div class="slide" data-anchor="slide3"> Slide 3 </div>
+            <div class="slide" data-anchor="slide4"> Slide 4 </div>
+        </div>
+
+
+        <div class="section fp-auto-height">
+            <div id="myHeight">제어하고 싶은 구조물 안에 내용물 넣기</div>
+        </div>
+        <footer class="section">footer</footer>
+
+    </div>
+    <header>
+        <nav class="lnb">
+            <ul id='myMenu'>
+                <li data-menuanchor="firstPage" class="active"></li>><a href="#section1">section1</a></li>
+                <li data-menuanchor="secondPage" class="active"><a href="#section2">section2</a></li>
+                <li data-menuanchor="thirdPage" class="active"><a href="#section3">section3</a></li>
+                <li data-menuanchor="fourthPage" class="active"><a href="#section4">section4</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./script/jquery.fullPage.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                //options here
+                autoScrolling: true,
+                scrollHorizontally: true,
+                sectionsColor: ['pink', 'yello', 'red', 'blue'],
+                anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+                menu: '#myMenu',
+                navigation: true,
+                navigationPosition: 'right',
+                navigationTooltips: ['first page', 'second page', 'third page', 'fourth page'],
+                slidesNavigation: true,
+                slidesNavPosition: 'bottom',
+                sectionSelector: '.section',
+
+
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>
