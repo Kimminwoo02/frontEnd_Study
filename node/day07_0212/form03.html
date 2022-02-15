@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{ display: flex; justify-content: center; height: 100vh; align-items: center;}
+    .container{ width: 300px; margin: auto; padding:20px; 
+        border-radius: 20px;
+        border: 1px solid #ababab; 
+    }
+    .task-list{ height: 200px;}
+    input[type='submit'], button{ padding:5px;}
+    input[type='text'] { padding: 7px 5px 5px 5px;}
+
+    input[type='text'].on{ padding:5px;}
+  </style>
+</head>
+<body>
+   <div class="container">
+     <header>
+       <h1>주문서 입력 </h1>
+       <form action="" id="new-task-form">
+          <input type="text" id="new-task-input" placeholder="주문하실 메뉴를 입력하세요.">
+          <input type="submit" id="new-task-submit" value="입력">
+       </form>
+     </header>
+     <section class="task-list">
+          <h1>주문</h1>
+          <div id="tasks">
+            <!-- <div class="task">
+              <div class="content">
+                <input type="text" class="text" value="라떼" readonly>
+              </div>
+              <div class="action">
+                <button class="edit">수정</button><button class="delete">삭제</button>
+              </div>
+            </div> -->
+          </div>
+     </section>
+   </div>
+
+   <script>
+     window.addEventListener('DOMContentLoaded', ()=>{
+          const form = document.querySelector('#new-task-form');
+          const input = document.querySelector('#new-task-input');
+          const list_el = document.querySelector('#tasks');
+
+          input.focus(); 
+          form.addEventListener('submit', (e)=>{
+              e.preventDefault(); // 이벤트 버블링 방지
+
+              const task = input.value; //문자열 = TRUE
+
+              if( !task ){
+                  alert('메뉴를 입력하세요. ');
+                  input.focus(); 
+                  return; 
+              }
+
+              // element 제작 
+              const task_el = document.createElement('div'); // <div class="task">
+              const task_content_el = document.createElement('div');  // <div class="content">
+              task_el.appendChild( task_content_el);
+
+              const task_input_el = document.createElement('input');
+              task_input_el.value = task; 
+              task_input_el.setAttribute('readonly', 'readonly');
+              task_input_el.classList.add('on'); // 
+              task_content_el.appendChild( task_input_el);
+              //  <input type="text" class="text" value="라떼" readonly>
+
+              const task_action_el = document.createElement('div'); // <div class="action">
+              
+              // <button class="edit">수정</button><button class="delete">삭제</button>
+              const task_edit_el = document.createElement('button');
+              task_edit_el.innerHTML = "수정";
+              
+              const task_delete_el = document.createElement('button');
+              task_delete_el.innerHTML = "삭제";
+               
+              task_action_el.appendChild( task_edit_el );
+              task_action_el.appendChild( task_delete_el );
+
+              task_el.appendChild(task_action_el );
+              list_el.appendChild( task_el );
+
+              input.value = '';
+              // 입력 후에는  새로 입력 받을 수 있도록 value  삭제 
+
+              task_edit_el.addEventListener('click', ()=>{
+                    if( task_edit_el.innerText == '수정') {
+                          task_input_el.removeAttribute('readonly');
+                          task_input_el.focus();
+                          task_edit_el.innerHTML = '저장';
+                    }else{ 
+                          task_input_el.setAttribute('readonly', 'readonly');
+                          task_edit_el.innerHTML = '수정';
+                    }
+              })
+
+              task_delete_el.addEventListener( 'click', ()=>{
+                  list_el.removeChild(task_el);
+              })
+          })
+
+     })
+
+   </script>
+
+</body>
+</html>

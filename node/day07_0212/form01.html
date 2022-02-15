@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style> </style>
+</head>
+<body>
+  <button>장바구니담기</button>
+  <ul id="list">
+
+  </ul>
+
+  <div class="log"></div>
+  <script>
+    const ary = ['사과', '바나나', '딸기', '양파'];
+    const list = document.querySelector('#list');
+
+    // for( let i = 0 ; i<ary.length ; i++){
+    //   const li = document.createElement('li');    // <li>
+    //   let  text = document.createTextNode( ary[i]);   // 사과, 바나나, 딸기, 양파
+    //   li.appendChild(text); // <li>text</li>
+    //   list.appendChild( li );
+    // }
+
+    // ary.forEach(function(a){
+    //     const li = document.createElement('li');    // <li>
+    //     let  text = document.createTextNode(a);   // 사과, 바나나, 딸기, 양파
+    //     li.appendChild(text); // <li>text</li>
+    //     list.appendChild( li );
+    // })
+
+     
+    const btn = document.querySelector('button');
+    btn.addEventListener('click', function(){
+       let idx = Math.floor(Math.random()*4);
+        // if( ary.length <= idx){
+        //   return false; 
+        // }
+
+        const li = document.createElement('li');    // <li>
+        let  text = document.createTextNode( ary[idx]);  
+        // 사과, 바나나, 딸기, 양파
+        li.appendChild(text); // <li>text</li>
+        list.appendChild( li );
+
+        let count = document.querySelectorAll('#list>li').length;
+        console.log( count );
+        document.querySelector('.log').innerHTML = `총 ${count} 개`;
+    })
+
+  </script>
+</body>
+</html>

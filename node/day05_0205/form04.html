@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <div>좋아하는 음식은? <br>
+            <label><input type="radio" name="food" value="라면">라면</label>
+            <label><input type="radio" name="food" value="만두">만두</label>
+            <label><input type="radio" name="food" value="불고기">불고기</label>
+
+            <br>
+            <input type="button" id="btn" value="저장">
+        </div>
+
+    </form>
+
+    <script>
+        // radio, checkbox  도 같은 방법으로 데이타 추출 
+        document.addEventListener('DOMContentLoaded', () => {
+            const getRadioValue = function() {
+
+                const foods = document.querySelectorAll('input');
+                let foodName = '';
+
+                [...foods].forEach((food, i) => {
+                    if (food.checked) {
+                        foodName = food.value;
+                    }
+                })
+
+                console.log(foodName);
+                return foodName;
+            }
+
+            document.querySelector('#btn').addEventListener('click', function() {
+                alert(getRadioValue());
+            })
+        })
+    </script>
+
+</body>
+
+</html>

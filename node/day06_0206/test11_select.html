@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      #select{ width:200px;  border:1px solid saddlebrown; 
+          padding:12px;  
+      }
+      #select>option{ padding: 10px; border-bottom: 1px solid black;}
+  </style>
+</head>
+<body>
+  <h1> 과목을 선택하세요. </h1>
+  <select name="select" id="select" multiple size="5">
+      <option value="html">HTML</option>
+      <option value="css">css</option>
+      <option value="javascript">javascript</option>
+      <option value="nodejs">nodejs</option>
+  </select>
+  <button> select  print </button>
+  <div class="log"></div>
+  <script>
+
+      const log = document.querySelector('.log');
+      const select = document.querySelector('#select');
+      const selectoption = select.options; // HTMLCollection  유사배열
+      
+      // select.addEventListener('click', function(){
+      select.addEventListener('change', selectValueMul)
+
+      function selectValueMul(){
+          // 누적 배열 지우기위해서 변수 위치 조정 
+          const selectValue = [];
+          [...selectoption].forEach((option, i)=>{
+            if( option.selected ){
+                  selectValue.push( option.value );
+            }
+          })
+
+          log.innerHTML = selectValue.toString();
+          return selectValue.toString(); 
+      }
+
+      document.querySelector('button').addEventListener('click', function(){
+            console.log(selectValueMul());
+      })
+  </script>
+</body>
+</html>

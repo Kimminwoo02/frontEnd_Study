@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div>
+        좋아하는 음식은?
+        <form action="">
+            <label for=""><input type="radio" name="id_food" value="라면">라면</label>
+            <label for=""><input type="radio" name="id_food" value="불고기">불고기</label>
+            <label for=""><input type="radio" name="id_food" value="김밥">김밥</label>
+            <button id="btn">저장</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentloaded', () => {
+            const getFoodValue = () => {
+                const foods = document.querySelectorAll('input')
+                let ary = '';
+
+                [...foods].forEach((food, i) => {
+                    if (food.checked) {
+                        ary = food.value
+                    }
+
+                })
+
+                console.log(ary);
+                return ary;
+
+            }
+            document.querySelector('#btn').addEventListener('click', () => {
+                alert(getFoodValue())
+            })
+
+        })
+    </script>
+</body>
+
+</html>

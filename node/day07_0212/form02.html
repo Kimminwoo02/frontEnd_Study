@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style> </style>
+</head>
+<body>
+  <input type="text" id="item" name="item" placeholder="상품명을 입력하세요">
+  <button class="cartBtn">장바구니담기</button>
+  <ul id="list">
+
+  </ul>
+
+  <div class="log"></div>
+  <script>
+    const list = document.querySelector('#list');
+    const btn = document.querySelector('.cartBtn');
+    
+
+    btn.addEventListener('click', function(){
+       const item = document.querySelector('#item');
+        const li = document.createElement('li');    // <li>
+        let  text = document.createTextNode( item.value );  
+        // 입력한 아이템
+        li.appendChild(text); // <li>text</li>
+        
+
+        const del = document.createElement('button');
+        const delText = document.createTextNode('삭제');
+        del.appendChild(delText);
+        del.classList.add('del');
+        del.setAttribute('value', '삭제');
+        li.appendChild(del); // 사과 [삭제]
+
+        list.appendChild( li );
+
+        let count = document.querySelectorAll('#list>li').length;
+        //console.log( count );
+        document.querySelector('.log').innerHTML = `총 ${count} 개`;
+       
+        // 함수 위치 확인 
+        list.addEventListener('click', function(event){
+            //const del = document.querySelector('del');
+            console.log( event.target ); 
+            event.target.parentElement.remove(); 
+            // li 삭제
+        })
+    
+    })
+
+    // list.addEventListener('click', removeList(event)); 
+
+    // // 함수 위치 확인 
+    // function  removeList(event){
+    //         event.target.parentElement.remove(); 
+            
+    //  })
+  </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      .log{ height: 50px; background-color: lightsalmon;}
+  </style>
+</head>
+<body>
+   <h1>다음을 선택 하세요</h1>
+  <label>
+         <input type="checkbox" name="subject" id="html" value="html"> html
+  </label>
+  <label>
+         <input type="checkbox" name="subject" id="css" value="css" checked > css
+  </label>
+  <label>
+         <input type="checkbox" name="subject" id="javascript" value="javascript"> javascript
+  </label>
+
+   <button>전송</button>
+   <div class="log"></div>
+
+   <script>
+      const  log = document.querySelector('.log');
+      const  radioBtn = document.getElementsByName('subject');
+      
+      document.getElementById('html').addEventListener('click', ()=>{
+          log.innerHTML = document.getElementById('html').value; 
+      })
+
+      document.getElementById('css').addEventListener('change', ()=>{
+          log.innerHTML = document.getElementById('css').value; 
+      })
+
+      const jsBtn = document.querySelector('button');
+      jsBtn.addEventListener('click', ()=>{
+        // document.getElementById('javascript').setAttribute('checked', 'checked');
+        document.getElementById('javascript').checked = true;
+      })
+   </script>
+</body>
+</html>

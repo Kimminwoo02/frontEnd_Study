@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>장바구니 추가</button>
+  <ul id="list"></ul>
+
+  <script>
+      const fruits = [ 'apple', 'banana', 'orange', 'pineapple'];
+      const list = document.getElementById('list');
+      const btn = document.querySelector('button');
+
+      btn.addEventListener('click', function(){
+            let num = Math.floor(Math.random()*4);
+            console.log( num );
+
+            const li = document.createElement('li');
+            const st = document.createTextNode(fruits[num]);
+            li.appendChild(st);
+            list.appendChild(li);
+      })
+
+  </script>
+</body>
+</html>

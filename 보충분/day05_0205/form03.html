@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{ display: flex; justify-content: center;
+          height:100vh;  align-items: center;
+    }
+    .modal-container{ width: 500px; padding: 20px;
+        background-color: #333;
+        display: flex; flex-wrap:wrap;
+    }
+    .bg{  background: linear-gradient(white, white 50%, 
+          pink 0, pink 60%, white 0, white 70%,  
+          gray 0, gray 80%, white 0);
+          background-size: 100% 50px;
+
+          position: fixed; width:100%; height: 100vh;
+          z-index: -2;  transform:rotate(-30deg) scale(2);
+        }
+      
+      h1{ color:white; width:100%; }
+      label{ color:white; display: block; width:20%; }
+      input{ display: block; width:70%; height: 40px; margin-bottom: 40px;
+          text-indent: 40px;
+          background-image: url(http://placehold.it/30x30);
+          background-repeat: no-repeat;
+          background-position: 5px;
+      }
+
+      .agreeCheck{ width: 100%;  position: relative;}
+      input[type='checkbox']{ align-self: flex-start;
+          position: absolute; left: 0; top:0; 
+      }
+      label[for="agree"]{position: absolute; right:0; }
+
+      button [ type="submit"]{ width:100%; }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+
+  <div class="modal-container">
+    <h1>회원가입을 환영합니다.</h1>
+    <label for="ui_name">이름</label>
+    <input type="text" placeholder="이름">
+    
+    <label for="ui_tel">이름</label>
+    <input type="tel" placeholder="010-xxxx-xxxx">
+
+    <label for="ui_email">이메일</label>
+    <input type="email" placeholder="userid@gmail.com">
+
+    <label for="ui_pwd">이메일</label>
+    <input type="password" placeholder="비밀번호">
+    
+    <label for="ui_birth">이메일</label>
+    <input type="time" placeholder="년도-월-일">
+     
+    <div class="agreeCheck">
+      <input type="checkbox" id="agree">
+      <label for="agree">약관에 동의하며 관련내용을 이메일로 전달박겠습니다.</label>  
+    </div>
+    <button  type="submit">Resister</button>
+
+
+
+  </div>
+
+</body>
+</html>

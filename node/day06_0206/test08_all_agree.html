@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      .log{ height: 50px; background-color: lightsalmon;}
+  </style>
+</head>
+<body>
+   <h1>다음을 선택 하세요</h1>
+    <label>
+        <input type="checkbox" name="all" id="allCheck" value="전체선택">전체선택
+    </label>
+    <label>
+          <input type="checkbox" name="subject" id="html" value="html"> html
+    </label>
+    <label>
+          <input type="checkbox" name="subject" id="css" value="css"> css
+    </label>
+    <label>
+          <input type="checkbox" name="subject" id="javascript" value="javascript"> javascript
+    </label>
+
+   <button>전송</button>
+   <div class="log"></div>
+
+   <script>
+      const  log = document.querySelector('.log');
+      const  checkedBtn = document.getElementsByName('subject');
+      let    msg = [];
+      const jsBtn = document.querySelector('button');
+      jsBtn.addEventListener('click', ()=>{
+            if( !allCheck.checked ) { 
+                alert('전체 선택 버튼을 선택하여야 합니다.');
+                return false;
+            }
+             checkedBtn.forEach( item =>{
+               if( item.checked ){
+                  msg.push( item.value );
+               }
+             })
+
+             log.innerHTML = msg.toString();
+      })
+
+      function setCheck( name , value ){
+          const  subject = document.getElementsByName(name);
+          subject.forEach( (sub, i)=>{
+              if( value.indexOf(sub.value)>-1 ){
+                sub.checked = true; 
+              }
+          })
+      }
+      function falseCheck( name ){
+          const  subject = document.getElementsByName(name);
+          subject.forEach(sub=>{
+              sub.checked = false; 
+          })
+      }
+      //setCheck('subject', ['javascript','html','css'] );
+      const allCheck = document.getElementById('allCheck');
+      allCheck.addEventListener('click', ()=>{
+        if( allCheck.checked ){
+            setCheck('subject', ['javascript','html','css'] );
+        }else{
+            falseCheck('subject' );
+        }
+      })
+
+   </script>
+</body>
+</html>

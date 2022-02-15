@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+   <input type="text" id="ui_id" name="ui_id" placeholder="이름" 
+          onchange="changeValue('ui_id', this.value)">      
+   <input type="text" id="ui_email" name="ui_email" placeholder="메일" 
+          onchange="changeValue('ui_email', this.value)">
+   <button onclick="login()">로그인</button>
+
+   <script>
+     function changeValue(variable, value){
+          window[variable] = value; 
+          console.log(window[variable]);
+     }
+
+     function login(){
+         const param = {
+            //ui_id : document.queryselect('#ui_id').value,
+            //ui_id : ui_id
+            ui_id, 
+            ui_email
+         };
+
+         const xhr = new XMLHttpRequest();
+         xhr.open('POST', '/login');
+         xhr.onreadystatechange = function(){
+            if( xhr.readyState == 4 && xhr.status == 200 ){
+               console.log(xhr.readyState + ':' + xhr.status);
+               console.log(xhr.responseText);
+            }
+            console.log( xhr.readyState);
+         }
+         xhr.setRequestHeader( 'Content-Type', 'application/json');
+         xhr.send( JSON.stringify(param));
+     }
+
+   </script>
+</body>
+</html>

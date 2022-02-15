@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="list"></ul>
+
+    <script>
+        const fruits = ['apple', 'banana', 'orange', 'pineapple'];
+        const list = document.getElementById('list');
+
+        fruits.forEach(fruit => {
+            let li = document.createElement('li');
+            const st = `${fruit}는 ${Math.round(Math.random()*1000)} 원입니다.`;
+            const text = document.createTextNode(st);
+            li.appendChild(text);
+            list.appendChild(li);
+        })
+    </script>
+</body>
+
+</html>

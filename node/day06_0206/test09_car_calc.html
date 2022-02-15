@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table{ border-collapse: collapse; width:500px; height: 150px;}
+    th, td{ border:1px solid black; }
+    td:nth-child(2){ text-align: right;}
+    td:nth-child(3){ text-align: center;}
+    thead th, tfoot th{ background-color: black; color:#fff;}
+    #total{ border:none; }
+  </style>
+</head>
+<body>
+    <h1> 차량 견적서 </h1>
+    <div class="car-container">
+        <table>
+          <thead>
+            <tr>
+              <th scope="row"> 옵션</th>
+              <th scope="row"> 추가가격</th>
+              <th scope="row"> 선택</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th scope="col">(기본)차량가격</th>
+              <td colspan="2"> 
+                  <input type="text" readonly value="1000000" name="total" id="total">
+              </td>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr>
+              <th scope="col">인조가죽시트</th>
+              <td>250000</td>
+              <td><input type="checkbox" name="opt" id="opt1" value="250000" onclick="car()"></td>
+            </tr>
+            <tr>
+              <th scope="col">내비게이션</th>
+              <td>250000</td>
+              <td><input type="checkbox" name="opt" id="opt2" value="250000"
+                onclick="car()"></td>
+            </tr>
+            <tr>
+              <th scope="col">선루프</th>
+              <td>4450000</td>
+              <td><input type="checkbox" name="opt" id="opt3" value="440000" onclick="car()"></td>
+            </tr>
+
+          </tbody> 
+        </table>
+    </div>
+
+    <script>
+       function car(){
+          const basic = document.getElementById('total');
+          let   basic_hop = Number(basic.value);
+          //console.log( basic_hop );
+          const options = document.getElementsByName('opt');
+          options.forEach( option=>{
+              if( option.checked ){
+                    basic_hop += Number(option.value);
+              }
+          })
+
+          basic.value = basic_hop;
+       }
+       //car();
+    </script>
+</body>
+</html>

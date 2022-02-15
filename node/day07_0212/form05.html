@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{ padding: 0; margin: 0; }
+    a{ text-decoration: none;}
+    li{ list-style-type: none;}
+    .order-container{ width: 400px; margin: auto;}
+    .product-list>ul{ display: flex;}
+    .product-list li{ border:1px solid orangered; 
+          width:calc(400px / 5); height: 60px;
+          background-color: blanchedalmond;
+    }
+
+    .order li{ display: flex; justify-content: space-between;}
+    .order li span:nth-child(1){ width: 120px; text-align: right;}
+    .order li span:nth-child(2){ width: 100px; text-align: right;}
+  </style>
+</head>
+<body>
+  <div class="order-container">
+    <div class="product-list">
+      <ul>
+        <li data-price="3500">청귤차</li>
+        <li data-price="4500">자몽차</li>
+        <li data-price="3000">아메리카노</li>
+        <li data-price="3200">토피넛라떼</li>
+        <li data-price="2500">쌍화차</li>
+      </ul>
+    </div>
+    <h1>주문목록</h1>
+    <div class="order-list">
+      <ul class="order">
+        <!-- <li> 청귤차  가격 삭제</li> -->
+      </ul>
+    </div>
+    <h1>결제금액</h1>
+    <div class="result">
+        <div class="count"> 0</div>
+        <div class="payment"> 원</div>
+    </div>
+  </div>
+  <script>
+    const productList = document.querySelector('.product-list');
+    const orderList = document.querySelector('.order-list');
+    const order = document.querySelector('.order');
+    const price = document.querySelectorAll('.product-list li');
+    // 유사 배열 [li, li, li, li, li]
+
+    const count = document.querySelector('.count');
+    const payment = document.querySelector('.payment');
+    const amountOfPayment = [];
+    // 배열에 저장된 데이터를 자동 누적 하도록 할 것임
+
+    productList.addEventListener('click', Add_order_list);
+    orderList.addEventListener('click', Delete_order_list);
+
+    function Add_order_list(event){
+        const order_name = event.target.innerHTML;
+        
+        price.forEach( op =>{
+            if( order_name == op.innerHTML ){
+              amountOfPayment.push( Number(op.getAttribute('data-price')));
+            }
+            // console.log( amountOfPayment.toString() ); 
+        })
+
+        const paymentHap = amountOfPayment.reduce((a, c)=>{
+           return a+=c; 
+        })
+        //console.log( paymentHap );
+
+        const li = document.createElement('li');
+        const textSpan = document.createElement('span');
+        const text = document.createTextNode(order_name);
+        textSpan.appendChild(text);
+        li.appendChild(textSpan);       
+
+        const span = document.createElement('span');
+        const priceText = document.createTextNode(event.target.getAttribute('data-price'));
+        li.appendChild(priceText);
+
+        const remove_btn = document.createElement('button');
+        remove_btn.innerHTML = '삭제';
+        li.appendChild( remove_btn);
+        order.appendChild(li);
+
+        count.innerHTML = amountOfPayment.length; 
+        payment.innerHTML = paymentHap + ' 원';
+    }
+
+    function Delete_order_list(event){
+        const del = event.target.parentElement; 
+        del.remove();
+    }
+
+
+  </script>
+</body>
+</html>
