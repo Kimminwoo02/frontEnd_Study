@@ -1,0 +1,19 @@
+{
+    "items" : [
+        {
+            "id": 1,
+            "checked": true,
+            "item": "사과"
+        },
+        {
+            "id": 2,
+            "checked": false,
+            "item": "바나나"
+        },
+        {
+            "id": 3,
+            "checked": false,
+            "item": "커피"
+        }
+    ]
+}

@@ -1,98 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
 </head>
+
 <body>
-  <div class="conatainer">
-    <form action="" class="howHeard">
-      <div class="two-thirds" id="main">
-        <fieldset>
-          <legend>장비대여</legend>
-          <label for="equipmentType">종류</label>
-          <select name="equipmentType" id="equipmentType">
+    <div class="conatainer">
+        <form action="" class="howHeard">
+            <div class="two-thirds" id="main">
+                <fieldset>
+                    <legend>장비대여</legend>
+                    <label for="equipmentType">종류</label>
+                    <select name="equipmentType" id="equipmentType">
             <option value="choose">종류를 선택해 주세요</option>
             <option value="cameras">카메라</option>
             <option value="projectors">프로젝터</option>
           </select>
-          <br>
+                    <br>
 
-          <label for="model">모델</label>
-          <select name="model" id="model">
+                    <label for="model">모델</label>
+                    <select name="model" id="model">
             <option>종류를 먼저 선택해 주세요</option>
             <!-- 
               <option> 목록1 </option>
              -->
           </select>
-        </fieldset>
+                </fieldset>
 
-        <input type="button" id="submit" value="전송">
-      </div>
+                <input type="button" id="submit" value="전송">
+            </div>
 
-      <div class="log"></div>
-    </form>
-  </div>
-  <script>
-    const type = document.querySelector('#equipmentType');
-    const model = document.querySelector('#model');
+            <div class="log"></div>
+        </form>
+    </div>
+    <script>
+        const type = document.querySelector('#equipmentType');
+        const model = document.querySelector('#model');
 
-    const cameras = {
-        cameras1 : 'cameras-data1',
-        cameras2 : 'cameras-data2',
-        cameras3 : 'cameras-data3',
-        cameras4 : 'cameras-data4',
-    }
-
-    const projectors = {
-        projector1 : 'projector1-data1',
-        projector2 : 'projector1-data2',
-        projector3 : 'projector1-data3',
-        projector4 : 'projector1-data4',
-    }
-
-    type.addEventListener('change', function(event){
-        let options = "<option>모델을 선택해 주세요</option>" ;
-
-        if( event.target.value === 'choose' ){
-            model.innerHTML = options; 
-            alert('장비종류를 먼저 선택하세요')
-            return; 
+        const cameras = {
+            cameras1: 'cameras-data1',
+            cameras2: 'cameras-data2',
+            cameras3: 'cameras-data3',
+            cameras4: 'cameras-data4',
         }
 
-        var models = getModels( this.value ); // cameras, projectors
-        //console.log(models);
-
-        for( key in models) {
-            options += "<option value="+key+">"+ models[key]+"</option>";
+        const projectors = {
+            projector1: 'projector1-data1',
+            projector2: 'projector1-data2',
+            projector3: 'projector1-data3',
+            projector4: 'projector1-data4',
         }
-        model.innerHTML = options;
-    })// event end
-    
-    function getModels( type ){
-       if( type === 'cameras'){
-          return cameras; // cameras 배열을 리턴
-       }else if( type === 'projectors'){
-          return projectors; // projectors 배열 리턴 
-       }
-    }
 
-    const items = {};
-    document.querySelector('#submit').addEventListener('click', function(){
-      var models = getModels(this.value);
-      items.type = models;
-      items.value = document.querySelector('#model').value;
+        type.addEventListener('change', function(event) {
+                let options = "<option>모델을 선택해 주세요</option>";
 
-      const isYes = confirm('지정한 내용을 전송할까요?');
-      if( isYes ){
-          localStorage.setItem('model', JSON.stringify(items)); 
-      }else{
-          localStorage.removeItem('model', JSON.stringify(items)); 
-      }
-    })
-  </script>
+                if (event.target.value === 'choose') {
+                    model.innerHTML = options;
+                    alert('장비종류를 먼저 선택하세요')
+                    return;
+                }
+
+                var models = getModels(this.value); // cameras, projectors
+                //console.log(models);
+
+                for (key in models) {
+                    options += "<option value=" + key + ">" + models[key] + "</option>";
+                }
+                model.innerHTML = options;
+            }) // event end
+
+        function getModels(type) {
+            if (type === 'cameras') {
+                return cameras; // cameras 배열을 리턴
+            } else if (type === 'projectors') {
+                return projectors; // projectors 배열 리턴 
+            }
+        }
+
+        const items = {};
+        document.querySelector('#submit').addEventListener('click', function() {
+            var models = getModels(this.value);
+            items.type = models;
+            items.value = document.querySelector('#model').value;
+
+            const isYes = confirm('지정한 내용을 전송할까요?');
+            if (isYes) {
+                localStorage.setItem('model', JSON.stringify(items));
+            } else {
+                localStorage.removeItem('model', JSON.stringify(items));
+            }
+        })
+    </script>
 </body>
+
 </html>

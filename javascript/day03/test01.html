@@ -38,6 +38,110 @@
         
         */
     </script>
-</body>
 
-</html>
+    <script>
+        ! function(e) {
+            "function" == typeof define && define.amd ? define(["jquery"], e) : e(jQuery)
+        }(function(e) {
+            function t(t, a) {
+                var o = this,
+                    n = e(o);
+                if (o.value == n.attr("placeholder") && n.hasClass(d.customClass))
+                    if (n.data("placeholder-password")) {
+                        if (n = n.hide().nextAll('input[type="password"]:first').show().attr("id", n.removeAttr("id").data("placeholder-id")), !0 === t) return n[0].value = a;
+                        n.focus()
+                    } else o.value = "", n.removeClass(d.customClass), o == l() && o.select()
+            }
+
+            function a() {
+                var a, l = this,
+                    o = e(l),
+                    n = this.id;
+                if ("" === l.value) {
+                    if ("password" === l.type) {
+                        if (!o.data("placeholder-textinput")) {
+                            try {
+                                a = o.clone().attr({
+                                    type: "text"
+                                })
+                            } catch (t) {
+                                a = e("<input>").attr(e.extend(function(t) {
+                                    var a = {},
+                                        l = /^jQuery\d+$/;
+                                    return e.each(t.attributes, function(e, t) {
+                                        t.specified && !l.test(t.name) && (a[t.name] = t.value)
+                                    }), a
+                                }(this), {
+                                    type: "text"
+                                }))
+                            }
+                            a.removeAttr("name").data({
+                                "placeholder-password": o,
+                                "placeholder-id": n
+                            }).bind("focus.placeholder", t), o.data({
+                                "placeholder-textinput": a,
+                                "placeholder-id": n
+                            }).before(a)
+                        }
+                        o = o.removeAttr("id").hide().prevAll('input[type="text"]:first').attr("id", n).show()
+                    }
+                    o.addClass(d.customClass), o[0].value = o.attr("placeholder")
+                } else o.removeClass(d.customClass)
+            }
+
+            function l() {
+                try {
+                    return document.activeElement
+                } catch (e) {}
+            }
+            var o, n, r = "[object OperaMini]" == Object.prototype.toString.call(window.operamini),
+                s = "placeholder" in document.createElement("input") && !r,
+                i = "placeholder" in document.createElement("textarea") && !r,
+                c = e.valHooks,
+                u = e.propHooks;
+            if (s && i)(n = e.fn.placeholder = function() {
+                return this
+            }).input = n.textarea = !0;
+            else {
+                var d = {};
+                (n = e.fn.placeholder = function(l) {
+                    d = e.extend({}, {
+                        customClass: "placeholder"
+                    }, l);
+                    return this.filter((s ? "textarea" : ":input") + "[placeholder]").not("." + d.customClass).bind({
+                        "focus.placeholder": t,
+                        "blur.placeholder": a
+                    }).data("placeholder-enabled", !0).trigger("blur.placeholder"), this
+                }).input = s, n.textarea = i, o = {
+                    get: function(t) {
+                        var a = e(t),
+                            l = a.data("placeholder-password");
+                        return l ? l[0].value : a.data("placeholder-enabled") && a.hasClass(d.customClass) ? "" : t.value
+                    },
+                    set: function(o, n) {
+                        var r = e(o),
+                            s = r.data("placeholder-password");
+                        return s ? s[0].value = n : r.data("placeholder-enabled") ? ("" === n ? (o.value = n, o != l() && a.call(o)) : r.hasClass(d.customClass) && t.call(o, !0, n) || (o.value = n), r) : o.value = n
+                    }
+                }, s || (c.input = o, u.value = o), i || (c.textarea = o, u.value = o), e(function() {
+                    e(document).delegate("form", "submit.placeholder", function() {
+                        var l = e("." + d.customClass, this).each(t);
+                        setTimeout(function() {
+                            l.each(a)
+                        }, 10)
+                    })
+                }), e(window).bind("beforeunload.placeholder", function() {
+                    e("." + d.customClass).each(function() {
+                        this.value = ""
+                    })
+                })
+            }
+        }), "/result.php" !== window.location.pathname && "/about.php" !== window.location.pathname && "/bmi-result.php" !== window.location.pathname || $(window).bind("load", function() {
+                $.getScript("assets/js/fb.js", function() {})
+            }), $("input").placeholder(), $("#units-tabs a").click(function(e) {
+                    e.preventDefault(), $(this).tab("show")
+                } <
+                /body>
+
+                <
+                /html>
